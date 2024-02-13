@@ -6,6 +6,8 @@ import { ICompactDailyBlogPosts } from "@/types/sanity-schemas/daily-blog.types"
 import { formatDate } from "@/utils/date";
 import Link from "next/link";
 
+export const revalidate = 1800;
+
 async function getData(): Promise<ICompactDailyBlogPosts[]> {
   const query = `
     *[_type == "daily-blog"] | order(_createdAt desc) {
@@ -26,7 +28,7 @@ export default async function Home() {
   return (
     <div>
       {data.map((post) => (
-        <Card key={post.currentSlug}>
+        <Card key={post.currentSlug} className="mb-7">
           <CardContent className="mt-5 text-center">
             <small>{formatDate(post.createdAt)}</small>
             <h2 className="text-lg line-clamp-2 mt-2 font-semibold">

@@ -5,7 +5,7 @@ export function formatDate(rawDate: string): string {
     year: "numeric",
     month: "long",
     day: "numeric",
-    timeZone: "UTC",
+    timeZone: "America/Mexico_City",
   };
 
   return date.toLocaleDateString("en-US", options);
