@@ -7,8 +7,8 @@ export function Navbar(props: IProps) {
   const {} = props;
 
   return (
-    <nav className="w-full relative flex items-center justify-between py-5">
-      <Link href="/" className="font-bold text-3xl text-primary">
+    <nav className="w-full relative flex items-center justify-between py-5 mb-24">
+      <Link href="/" className="text-3xl text-primary font-medium">
         O.
       </Link>
       <ThemeToggle />

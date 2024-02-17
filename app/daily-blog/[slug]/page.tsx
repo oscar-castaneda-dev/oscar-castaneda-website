@@ -1,9 +1,17 @@
+import { Metadata } from "next";
+
 import { client } from "@/lib/sanity";
 import { IDailyBlogPost } from "@/types/sanity-schemas/daily-blog.types";
 import { formatDate } from "@/utils/date";
 import { PortableText } from "@portabletext/react";
 
 export const revalidate = 1800;
+
+interface IProps {
+  params: {
+    slug: string;
+  };
+}
 
 async function getData(slug: string): Promise<IDailyBlogPost> {
   const query = `
@@ -19,11 +27,14 @@ async function getData(slug: string): Promise<IDailyBlogPost> {
   return data;
 }
 
-interface IProps {
-  params: {
-    slug: string;
+export const generateMetadata = async (params: IProps): Promise<Metadata> => {
+  const data = (await getData(params.params.slug)) ?? {};
+  const { title } = data;
+
+  return {
+    title: `${title}`,
   };
-}
+};
 
 export default async function DailyBlogPost(params: IProps) {
   const {
@@ -35,11 +46,11 @@ export default async function DailyBlogPost(params: IProps) {
 
   return (
     <div>
-      <h1 className="mt-2 block text-4xl text-center leading-8 font-bold tracking-tight">
-        {title}
-      </h1>
-      <p className="text-center mt-4">{formatDate(createdAt)}</p>
-      <div className="mt-[60px] prose prose-xl dark:prose-invert">
+      <div className="text-center mb-16 md:mb-28">
+        <time className="text-sm">{formatDate(createdAt)}</time>
+        <h1 className="text-5xl md:text-7xl mt-9">{title}</h1>
+      </div>
+      <div className="prose prose-neutral prose-xl dark:prose-invert">
         <PortableText value={content} />
       </div>
     </div>
