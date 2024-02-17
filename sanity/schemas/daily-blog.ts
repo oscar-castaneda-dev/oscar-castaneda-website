@@ -17,11 +17,6 @@ export default {
       },
     },
     {
-      name: 'smallDescription',
-      type: 'text',
-      title: 'Small description',
-    },
-    {
       name: 'content',
       type: 'array',
       title: 'Content',

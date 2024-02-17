@@ -1,10 +1,8 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
 import { client } from "@/lib/sanity";
 
 import { ICompactDailyBlogPosts } from "@/types/sanity-schemas/daily-blog.types";
-import { formatDate } from "@/utils/date";
-import Link from "next/link";
+import { PostCard } from "@/components/PostCard";
 
 export const revalidate = 1800;
 
@@ -12,7 +10,6 @@ async function getData(): Promise<ICompactDailyBlogPosts[]> {
   const query = `
     *[_type == "daily-blog"] | order(_createdAt desc) {
       title,
-      smallDescription,
       "currentSlug": slug.current,
       "createdAt": _createdAt
     }
@@ -26,23 +23,43 @@ export default async function Home() {
   const data = (await getData()) ?? [];
 
   return (
-    <div>
-      {data.map((post) => (
-        <Card key={post.currentSlug} className="mb-7">
-          <CardContent className="mt-5 text-center">
-            <small>{formatDate(post.createdAt)}</small>
-            <h2 className="text-lg line-clamp-2 mt-2 font-semibold">
-              {post.title}
-            </h2>
-            <p className="line-clamp-3 text-sm  text-gray-600 dark:text-gray-300">
-              {post.smallDescription}
-            </p>
-            <Button className="mt-4">
-              <Link href={`daily-blog/${post.currentSlug}`}>Read More</Link>
-            </Button>
-          </CardContent>
-        </Card>
-      ))}
+    <div className="text-center">
+      <section className="border-b-2 pb-20">
+        <h1 className="text-5xl md:text-6xl mb-7">Oscar Castaneda</h1>
+        <p>
+          Web developer. I create digital products and document them daily on
+          this website. My social networks:{" "}
+          <Link
+            href="https://github.com/oscar-castaneda-dev"
+            target="_blank"
+            className="underline"
+          >
+            github
+          </Link>
+          ,{" "}
+          <Link
+            href="https://twitter.com/oscar_casta_dev"
+            target="_blank"
+            className="underline"
+          >
+            twitter
+          </Link>{" "}
+          and{" "}
+          <Link
+            href="https://www.instagram.com/oscar.castaneda.dev/"
+            target="_blank"
+            className="underline"
+          >
+            instagram
+          </Link>{" "}
+          .
+        </p>
+      </section>
+      <section>
+        {data.map((post) => (
+          <PostCard key={post.currentSlug} post={post} />
+        ))}
+      </section>
     </div>
   );
 }
