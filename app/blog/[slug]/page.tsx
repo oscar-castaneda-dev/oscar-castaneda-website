@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { getPost } from "@/lib/postLoader";
 
 interface PostPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export default async function PostPage({ params }: PostPageProps) {
