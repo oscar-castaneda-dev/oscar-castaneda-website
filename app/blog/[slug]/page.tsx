@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 
 import { getPost } from "@/lib/postLoader";
-import { getPexelsPhoto } from "@/lib/pexels";
 
 interface PostPageProps {
   params: Promise<{ slug: string }>;
