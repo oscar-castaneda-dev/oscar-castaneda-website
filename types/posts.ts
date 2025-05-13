@@ -4,6 +4,6 @@ export interface Post {
   date: string;
   excerpt: string;
   category: string;
-  image: string;
+  imageId: string;
   content: string;
 }

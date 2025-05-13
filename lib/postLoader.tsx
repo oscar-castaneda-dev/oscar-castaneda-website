@@ -24,7 +24,7 @@ export async function getPosts(): Promise<Post[]> {
       date: data.date,
       excerpt: data.excerpt,
       category: data.category,
-      image: data.image,
+      imageId: data.imageId,
       content: "",
     };
   });
@@ -55,7 +55,7 @@ export async function getPost(slug: string): Promise<Post | null> {
     date: data.date,
     excerpt: data.excerpt,
     category: data.category,
-    image: data.image,
+    imageId: data.imageId,
     content: processedContent,
   };
 }
