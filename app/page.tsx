@@ -1,23 +1,13 @@
-import { ModeToggle } from "@/components/ui/mode-toggle";
-import { getPosts } from "@/lib/postLoader";
-import Link from "next/link";
+import { Hero } from "@/components/common/hero";
 
 export default async function Home() {
-  const posts = await getPosts();
-
   return (
-    <div className="p-4">
-      <div className="flex items-center gap-x-4">
-        <h1>Hello World</h1>
-        <ModeToggle />
-      </div>
-      <div>
-        {posts.map((post) => (
-          <Link key={post.slug} href={`/blog/${post.slug}`}>
-            {post.title}
-          </Link>
-        ))}
-      </div>
+    <div className="min-h-screen">
+      <Hero
+        title="Hey, I&#39;m Oscar."
+        subtitle="Today I learned something and wrote about it."
+      />
+      <h2 className="text-3xl font-bold mb-6">Daily dev blog</h2>
     </div>
   );
 }

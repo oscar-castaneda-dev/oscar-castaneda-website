@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
-import "./globals.css";
+
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 import { ThemeProvider } from "@/components/theme-provider";
+
+import "./globals.css";
 
 const interTight = Inter_Tight({
   variable: "--font-sans",
@@ -21,14 +25,17 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${interTight.variable}  antialiased`}>
-        {" "}
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="container mx-auto">
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
