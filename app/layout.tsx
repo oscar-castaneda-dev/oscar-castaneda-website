@@ -31,7 +31,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="container mx-auto">
+          <div className="container mx-auto px-6">
             <Header />
             <main>{children}</main>
             <Footer />

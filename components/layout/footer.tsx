@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer>
+    <footer className="mb-9">
       <p>footer</p>
     </footer>
   );
