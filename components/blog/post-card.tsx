@@ -10,7 +10,7 @@ export function PostCard({ post }: { post: PostPreview }) {
       <div className="w-full overflow-hidden aspect-[3/4] rounded-lg">
         <Link href="/">
           <Image
-            src="/road.webp"
+            src="/placeholder.svg"
             alt="placeholder"
             width={300}
             height={400}

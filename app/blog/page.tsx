@@ -11,12 +11,12 @@ export default async function BlogPage() {
         title="Daily dev log."
         subtitle="A developer&#39;s journal of progress sharing what I learn as I build."
       />
+      <Separator className="my-12" />
       <h2 className="text-4xl font-bold mb-6">Recent coding notes</h2>
       <PostGrid posts={posts.slice(0, 4)} />
       <Separator className="my-16" />
       <h2 className="text-4xl font-bold mb-6">Latest from the blog</h2>
       <PostGrid columns={3} posts={posts} />
-      <Separator className="my-16" />
     </div>
   );
 }
