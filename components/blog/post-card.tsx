@@ -8,9 +8,9 @@ export function PostCard({ post }: { post: PostPreview }) {
   return (
     <div className="relative overflow-hidden space-y-3 group">
       <div className="w-full overflow-hidden aspect-[3/4] rounded-lg">
-        <Link href="/">
+        <Link href="/blog/example">
           <Image
-            src="/placeholder.svg"
+            src="/placeholder.webp"
             alt="placeholder"
             width={300}
             height={400}
@@ -27,7 +27,7 @@ export function PostCard({ post }: { post: PostPreview }) {
           ))}
         </div>
       </div>
-      <Link href="/">
+      <Link href="/blog/example">
         <h3
           className="font-bold text-3xl leading-tight line-clamp-2 group-hover:underline mb-3"
           title={post.title}

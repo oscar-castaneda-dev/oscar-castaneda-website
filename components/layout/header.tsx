@@ -1,5 +1,5 @@
 import { Logo } from "../common/logo";
-import NavLink from "../navigation/nav-link";
+import { NavLink } from "../navigation/nav-link";
 import { ModeToggle } from "../ui/mode-toggle";
 
 const navigationLinks = [{ href: "/blog", label: "Blog" }];

@@ -8,7 +8,7 @@ interface NavLinkProps {
   href: string;
 }
 
-export default function NavLink({ children, href }: NavLinkProps) {
+export function NavLink({ children, href }: NavLinkProps) {
   const pathName = usePathname();
 
   const isActive = pathName === href;
