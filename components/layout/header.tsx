@@ -1,18 +1,19 @@
-import { ModeToggle } from "../ui/mode-toggle";
 import { Logo } from "../common/logo";
-import Link from "next/link";
+import NavLink from "../navigation/nav-link";
+import { ModeToggle } from "../ui/mode-toggle";
+
+const navigationLinks = [{ href: "/blog", label: "Blog" }];
 
 export function Header() {
   return (
     <header className="py-4 flex items-center justify-between border-b">
       <Logo />
       <nav className="space-x-6">
-        <Link
-          href="/blog"
-          className="font-medium text-sm hover:text-gray-600 hover:underline"
-        >
-          Blog
-        </Link>
+        {navigationLinks.map((link) => (
+          <NavLink key={link.label} href={link.href}>
+            {link.label}
+          </NavLink>
+        ))}
         <ModeToggle />
       </nav>
     </header>
