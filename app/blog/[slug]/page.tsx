@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 
-import { PostHeader } from "@/components/blog/post-header";
+import { AuthorCard } from "@/components/blog/author-card";
 import { getPost } from "@/lib/postLoader";
+import { PostHeader } from "@/components/blog/post-header";
 
 interface PostPageProps {
   params: Promise<{ slug: string }>;
@@ -22,6 +23,7 @@ export default async function PostPage({ params }: PostPageProps) {
           className="prose"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
+        <AuthorCard />
       </div>
     </article>
   );

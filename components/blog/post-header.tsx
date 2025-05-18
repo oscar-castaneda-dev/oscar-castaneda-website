@@ -5,6 +5,7 @@ import { Post } from "@/types/posts";
 import { getPexelsPhoto } from "@/lib/pexels";
 import Link from "next/link";
 import { formatDate } from "@/utils/formatDate";
+import { Separator } from "../ui/separator";
 
 export async function PostHeader({ post }: { post: Post }) {
   const photo = await getPexelsPhoto(post.imageId);
@@ -17,7 +18,8 @@ export async function PostHeader({ post }: { post: Post }) {
           {post.title}
         </h1>
         <p>{post.excerpt}</p>
-        <p>{formatDate(post.date)}</p>
+        <Separator className="max-w-2xs mx-auto" />
+        <time dateTime={post.date}>{formatDate(post.date)}</time>
       </div>
       <div className="text-center">
         <div className="relative w-full rounded-lg overflow-hidden max-w-5xl mx-auto aspect-[16/9] md:aspect-[21/9] lg:h-[600px] lg:aspect-auto mb-6">
