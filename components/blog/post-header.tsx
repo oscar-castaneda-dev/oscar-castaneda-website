@@ -6,12 +6,16 @@ import { getPexelsPhoto } from "@/lib/pexels";
 import Link from "next/link";
 import { formatDate } from "@/utils/formatDate";
 import { Separator } from "../ui/separator";
+import { BackLink } from "../common/back-link";
 
 export async function PostHeader({ post }: { post: Post }) {
   const photo = await getPexelsPhoto(post.imageId);
 
   return (
     <div>
+      <div className="mt-6">
+        <BackLink href="/blog" />
+      </div>
       <div className="max-w-3xl mx-auto text-center mt-16 mb-12 space-y-4">
         <Badge>{post.category}</Badge>
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
