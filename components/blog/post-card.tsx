@@ -30,7 +30,7 @@ export async function PostCard({ post }: { post: Post }) {
           <Badge variant="secondary">{post.category}</Badge>
         </div>
       </div>
-      <Link href="/blog/example">
+      <Link href={`/blog/${post.slug}`}>
         <h3
           className="font-bold text-3xl leading-tight line-clamp-2 group-hover:underline mb-3"
           title={post.title}
