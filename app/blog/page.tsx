@@ -1,10 +1,11 @@
 import { PostGrid } from "@/components/blog/post-grid";
 import { Hero } from "@/components/common/hero";
 import { Separator } from "@/components/ui/separator";
-
-import { posts } from "@/data/samplePosts";
+import { getPosts } from "@/lib/postLoader";
 
 export default async function BlogPage() {
+  const posts = await getPosts();
+
   return (
     <div className="min-h-screen">
       <Hero

@@ -119,3 +119,78 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* posts styles */
+@layer components {
+  .prose {
+    @apply max-w-none mx-auto px-4 sm:px-6 lg:px-8 text-xl leading-relaxed;
+    max-width: 65ch;
+  }
+
+  /* paragraph */
+  .prose p {
+    @apply text-xl;
+    @apply my-4;
+  }
+
+  /* headings */
+  .prose h2 {
+    @apply mt-12 mb-4 text-3xl font-semibold;
+  }
+
+  .prose h3 {
+    @apply mt-10 mb-4 text-2xl font-semibold;
+  }
+
+  /* lists */
+  .prose ul {
+    @apply my-6 list-disc list-inside;
+  }
+
+  .prose ol {
+    @apply my-6 list-decimal list-inside;
+  }
+
+  .prose li p {
+    @apply my-2;
+  }
+
+  /* blockquotes */
+  .prose blockquote {
+    @apply border-l-4 pl-4 my-6 italic;
+  }
+
+  /* images */
+  .prose img {
+    @apply block mx-auto my-6 rounded-xl max-w-full;
+  }
+
+  /* inline code */
+  .prose code {
+    @apply bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded;
+  }
+
+  /* code block */
+  .prose pre {
+    @apply overflow-auto p-4 rounded-lg my-6 bg-gray-100 dark:bg-gray-800;
+  }
+
+  /* tables */
+  .prose table {
+    @apply w-full table-auto my-6 border-collapse;
+  }
+
+  .prose th,
+  .prose td {
+    @apply border px-4 py-2 text-left align-top;
+  }
+
+  /* links */
+  .prose a {
+    @apply underline underline-offset-2 decoration-1;
+  }
+
+  .prose a:hover {
+    @apply underline-offset-4 decoration-2;
+  }
+}

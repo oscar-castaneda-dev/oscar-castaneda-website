@@ -1,5 +1,6 @@
 import { remark } from "remark";
 import fs from "fs";
+import gfm from "remark-gfm";
 import html from "remark-html";
 import matter from "gray-matter";
 import path from "path";
@@ -37,17 +38,11 @@ export async function getPosts(): Promise<Post[]> {
 export async function getPost(slug: string): Promise<Post | null> {
   const postFilePath = path.join(postsDirectory, `${slug}.mdx`);
 
-  if (!postFilePath) {
-    return null;
-  }
-
   const postContent = fs.readFileSync(postFilePath, "utf8");
 
   const { data, content } = matter(postContent);
 
-  const processedContent = (
-    await remark().use(html).process(content)
-  ).toString();
+  const processedContent = await remark().use(gfm).use(html).process(content);
 
   return {
     slug,
@@ -56,6 +51,6 @@ export async function getPost(slug: string): Promise<Post | null> {
     excerpt: data.excerpt,
     category: data.category,
     imageId: data.imageId,
-    content: processedContent,
+    content: processedContent.toString(),
   };
 }

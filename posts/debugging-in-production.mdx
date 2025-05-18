@@ -1,0 +1,21 @@
+---
+title: Lessons From Debugging in Production
+date: "2025-05-22"
+excerpt: "It's terrifying — and incredibly valuable"
+category: "Backend"
+imageId: "121472"
+---
+
+No matter how many tests you write, production will always surprise you.
+
+One time, an edge case related to time zones broke a financial report — but only for users in Argentina. No one caught it in staging.
+
+That experience taught me a few things:
+
+- Add logging _before_ you need it
+- Feature flags are your best friends
+- Panic fixes usually create future bugs
+
+> Production debugging humbles you. But it also sharpens your instincts.
+
+After that, I started logging with context, not just messages. Every debug step became a breadcrumb for future me.

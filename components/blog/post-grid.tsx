@@ -1,9 +1,9 @@
-import { PostPreview } from "@/data/samplePosts";
 import { PostCard } from "./post-card";
+import { Post } from "@/types/posts";
 
 interface PostGridProps {
   columns?: 3 | 4;
-  posts: PostPreview[];
+  posts: Post[];
 }
 
 const columnClasses = {
@@ -17,7 +17,7 @@ export function PostGrid({ columns = 4, posts }: PostGridProps) {
       className={`grid gap-x-6 gap-y-16 grid-cols-1 md:grid-cols-2 ${columnClasses[columns]}`}
     >
       {posts.map((post) => (
-        <PostCard key={post.id} post={post} />
+        <PostCard key={post.slug} post={post} />
       ))}
     </section>
   );
