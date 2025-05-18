@@ -2,15 +2,19 @@ import Image from "next/image";
 
 import { Badge } from "../ui/badge";
 import { Post } from "@/types/posts";
-import { getPexelsPhoto } from "@/lib/pexels";
 import Link from "next/link";
 import { formatDate } from "@/utils/formatDate";
 import { Separator } from "../ui/separator";
 import { BackLink } from "../common/back-link";
+import { PexelsPhoto } from "@/types/pexels";
 
-export async function PostHeader({ post }: { post: Post }) {
-  const photo = await getPexelsPhoto(post.imageId);
-
+export async function PostHeader({
+  post,
+  photo,
+}: {
+  post: Post;
+  photo: PexelsPhoto;
+}) {
   return (
     <div>
       <div className="mt-6">
