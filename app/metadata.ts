@@ -20,7 +20,7 @@ export function generateMetadata(): Metadata {
       url: baseUrl,
       images: [
         {
-          url: `${baseUrl}${featuredImagePath}`,
+          url: `${featuredImagePath}`,
           width: 1200,
           height: 630,
           alt: "Oscar - Financial Software Developer",
@@ -32,7 +32,7 @@ export function generateMetadata(): Metadata {
       title: "Oscar | Financial Software Developer",
       description:
         "I develop financial software with emphasis on visual design.",
-      images: [`${baseUrl}${featuredImagePath}`],
+      images: [`${featuredImagePath}`],
     },
   };
 }

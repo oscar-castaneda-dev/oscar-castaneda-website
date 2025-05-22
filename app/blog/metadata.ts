@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
       url,
       images: [
         {
-          url: `${baseUrl}${featuredImagePath}`,
+          url: `${featuredImagePath}`,
           width: 1200,
           height: 630,
           alt: "Daily dev log featured image",
@@ -36,7 +36,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title: "Daily dev log | Development Blog",
       description: `A developer's journal of progress sharing what I learn as I build.`,
-      images: [`${baseUrl}${featuredImagePath}`],
+      images: [`${featuredImagePath}`],
     },
   };
 }
