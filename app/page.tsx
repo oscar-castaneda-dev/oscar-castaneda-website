@@ -15,3 +15,5 @@ export default async function Home() {
     </div>
   );
 }
+
+export { generateMetadata } from "./metadata";
