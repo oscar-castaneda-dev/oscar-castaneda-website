@@ -8,7 +8,6 @@ export async function generateMetadata(): Promise<Metadata> {
     .map((post) => post.title)
     .join(", ");
 
-  // Añadir fallback para baseUrl
   const baseUrl =
     process.env.NEXT_PUBLIC_BASE_URL || "https://oscarcastaneda.dev";
   const url = `${baseUrl}/blog`;
