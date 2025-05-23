@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const url = `${baseUrl}/blog`;
-  const featuredImagePath = "/blog-featured.webp";
+  const featuredImagePath = "/blog-featured.jpg";
 
   return {
     title: "Daily dev log | Development Blog",

@@ -2,8 +2,7 @@ import { Metadata } from "next";
 
 export function generateMetadata(): Metadata {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-
-  const featuredImagePath = "/blog-featured.webp";
+  const featuredImagePath = "/blog-featured.jpg";
 
   return {
     title: "Oscar | Financial Software Developer",
