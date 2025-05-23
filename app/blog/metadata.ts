@@ -8,7 +8,9 @@ export async function generateMetadata(): Promise<Metadata> {
     .map((post) => post.title)
     .join(", ");
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  // Añadir fallback para baseUrl
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL || "https://oscarcastaneda.dev";
   const url = `${baseUrl}/blog`;
   const featuredImagePath = "/blog-featured.jpg";
 
@@ -29,13 +31,16 @@ export async function generateMetadata(): Promise<Metadata> {
           width: 1200,
           height: 630,
           alt: "Daily dev log featured image",
+          type: "image/jpeg",
         },
       ],
+      siteName: "Oscar Castaneda",
     },
     twitter: {
       card: "summary_large_image",
       title: "Daily dev log | Development Blog",
-      description: `A developer's journal of progress sharing what I learn as I build.`,
+      description:
+        "A developer's journal of progress sharing what I learn as I build.",
       images: [`${baseUrl}${featuredImagePath}`],
     },
   };
