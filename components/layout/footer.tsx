@@ -1,10 +1,5 @@
+import { socialLiks } from "@/conts/socialLinks";
 import { SocialLink } from "../common/social-link";
-
-const socialLiks = [
-  { href: "https://x.com/iamoscar/", name: "twitter" },
-  { href: "https://www.instagram.com/oscar_castaneda_dev", name: "instagram" },
-  { href: "https://github.com/oscar-castaneda-dev/", name: "github" },
-];
 
 export function Footer() {
   return (
@@ -15,8 +10,8 @@ export function Footer() {
       </div>
       <ul className="flex flex-wrap gap-x-6 gap-y-2">
         {socialLiks.map((socialLink) => (
-          <li key={socialLink.name}>
-            <SocialLink href={socialLink.href} name={socialLink.name} />
+          <li key={socialLink.label}>
+            <SocialLink href={socialLink.href} name={socialLink.label} />
           </li>
         ))}
       </ul>
