@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function ProjectHeader() {
   return (
-    <div className="mb-16 max-w-4xl space-y-6">
+    <header className="mb-16 max-w-4xl space-y-6">
       <Badge
         variant="outline"
         className="px-4 py-1.5 text-sm font-medium rounded-2xl"
@@ -37,6 +37,6 @@ export function ProjectHeader() {
           </Button>
         </Link>
       </div>
-    </div>
+    </header>
   );
 }

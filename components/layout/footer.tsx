@@ -1,4 +1,4 @@
-import { socialLiks } from "@/conts/socialLinks";
+import { socialLiks } from "@/conts/social-links";
 import { SocialLink } from "../common/social-link";
 
 export function Footer() {

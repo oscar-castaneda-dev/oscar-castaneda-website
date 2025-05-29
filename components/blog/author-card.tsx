@@ -2,7 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { getSocialIcons } from "@/lib/social-icons";
 import { Separator } from "../ui/separator";
 import { SocialIconLink } from "../common/social-icon-link";
-import { socialLiks } from "@/conts/socialLinks";
+import { socialLiks } from "@/conts/social-links";
 
 export function AuthorCard() {
   return (
