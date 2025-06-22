@@ -1,5 +1,5 @@
 import { PostCard } from "@/components/blog/post-card";
-import { ModeToggle } from "@/components/ui/mode-toggle";
+import { Hero } from "@/components/common/hero";
 import { getPosts } from "@/lib/posts-service";
 
 export default async function HomePage() {
@@ -7,9 +7,15 @@ export default async function HomePage() {
 
   return (
     <div>
-      {posts.map((post) => (
-        <PostCard key={post.slug} post={post} />
-      ))}
+      <Hero
+        title="Daily dev log"
+        subtitle="A developer's journal of progress sharing what I learn as I build."
+      />
+      <div className="space-y-12">
+        {posts.map((post) => (
+          <PostCard key={post.slug} post={post} />
+        ))}
+      </div>
     </div>
   );
 }

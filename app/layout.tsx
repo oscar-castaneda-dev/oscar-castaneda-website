@@ -4,6 +4,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { inter, lora } from "@/lib/fonts";
 
 import "./globals.css";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: "Oscar Castaneda",
@@ -24,7 +26,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Header />
+          <div className="max-w-2xl mx-auto px-6 py-12">
+            <main>{children}</main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
