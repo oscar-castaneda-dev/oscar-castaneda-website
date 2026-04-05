@@ -26,9 +26,7 @@ This is a personal portfolio site with three routes:
 - `/about` (`app/about/page.tsx`) — Bio, stats strip, tech stack, contact CTA.
 - `/work/[slug]` (`app/work/[slug]/page.tsx`) — Project case study. Project data is a hardcoded object keyed by slug; unknown slugs fall back to `"nothing-phone"`.
 
-`app/layout.tsx` — Root layout. Injects an inline `<script>` before first paint to apply the saved theme class (`light`/`dark`) on `<html>`, avoiding a flash. Uses `suppressHydrationWarning` on `<html>` for this reason.
-
-`app/components/ThemeToggle.tsx` — `"use client"` component. Reads/writes `localStorage` key `"theme"`, toggles `.light`/`.dark` classes on `document.documentElement`.
+`app/layout.tsx` — Root layout. Sets up fonts and global metadata.
 
 ## Design Skill
 
