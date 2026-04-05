@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Space_Mono, Doto } from "next/font/google";
 import "./globals.css";
+import { Nav } from "./components/nav";
+import { Footer } from "./components/footer";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -33,9 +35,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`dark ${spaceGrotesk.variable} ${spaceMono.variable} ${doto.variable}`}
+      className={`dark text-base ${spaceGrotesk.variable} ${spaceMono.variable} ${doto.variable}`}
     >
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

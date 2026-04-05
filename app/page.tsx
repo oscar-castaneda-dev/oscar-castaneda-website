@@ -1,7 +1,9 @@
 export default function Home() {
   return (
-    <div>
-      <h1>Hello World!</h1>
-    </div>
+    <main className="min-h-screen flex flex-col">
+      <div className="container">
+        <h1>Oscar Castaneda</h1>
+      </div>
+    </main>
   );
 }
