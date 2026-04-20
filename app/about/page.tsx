@@ -1,7 +1,9 @@
+import { Page } from "../components/layout/page";
+
 export default function AboutPage() {
   return (
-    <div>
+    <Page>
       <p>About</p>
-    </div>
+    </Page>
   );
 }

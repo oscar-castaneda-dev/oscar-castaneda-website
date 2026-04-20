@@ -31,7 +31,7 @@
 - **Doto:** 36px+ only, tight tracking, never for body text
 - **Labels:** Always Space Mono, ALL CAPS, 0.06–0.1em spacing, 11–12px ("instrument panel" labels)
 - **Data/Numbers:** Always Space Mono. Units as `--label` size, slightly raised, adjacent
-- **Hierarchy:** display (Doto) > heading (Space Grotesk) > label (Space Mono caps) > body (Space Grotesk). Four levels max.
+- **Hierarchy:** heading (Doto) > subheading (Space Grotesk) > label (Space Mono caps) > text (Space Grotesk). Four levels max.
 
 ---
 
