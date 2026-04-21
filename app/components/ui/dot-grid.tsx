@@ -5,7 +5,7 @@ interface DotGridProps {
   className?: string;
 }
 
-export function DotGrid({ fade = false, className }: DotGridProps) {
+export function DotGrid({ fade = true, className }: DotGridProps) {
   return (
     <div
       className={cn(

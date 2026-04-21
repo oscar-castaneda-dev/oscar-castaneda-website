@@ -38,9 +38,9 @@ Dark mode only. All design tokens live in `app/globals.css` under `@theme`, whic
 
 **Colors** — custom tokens in `@theme` (use as `bg-*`, `text-*`, `border-*`). Pure black/white use Tailwind's `black`/`white`:
 
-- `surface` (#111) · `surface-raised` (#1a1a1a)
-- `border` (#222) · `border-visible` (#333)
-- `muted` (#666) · `subtle` (#999) · `body` (#e8e8e8)
+- `void` (#111) · `graphite` (#1a1a1a)
+- `carbon` (#222) · `slate` (#333)
+- `ash` (#666) · `smoke` (#999) · `mist` (#e8e8e8)
 - `accent` (#d71921) · `success` · `warning` · `interactive`
 
 **Spacing** — uses Tailwind's default numeric scale (`--spacing: 0.25rem`). Common values: `1`=4px · `2`=8px · `4`=16px · `6`=24px · `8`=32px · `12`=48px · `16`=64px · `24`=96px

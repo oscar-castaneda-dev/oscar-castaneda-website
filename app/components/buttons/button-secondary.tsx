@@ -23,7 +23,7 @@ export function ButtonSecondary({
 }: ButtonSecondaryProps) {
   const classes = cn(
     "inline-flex items-center rounded-full font-mono uppercase duration-150",
-    "border border-border-visible text-body transition-colors",
+    "border border-slate text-mist transition-colors",
     sizes[size],
     className,
   );

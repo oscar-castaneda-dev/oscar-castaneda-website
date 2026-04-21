@@ -1,13 +1,22 @@
 import { cn } from "@/lib/cn";
 
 const sizes = {
-  base: "text-base leading-[1.7]",
-  lg: "text-lg leading-[1.4]",
+  12: "text-xs leading-[1.4]",
+  14: "text-sm leading-[1.5]",
+  16: "text-base leading-[1.7]",
+  18: "text-lg leading-[1.4]",
+  20: "text-xl leading-[1.4]",
+  24: "text-2xl leading-[1.2]",
+  30: "text-3xl leading-[1.2]",
+  36: "text-4xl leading-[1.1]",
+  48: "text-5xl leading-[1.05]",
+  60: "text-6xl leading-[1.0]",
+  72: "text-7xl leading-[1.0]",
 } as const;
 
 const colors = {
-  body: "text-body",
-  subtle: "text-subtle",
+  mist: "text-mist",
+  smoke: "text-smoke",
 } as const;
 
 interface TextProps {
@@ -18,8 +27,8 @@ interface TextProps {
 }
 
 export function Text({
-  size = "base",
-  color = "body",
+  size = 16,
+  color = "mist",
   className,
   children,
 }: TextProps) {

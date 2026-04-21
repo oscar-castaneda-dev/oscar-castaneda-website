@@ -23,7 +23,7 @@ export function ButtonGhost({
 }: ButtonGhostProps) {
   const classes = cn(
     "inline-flex items-center rounded-full font-mono uppercase duration-150",
-    "border border-border-visible text-subtle transition-colors",
+    "border border-slate text-smoke transition-colors",
     sizes[size],
     className,
   );

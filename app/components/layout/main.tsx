@@ -9,7 +9,7 @@ export function Main({
 }) {
   return (
     <main className={cn("min-h-screen flex flex-col", className)}>
-      <div className="container">{children}</div>
+      {children}
     </main>
   );
 }

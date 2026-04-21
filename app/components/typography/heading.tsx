@@ -22,8 +22,9 @@ export function Heading({
   return (
     <Tag
       className={cn(
-        "font-nothing-doto tracking-[-0.03em] text-white font-bold leading-[0.92]",
+        "font-nothing-doto tracking-[-0.03em] text-white font-bold",
         sizes[size],
+        "leading-[0.92]",
         className,
       )}
     >

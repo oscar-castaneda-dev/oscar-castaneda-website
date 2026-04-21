@@ -2,18 +2,18 @@
 
 @theme {
   /* COLORS */
-  --color-surface: #111111;
-  --color-surface-raised: #1a1a1a;
-  --color-border: #222222;
-  --color-border-visible: #333333;
-  --color-muted: #666666;
-  --color-subtle: #999999;
-  --color-body: #e8e8e8;
+  --color-void: #111111;
+  --color-graphite: #1a1a1a;
+  --color-carbon: #222222;
+  --color-slate: #333333;
+  --color-ash: #666666;
+  --color-smoke: #999999;
+  --color-mist: #e8e8e8;
   --color-accent: #d71921;
   --color-accent-subtle: rgba(215, 25, 33, 0.15);
   --color-success: #4a9e5c;
   --color-warning: #d4a843;
-  --color-interactive: #5b9bf6;
+  --color-interactive: #f16a0d;
 
   /* FONTS */
   --font-sans: var(--font-space-grotesk), "DM Sans", system-ui, sans-serif;
@@ -27,7 +27,7 @@ html {
 
 body {
   background-color: black;
-  color: var(--color-body);
+  color: white;
   font-family: var(--font-sans);
   min-height: 100vh;
 }
@@ -57,7 +57,7 @@ body {
 @utility dot-grid {
   background-image: radial-gradient(
     circle,
-    var(--color-border-visible) 1px,
+    var(--color-slate) 1px,
     transparent 1px
   );
   background-size: 16px 16px;
@@ -66,7 +66,7 @@ body {
 @utility dot-grid-subtle {
   background-image: radial-gradient(
     circle,
-    var(--color-border) 0.5px,
+    var(--color-carbon) 0.5px,
     transparent 0.5px
   );
   background-size: 12px 12px;

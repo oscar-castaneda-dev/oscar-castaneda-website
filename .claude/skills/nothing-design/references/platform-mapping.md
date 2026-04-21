@@ -7,19 +7,19 @@ Load fonts via Google Fonts `<link>` or `@import`. Use CSS custom properties, `r
 ```css
 :root {
   --black: #000000;
-  --surface: #111111;
-  --surface-raised: #1A1A1A;
-  --border: #222222;
-  --border-visible: #333333;
-  --text-disabled: #666666;
-  --text-secondary: #999999;
-  --text-primary: #E8E8E8;
+  --void: #111111;
+  --graphite: #1A1A1A;
+  --carbon: #222222;
+  --slate: #333333;
+  --ash: #666666;
+  --smoke: #999999;
+  --mist: #E8E8E8;
   --text-display: #FFFFFF;
   --accent: #D71921;
   --accent-subtle: rgba(215,25,33,0.15);
   --success: #4A9E5C;
   --warning: #D4A843;
-  --interactive: #5B9BF6;
+  --interactive: #F16A0D;
 }
 ```
 
@@ -32,18 +32,18 @@ Register fonts in Info.plist, bundle `.ttf` files. Use `@Environment(\.colorSche
 ```swift
 extension Color {
     static let ndBlack = Color(hex: "000000")
-    static let ndSurface = Color(hex: "111111")
-    static let ndSurfaceRaised = Color(hex: "1A1A1A")
-    static let ndBorder = Color(hex: "222222")
-    static let ndBorderVisible = Color(hex: "333333")
-    static let ndTextDisabled = Color(hex: "666666")
-    static let ndTextSecondary = Color(hex: "999999")
-    static let ndTextPrimary = Color(hex: "E8E8E8")
+    static let ndVoid = Color(hex: "111111")
+    static let ndGraphite = Color(hex: "1A1A1A")
+    static let ndCarbon = Color(hex: "222222")
+    static let ndSlate = Color(hex: "333333")
+    static let ndAsh = Color(hex: "666666")
+    static let ndSmoke = Color(hex: "999999")
+    static let ndMist = Color(hex: "E8E8E8")
     static let ndTextDisplay = Color.white
     static let ndAccent = Color(hex: "D71921")
     static let ndSuccess = Color(hex: "4A9E5C")
     static let ndWarning = Color(hex: "D4A843")
-    static let ndInteractive = Color(hex: "5B9BF6")
+    static let ndInteractive = Color(hex: "F16A0D")
 }
 ```
 
@@ -68,13 +68,13 @@ Load fonts via `next/font/google`. Tokens live in `globals.css` under `@theme`. 
 | `--black` (bg) | `bg-black` |
 | `--black` (text) | `text-black` |
 | `--text-display` (#FFF) | `text-white` |
-| `--surface` | `bg-surface` |
-| `--surface-raised` | `bg-surface-raised` |
-| `--border` | `border-border` |
-| `--border-visible` | `border-border-visible` |
-| `--text-disabled` | `text-muted` |
-| `--text-secondary` | `text-subtle` |
-| `--text-primary` | `text-body` |
+| `--void` | `bg-void` |
+| `--graphite` | `bg-graphite` |
+| `--carbon` | `border-carbon` |
+| `--slate` | `border-slate` |
+| `--ash` | `text-ash` |
+| `--smoke` | `text-smoke` |
+| `--mist` | `text-mist` |
 | `--accent` | `text-accent` / `bg-accent` / `border-accent` |
 | `--accent-subtle` | `bg-accent-subtle` |
 | `--success` | `text-success` / `bg-success` |
@@ -115,8 +115,8 @@ Uses Tailwind's default `--spacing: 0.25rem` multiplier.
 @utility nd-label   { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.2; }
 @utility nd-doto    { font-family: var(--font-display); }
 @utility nd-mono    { font-family: var(--font-mono); }
-@utility dot-grid   { background-image: radial-gradient(circle, var(--color-border-visible) 1px, transparent 1px); background-size: 16px 16px; }
-@utility dot-grid-subtle { background-image: radial-gradient(circle, var(--color-border) 0.5px, transparent 0.5px); background-size: 12px 12px; }
+@utility dot-grid   { background-image: radial-gradient(circle, var(--color-slate) 1px, transparent 1px); background-size: 16px 16px; }
+@utility dot-grid-subtle { background-image: radial-gradient(circle, var(--color-carbon) 0.5px, transparent 0.5px); background-size: 12px 12px; }
 ```
 
 ### Component Patterns
@@ -130,21 +130,21 @@ Uses Tailwind's default `--spacing: 0.25rem` multiplier.
 
 **Secondary button** (outlined pill):
 ```tsx
-<button className="inline-flex items-center gap-2 py-3 px-6 border border-border-visible text-body rounded-full font-mono text-[13px] tracking-[0.06em] uppercase transition-colors duration-150">
+<button className="inline-flex items-center gap-2 py-3 px-6 border border-slate text-mist rounded-full font-mono text-[13px] tracking-[0.06em] uppercase transition-colors duration-150">
   LABEL
 </button>
 ```
 
 **Tag / chip** (technical, 4px radius):
 ```tsx
-<span className="nd-label text-body py-1 px-4 border border-border-visible rounded">
+<span className="nd-label text-mist py-1 px-4 border border-slate rounded">
   LABEL
 </span>
 ```
 
 **Tag / chip** (pill):
 ```tsx
-<span className="nd-label text-subtle py-1 px-3 border border-border-visible rounded-full">
+<span className="nd-label text-smoke py-1 px-3 border border-slate rounded-full">
   LABEL
 </span>
 ```
@@ -152,12 +152,12 @@ Uses Tailwind's default `--spacing: 0.25rem` multiplier.
 **Nav label** (active / inactive):
 ```tsx
 <span className="nd-label text-white">[ ACTIVE ]</span>
-<span className="nd-label text-muted">INACTIVE</span>
+<span className="nd-label text-ash">INACTIVE</span>
 ```
 
 **Section label** (tertiary marker):
 ```tsx
-<p className="nd-label text-subtle mb-8">01 — SECTION TITLE</p>
+<p className="nd-label text-smoke mb-8">01 — SECTION TITLE</p>
 ```
 
 **Dot-grid background** (decorative):
@@ -167,15 +167,15 @@ Uses Tailwind's default `--spacing: 0.25rem` multiplier.
 
 **Surface card**:
 ```tsx
-<div className="bg-surface border border-border rounded-xl p-6">
+<div className="bg-void border border-carbon rounded-xl p-6">
   {/* content */}
 </div>
 ```
 
 **Data row** (list item with divider):
 ```tsx
-<div className="grid grid-cols-[1fr_auto] items-center py-4 border-b border-border">
-  <span className="nd-label text-subtle">LABEL</span>
+<div className="grid grid-cols-[1fr_auto] items-center py-4 border-b border-carbon">
+  <span className="nd-label text-smoke">LABEL</span>
   <span className="nd-label text-white">VALUE</span>
 </div>
 ```
