@@ -5,7 +5,7 @@ export function Nav() {
   return (
     <header className="border-b border-border">
       <div className="container py-6 flex justify-between items-center">
-        <Link href="/" className="font-nothing-subtitle text-white text-sm">
+        <Link href="/" className="font-nothing-subtitle text-title text-sm">
           [ OC ]
         </Link>
         <nav className="flex items-center gap-8">

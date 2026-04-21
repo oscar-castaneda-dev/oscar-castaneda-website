@@ -71,7 +71,7 @@ Same numeric keys, no leading override (font-nothing-subtitle handles it). Defau
 | `--disabled` | `#666666` | 4.0:1 | Disabled text, decorative elements |
 | `--caption` | `#999999` | 6.3:1 | Labels, captions, metadata |
 | `--body` | `#E8E8E8` | 16.5:1 | Body text |
-| `--text-display` | `#FFFFFF` | 21:1 | Headlines, hero numbers |
+| `--title` | `#FFFFFF` | 21:1 | Headlines, hero numbers |
 
 ### Accent & Status Colors
 
@@ -99,7 +99,7 @@ Same numeric keys, no leading override (font-nothing-subtitle handles it). Defau
 | `--disabled` | `#666666` | `#999999` |
 | `--caption` | `#999999` | `#666666` |
 | `--body` | `#E8E8E8` | `#1A1A1A` |
-| `--text-display` | `#FFFFFF` | `#000000` |
+| `--title` | `#FFFFFF` | `#000000` |
 | `--action` | `#F16A0D` | `#F16A0D` |
 
 **Identical across modes:** Accent red, status colors, ALL CAPS labels, fonts, type scale, spacing, component shapes.

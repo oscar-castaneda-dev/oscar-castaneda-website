@@ -4,7 +4,7 @@ import {
   COLORS,
   STATUS_COLORS,
   WHITE_SCALE,
-} from "@/data/system-design";
+} from "@/data/design-system";
 
 export function Colors() {
   return (
@@ -32,22 +32,23 @@ export function Colors() {
           <div>
             <Subtitle className="mb-6">white scale</Subtitle>
             <div className="bg-card border border-border rounded-xl p-6 flex flex-col">
-              {WHITE_SCALE.map((whiteColor) => (
+              {WHITE_SCALE.map((whiteColor, index) => (
                 <div
                   key={whiteColor.color}
                   className="flex flex-col gap-2 py-4 border-b border-border last:border-b-0"
                 >
-                  <div
-                    className={`flex items-center gap-2 ${whiteColor.color}`}
+                  <span className="font-nothing-subtitle text-xs text-caption">
+                    class - {whiteColor.color}
+                  </span>
+                  <span
+                    className={`${whiteColor.color} font-nothing-code ${
+                      index === 0
+                        ? "text-2xl"
+                        : index === 1
+                          ? "text-xl"
+                          : "text-sm"
+                    }`}
                   >
-                    <span className="font-nothing-subtitle text-xs">
-                      {whiteColor.color}
-                    </span>
-                    <span className="font-nothing-subtitle text-xs">
-                      - {whiteColor.label}
-                    </span>
-                  </div>
-                  <span className={`${whiteColor.color} font-nothing-code`}>
                     {whiteColor.value}
                   </span>
                 </div>
@@ -57,17 +58,17 @@ export function Colors() {
           {/* STATUS COLORS */}
           <div>
             <Subtitle className="mb-6">status colors</Subtitle>
-            <div className="bg-card border border-border rounded-xl p-6 flex flex-col gap-4">
+            <div className="bg-card border border-border rounded-xl p-6 flex flex-col">
               {STATUS_COLORS.map((statusColor) => (
                 <div
                   key={statusColor.color}
-                  className="flex justify-between items-baseline gap-4"
+                  className="flex flex-col gap-2 py-4 border-b border-border last:border-b-0"
                 >
-                  <span className="font-nothing-subtitle text-xs text-disabled">
-                    {statusColor.color}
+                  <span className="font-nothing-subtitle text-xs text-caption">
+                    class - {statusColor.color}
                   </span>
                   <span
-                    className={`font-nothing-code text-xs ${statusColor.color}`}
+                    className={`font-nothing-code text-xl ${statusColor.color}`}
                   >
                     {statusColor.value}
                   </span>
@@ -78,17 +79,17 @@ export function Colors() {
           {/* BACKGROUND SCALE */}
           <div>
             <Subtitle className="mb-6">background scale</Subtitle>
-            <div className="flex flex-col gap-px border border-border rounded-xl overflow-hidden">
-              {BACKGROUND_SCALE.map((backgroundScale) => (
+            <div className="flex flex-col gap-px border border-border rounded-xl overflow-hidden bg-border">
+              {BACKGROUND_SCALE.map((bg) => (
                 <div
-                  key={backgroundScale.color}
-                  className={`${backgroundScale.color} px-5 py-3 flex justify-between items-center`}
+                  key={bg.color}
+                  className={`${bg.color} px-6 py-5 flex flex-col gap-1`}
                 >
-                  <span className="font-nothing-subtitle text-xs text-disabled">
-                    {backgroundScale.name}
+                  <span className="font-nothing-subtitle text-xs text-caption">
+                    class - {bg.name}
                   </span>
-                  <span className="font-nothing-subtitle text-xs text-disabled">
-                    {backgroundScale.label}
+                  <span className="font-nothing-code text-caption">
+                    {bg.hex}
                   </span>
                 </div>
               ))}

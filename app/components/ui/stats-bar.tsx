@@ -30,7 +30,7 @@ export function StatsBar({ items, className = "" }: StatsBarProps) {
             <span className="font-nothing-subtitle text-caption">
               {item.label}
             </span>
-            <span className={cn("font-nothing-subtitle",item.fontClasses ?? "text-white")}>
+            <span className={cn("font-nothing-subtitle",item.fontClasses ?? "text-title")}>
               {item.value}
             </span>
           </div>

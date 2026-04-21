@@ -66,7 +66,7 @@ Load fonts via `next/font/google`. Tokens live in `globals.css` under `@theme`. 
 | Design Token | Tailwind Class |
 |---|---|
 | `--surface` (bg) | `bg-surface` |
-| `--text-display` (#FFF) | `text-white` |
+| `--title` (#FFF) | `text-title` |
 | `--card` | `bg-card` |
 | `--raised` | `bg-raised` |
 | `--border` | `border-border` |

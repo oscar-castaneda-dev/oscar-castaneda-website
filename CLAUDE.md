@@ -40,7 +40,7 @@ Dark mode only. All design tokens live in `app/globals.css` under `@theme`, whic
 
 - `surface` (#000) · `card` (#111) · `raised` (#1a1a1a)
 - `border` (#222) · `outline` (#333)
-- `disabled` (#666) · `caption` (#999) · `body` (#e8e8e8)
+- `disabled` (#666) · `caption` (#999) · `body` (#e8e8e8) · `title` (#fff)
 - `accent` (#d71921) · `success` · `warning` · `action`
 
 **Spacing** — uses Tailwind's default numeric scale (`--spacing: 0.25rem`). Common values: `1`=4px · `2`=8px · `4`=16px · `6`=24px · `8`=32px · `12`=48px · `16`=64px · `24`=96px

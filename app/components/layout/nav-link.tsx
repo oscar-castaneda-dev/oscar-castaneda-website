@@ -17,7 +17,7 @@ export function NavLink({ href, children }: NavLinkProps) {
       href={href}
       className={cn(
         "font-nothing-subtitle",
-        pathname === href ? "text-success" : "text-white",
+        pathname === href ? "text-success" : "text-title",
       )}
     >
       {children}
