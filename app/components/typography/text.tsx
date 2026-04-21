@@ -15,8 +15,8 @@ const sizes = {
 } as const;
 
 const colors = {
-  mist: "text-mist",
-  smoke: "text-smoke",
+  body: "text-body",
+  caption: "text-caption",
 } as const;
 
 interface TextProps {
@@ -28,7 +28,7 @@ interface TextProps {
 
 export function Text({
   size = 16,
-  color = "mist",
+  color = "body",
   className,
   children,
 }: TextProps) {

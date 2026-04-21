@@ -15,10 +15,10 @@ const sizes = {
 } as const;
 
 const colors = {
-  smoke: "text-smoke",
-  ash: "text-ash",
+  caption: "text-caption",
+  disabled: "text-disabled",
   white: "text-white",
-  mist: "text-mist",
+  body: "text-body",
   success: "text-success",
   warning: "text-warning",
   accent: "text-accent",
@@ -34,7 +34,7 @@ interface SubtitleProps {
 
 export function Subtitle({
   size = 20,
-  color = "smoke",
+  color = "caption",
   as: Tag = "p",
   className,
   children,

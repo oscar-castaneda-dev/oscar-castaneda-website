@@ -8,11 +8,11 @@ import {
 
 export function Colors() {
   return (
-    <section className="py-16 border-b border-carbon">
+    <section className="py-16 border-b border-border">
       <div className="container space-y-6">
         <Subtitle>01 - colors</Subtitle>
         {/* COLORS */}
-        <div className="mb-9 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px border border-carbon bg-carbon overflow-hidden rounded">
+        <div className="mb-9 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px border border-border bg-border overflow-hidden rounded">
           {COLORS.map((color) => (
             <div
               key={color.name}
@@ -21,7 +21,7 @@ export function Colors() {
               <span className={`font-nothing-subtitle ${color.text}`}>
                 {color.name}
               </span>
-              <span className={`font-nothing-mono ${color.text}`}>
+              <span className={`font-nothing-code ${color.text}`}>
                 {color.hex}
               </span>
             </div>
@@ -31,11 +31,11 @@ export function Colors() {
           {/* WHITE SCALE */}
           <div>
             <Subtitle className="mb-6">white scale</Subtitle>
-            <div className="bg-void border border-carbon rounded-xl p-6 flex flex-col">
+            <div className="bg-card border border-border rounded-xl p-6 flex flex-col">
               {WHITE_SCALE.map((whiteColor) => (
                 <div
                   key={whiteColor.color}
-                  className="flex flex-col gap-2 py-4 border-b border-carbon last:border-b-0"
+                  className="flex flex-col gap-2 py-4 border-b border-border last:border-b-0"
                 >
                   <div
                     className={`flex items-center gap-2 ${whiteColor.color}`}
@@ -47,7 +47,7 @@ export function Colors() {
                       - {whiteColor.label}
                     </span>
                   </div>
-                  <span className={`${whiteColor.color} font-nothing-mono`}>
+                  <span className={`${whiteColor.color} font-nothing-code`}>
                     {whiteColor.value}
                   </span>
                 </div>
@@ -57,17 +57,17 @@ export function Colors() {
           {/* STATUS COLORS */}
           <div>
             <Subtitle className="mb-6">status colors</Subtitle>
-            <div className="bg-void border border-carbon rounded-xl p-6 flex flex-col gap-4">
+            <div className="bg-card border border-border rounded-xl p-6 flex flex-col gap-4">
               {STATUS_COLORS.map((statusColor) => (
                 <div
                   key={statusColor.color}
                   className="flex justify-between items-baseline gap-4"
                 >
-                  <span className="font-nothing-subtitle text-xs text-ash">
+                  <span className="font-nothing-subtitle text-xs text-disabled">
                     {statusColor.color}
                   </span>
                   <span
-                    className={`font-nothing-mono text-xs ${statusColor.color}`}
+                    className={`font-nothing-code text-xs ${statusColor.color}`}
                   >
                     {statusColor.value}
                   </span>
@@ -78,16 +78,16 @@ export function Colors() {
           {/* BACKGROUND SCALE */}
           <div>
             <Subtitle className="mb-6">background scale</Subtitle>
-            <div className="flex flex-col gap-px border border-carbon rounded-xl overflow-hidden">
+            <div className="flex flex-col gap-px border border-border rounded-xl overflow-hidden">
               {BACKGROUND_SCALE.map((backgroundScale) => (
                 <div
                   key={backgroundScale.color}
                   className={`${backgroundScale.color} px-5 py-3 flex justify-between items-center`}
                 >
-                  <span className="font-nothing-subtitle text-xs text-ash">
+                  <span className="font-nothing-subtitle text-xs text-disabled">
                     {backgroundScale.name}
                   </span>
-                  <span className="font-nothing-subtitle text-xs text-ash">
+                  <span className="font-nothing-subtitle text-xs text-disabled">
                     {backgroundScale.label}
                   </span>
                 </div>

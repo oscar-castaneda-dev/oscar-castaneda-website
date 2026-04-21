@@ -20,14 +20,14 @@ export function StatsBar({ items, className = "" }: StatsBarProps) {
 
         const cellClass = cn(
           "py-6 flex flex-col gap1",
-          isntFirst && "border-r border-carbon pr-8",
+          isntFirst && "border-r border-border pr-8",
           isntLast && "pl-8",
         );
 
         return (
           // prettier-ignore
           <div key={item.label} className={cellClass}>
-            <span className="font-nothing-subtitle text-smoke">
+            <span className="font-nothing-subtitle text-caption">
               {item.label}
             </span>
             <span className={cn("font-nothing-subtitle",item.fontClasses ?? "text-white")}>

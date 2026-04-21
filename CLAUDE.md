@@ -38,10 +38,10 @@ Dark mode only. All design tokens live in `app/globals.css` under `@theme`, whic
 
 **Colors** — custom tokens in `@theme` (use as `bg-*`, `text-*`, `border-*`). Pure black/white use Tailwind's `black`/`white`:
 
-- `void` (#111) · `graphite` (#1a1a1a)
-- `carbon` (#222) · `slate` (#333)
-- `ash` (#666) · `smoke` (#999) · `mist` (#e8e8e8)
-- `accent` (#d71921) · `success` · `warning` · `interactive`
+- `surface` (#000) · `card` (#111) · `raised` (#1a1a1a)
+- `border` (#222) · `outline` (#333)
+- `disabled` (#666) · `caption` (#999) · `body` (#e8e8e8)
+- `accent` (#d71921) · `success` · `warning` · `action`
 
 **Spacing** — uses Tailwind's default numeric scale (`--spacing: 0.25rem`). Common values: `1`=4px · `2`=8px · `4`=16px · `6`=24px · `8`=32px · `12`=48px · `16`=64px · `24`=96px
 
@@ -53,7 +53,7 @@ Dark mode only. All design tokens live in `app/globals.css` under `@theme`, whic
 
 **Custom utilities** (defined via `@utility` in `globals.css`):
 
-- `nd-label` — Space Mono, 11px, uppercase, tracked. Does NOT set color — always pair with a `text-*` class.
-- `nd-mono` / `nd-doto` — font-family shortcuts
+- `font-nothing-subtitle` — Space Mono, uppercase, letter-spacing 0.08em. Does NOT set color — always pair with a `text-*` class.
+- `font-nothing-code` / `font-nothing-dots` — font-family shortcuts
 - `dot-grid` / `dot-grid-subtle` — radial-gradient dot pattern backgrounds
 - `.container` — overrides Tailwind's container; max-width 1280px, horizontal padding `2xl`

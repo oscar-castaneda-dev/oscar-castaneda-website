@@ -5,7 +5,7 @@ import { Text } from "@/app/components/typography/text";
 
 export function Header() {
   return (
-    <section className="py-24 border-carbon border-b relative">
+    <section className="py-24 border-border border-b relative">
       <DotGrid />
       <div className="container space-y-8">
         <Subtitle>// system design</Subtitle>

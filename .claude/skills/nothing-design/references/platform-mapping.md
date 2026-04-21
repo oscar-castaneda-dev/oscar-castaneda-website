@@ -6,20 +6,20 @@ Load fonts via Google Fonts `<link>` or `@import`. Use CSS custom properties, `r
 
 ```css
 :root {
-  --black: #000000;
-  --void: #111111;
-  --graphite: #1A1A1A;
-  --carbon: #222222;
-  --slate: #333333;
-  --ash: #666666;
-  --smoke: #999999;
-  --mist: #E8E8E8;
+  --surface: #000000;
+  --card: #111111;
+  --raised: #1A1A1A;
+  --border: #222222;
+  --outline: #333333;
+  --disabled: #666666;
+  --caption: #999999;
+  --body: #E8E8E8;
   --text-display: #FFFFFF;
   --accent: #D71921;
   --accent-subtle: rgba(215,25,33,0.15);
   --success: #4A9E5C;
   --warning: #D4A843;
-  --interactive: #F16A0D;
+  --action: #F16A0D;
 }
 ```
 
@@ -31,19 +31,19 @@ Register fonts in Info.plist, bundle `.ttf` files. Use `@Environment(\.colorSche
 
 ```swift
 extension Color {
-    static let ndBlack = Color(hex: "000000")
-    static let ndVoid = Color(hex: "111111")
-    static let ndGraphite = Color(hex: "1A1A1A")
-    static let ndCarbon = Color(hex: "222222")
-    static let ndSlate = Color(hex: "333333")
-    static let ndAsh = Color(hex: "666666")
-    static let ndSmoke = Color(hex: "999999")
-    static let ndMist = Color(hex: "E8E8E8")
-    static let ndTextDisplay = Color.white
-    static let ndAccent = Color(hex: "D71921")
-    static let ndSuccess = Color(hex: "4A9E5C")
-    static let ndWarning = Color(hex: "D4A843")
-    static let ndInteractive = Color(hex: "F16A0D")
+    static let ndSurface  = Color(hex: "000000")
+    static let ndCard     = Color(hex: "111111")
+    static let ndRaised   = Color(hex: "1A1A1A")
+    static let ndBorder   = Color(hex: "222222")
+    static let ndOutline  = Color(hex: "333333")
+    static let ndDisabled = Color(hex: "666666")
+    static let ndCaption  = Color(hex: "999999")
+    static let ndBody     = Color(hex: "E8E8E8")
+    static let ndDisplay  = Color.white
+    static let ndAccent   = Color(hex: "D71921")
+    static let ndSuccess  = Color(hex: "4A9E5C")
+    static let ndWarning  = Color(hex: "D4A843")
+    static let ndAction   = Color(hex: "F16A0D")
 }
 ```
 
@@ -65,21 +65,20 @@ Load fonts via `next/font/google`. Tokens live in `globals.css` under `@theme`. 
 
 | Design Token | Tailwind Class |
 |---|---|
-| `--black` (bg) | `bg-black` |
-| `--black` (text) | `text-black` |
+| `--surface` (bg) | `bg-surface` |
 | `--text-display` (#FFF) | `text-white` |
-| `--void` | `bg-void` |
-| `--graphite` | `bg-graphite` |
-| `--carbon` | `border-carbon` |
-| `--slate` | `border-slate` |
-| `--ash` | `text-ash` |
-| `--smoke` | `text-smoke` |
-| `--mist` | `text-mist` |
+| `--card` | `bg-card` |
+| `--raised` | `bg-raised` |
+| `--border` | `border-border` |
+| `--outline` | `border-outline` |
+| `--disabled` | `text-disabled` |
+| `--caption` | `text-caption` |
+| `--body` | `text-body` |
 | `--accent` | `text-accent` / `bg-accent` / `border-accent` |
 | `--accent-subtle` | `bg-accent-subtle` |
 | `--success` | `text-success` / `bg-success` |
 | `--warning` | `text-warning` |
-| `--interactive` | `text-interactive` |
+| `--action` | `text-action` |
 
 ### Type Scale → Tailwind Class
 
@@ -115,8 +114,8 @@ Uses Tailwind's default `--spacing: 0.25rem` multiplier.
 @utility nd-label   { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.2; }
 @utility nd-doto    { font-family: var(--font-display); }
 @utility nd-mono    { font-family: var(--font-mono); }
-@utility dot-grid   { background-image: radial-gradient(circle, var(--color-slate) 1px, transparent 1px); background-size: 16px 16px; }
-@utility dot-grid-subtle { background-image: radial-gradient(circle, var(--color-carbon) 0.5px, transparent 0.5px); background-size: 12px 12px; }
+@utility dot-grid   { background-image: radial-gradient(circle, var(--color-outline) 1px, transparent 1px); background-size: 16px 16px; }
+@utility dot-grid-subtle { background-image: radial-gradient(circle, var(--color-border) 0.5px, transparent 0.5px); background-size: 12px 12px; }
 ```
 
 ### Component Patterns
@@ -130,21 +129,21 @@ Uses Tailwind's default `--spacing: 0.25rem` multiplier.
 
 **Secondary button** (outlined pill):
 ```tsx
-<button className="inline-flex items-center gap-2 py-3 px-6 border border-slate text-mist rounded-full font-mono text-[13px] tracking-[0.06em] uppercase transition-colors duration-150">
+<button className="inline-flex items-center gap-2 py-3 px-6 border border-outline text-body rounded-full font-mono text-[13px] tracking-[0.06em] uppercase transition-colors duration-150">
   LABEL
 </button>
 ```
 
 **Tag / chip** (technical, 4px radius):
 ```tsx
-<span className="nd-label text-mist py-1 px-4 border border-slate rounded">
+<span className="nd-label text-body py-1 px-4 border border-outline rounded">
   LABEL
 </span>
 ```
 
 **Tag / chip** (pill):
 ```tsx
-<span className="nd-label text-smoke py-1 px-3 border border-slate rounded-full">
+<span className="nd-label text-caption py-1 px-3 border border-outline rounded-full">
   LABEL
 </span>
 ```
@@ -152,12 +151,12 @@ Uses Tailwind's default `--spacing: 0.25rem` multiplier.
 **Nav label** (active / inactive):
 ```tsx
 <span className="nd-label text-white">[ ACTIVE ]</span>
-<span className="nd-label text-ash">INACTIVE</span>
+<span className="nd-label text-disabled">INACTIVE</span>
 ```
 
 **Section label** (tertiary marker):
 ```tsx
-<p className="nd-label text-smoke mb-8">01 — SECTION TITLE</p>
+<p className="nd-label text-caption mb-8">01 — SECTION TITLE</p>
 ```
 
 **Dot-grid background** (decorative):
@@ -167,15 +166,15 @@ Uses Tailwind's default `--spacing: 0.25rem` multiplier.
 
 **Surface card**:
 ```tsx
-<div className="bg-void border border-carbon rounded-xl p-6">
+<div className="bg-card border border-border rounded-xl p-6">
   {/* content */}
 </div>
 ```
 
 **Data row** (list item with divider):
 ```tsx
-<div className="grid grid-cols-[1fr_auto] items-center py-4 border-b border-carbon">
-  <span className="nd-label text-smoke">LABEL</span>
+<div className="grid grid-cols-[1fr_auto] items-center py-4 border-b border-border">
+  <span className="nd-label text-caption">LABEL</span>
   <span className="nd-label text-white">VALUE</span>
 </div>
 ```
