@@ -27,10 +27,10 @@ export function StatsBar({ items, className = "" }: StatsBarProps) {
         return (
           // prettier-ignore
           <div key={item.label} className={cellClass}>
-            <span className="font-nothing-label text-smoke">
+            <span className="font-nothing-subtitle text-smoke">
               {item.label}
             </span>
-            <span className={cn("font-nothing-label",item.fontClasses ?? "text-white")}>
+            <span className={cn("font-nothing-subtitle",item.fontClasses ?? "text-white")}>
               {item.value}
             </span>
           </div>

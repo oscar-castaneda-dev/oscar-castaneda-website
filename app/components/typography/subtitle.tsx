@@ -42,7 +42,7 @@ export function Subtitle({
   return (
     <Tag
       className={cn(
-        "font-nothing-label uppercase",
+        "font-nothing-subtitle uppercase",
         sizes[size],
         colors[color],
         className,

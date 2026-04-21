@@ -39,7 +39,7 @@ body {
   padding-inline: 3rem;
 }
 
-@utility font-nothing-label {
+@utility font-nothing-subtitle {
   font-family: var(--font-mono);
   letter-spacing: 0.08em;
   text-transform: uppercase;

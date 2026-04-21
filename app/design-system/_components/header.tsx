@@ -8,7 +8,7 @@ export function Header() {
     <section className="py-24 border-carbon border-b relative">
       <DotGrid />
       <div className="container space-y-8">
-        <Subtitle>// system · design</Subtitle>
+        <Subtitle>// system design</Subtitle>
         <Heading size="hero" className="uppercase">
           design
           <br />

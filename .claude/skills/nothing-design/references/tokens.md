@@ -46,7 +46,7 @@ Numeric key = px value. Default `16`.
 | 72 | `text-7xl` | 1.0 |
 
 **`<Subtitle size={n}>`** — `app/components/typography/subtitle.tsx`  
-Same numeric keys, no leading override (font-nothing-label handles it). Default `12`.
+Same numeric keys, no leading override (font-nothing-subtitle handles it). Default `12`.
 
 ### Typographic Rules
 
