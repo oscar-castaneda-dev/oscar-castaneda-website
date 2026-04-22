@@ -94,6 +94,37 @@ export function Typefaces() {
               ))}
             </div>
           </div>
+          {/* UTILITIES */}
+          <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 md:gap-16 border-t border-border py-12">
+            <div className="flex flex-col gap-1 pt-1">
+              <Subtitle className="text-title">type styles</Subtitle>
+              <Text className="text-disabled">raw classes</Text>
+            </div>
+            <div className="flex flex-col gap-y-12">
+
+              <div className="flex flex-col gap-y-2">
+                <Text size={12} color="caption">font-nothing-dots</Text>
+                <Text size={48} className="font-nothing-dots text-title">Dots</Text>
+                <Text size={48} className="font-nothing-dots text-accent">Dots</Text>
+              </div>
+
+              <div className="flex flex-col gap-y-2">
+                <Text size={12} color="caption">font-nothing-subtitle</Text>
+                <Text className="font-nothing-subtitle text-title">font nothing subtitle</Text>
+                <Text className="font-nothing-subtitle text-caption">font nothing subtitle</Text>
+                <Text className="font-nothing-subtitle text-disabled">font nothing subtitle</Text>
+                <Text className="font-nothing-subtitle text-accent">font nothing subtitle</Text>
+              </div>
+
+              <div className="flex flex-col gap-y-2">
+                <Text size={12} color="caption">font-nothing-code</Text>
+                <Text className="font-nothing-code">font-nothing-code</Text>
+                <Text className="font-nothing-code text-caption">font-nothing-code</Text>
+                <Text className="font-nothing-code text-accent">font-nothing-code</Text>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </section>

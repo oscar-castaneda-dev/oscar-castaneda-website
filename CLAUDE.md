@@ -28,6 +28,16 @@ This is a personal portfolio site with three routes:
 
 `app/layout.tsx` — Root layout. Sets up fonts and global metadata.
 
+## Typography Components
+
+**Never use raw `<p>`, `<span>`, `<h1>`–`<h3>` for text.** Always use the typography components:
+
+- `Heading` — `app/components/typography/heading.tsx` — Doto font, hero headings
+- `Subtitle` — `app/components/typography/subtitle.tsx` — Space Mono, uppercase labels
+- `Text` — `app/components/typography/text.tsx` — Space Grotesk, body content
+
+Raw HTML text elements are only acceptable inside these components themselves, not in pages or feature components.
+
 ## Design Skill
 
 This project has the `/nothing-design` skill available. **You must invoke it with the Skill tool before any design or UI task** — new pages, components, sections, or visual changes. The skill contains the design system rules and patterns and must guide every visual decision in the project.
