@@ -4,11 +4,11 @@
 
 ### Font Stack
 
-| Role | Font | Fallback | Weight |
-|------|------|----------|--------|
-| **Display** | `"Doto"` | `"Space Mono", monospace` | 400–700, variable dot-size |
-| **Body / UI** | `"Space Grotesk"` | `"DM Sans", system-ui, sans-serif` | Light 300, Regular 400, Medium 500, Bold 700 |
-| **Data / Labels** | `"Space Mono"` | `"JetBrains Mono", "SF Mono", monospace` | Regular 400, Bold 700 |
+| Role | Font | CSS Variable | Weight |
+|------|------|-------------|--------|
+| **Display** | `"Doto"` | `var(--font-doto)` | 400–700, variable dot-size |
+| **Body / UI** | `"Space Grotesk"` | `var(--font-space-grotesk)` | Light 300, Regular 400, Medium 500, Bold 700 |
+| **Data / Labels** | `"Space Mono"` | `var(--font-space-mono)` | Regular 400, Bold 700 |
 
 **Why these fonts:** Doto = variable dot-matrix (closest to NDot 57). Space Grotesk + Space Mono by Colophon Foundry — same foundry as Nothing's actual typefaces. Shared design DNA.
 
@@ -43,10 +43,16 @@ Numeric key = px value. Default `16`.
 | 36 | `text-4xl` | 1.1 |
 | 48 | `text-5xl` | 1.05 |
 | 60 | `text-6xl` | 1.0 |
-| 72 | `text-7xl` | 1.0 |
 
 **`<Subtitle size={n}>`** — `app/components/typography/subtitle.tsx`  
-Same numeric keys, no leading override (font-nothing-subtitle handles it). Default `12`.
+Space Mono, ALL CAPS, no leading override. Default `20`.
+
+| size | Tailwind |
+|------|----------|
+| 20 | `text-xl` |
+| 24 | `text-2xl` |
+| 30 | `text-3xl` |
+| 36 | `text-4xl` |
 
 ### Typographic Rules
 

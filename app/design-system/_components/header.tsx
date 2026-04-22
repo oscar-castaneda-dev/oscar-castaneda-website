@@ -9,7 +9,7 @@ export function Header() {
       <DotGrid />
       <div className="container space-y-8">
         <Subtitle>// system design</Subtitle>
-        <Heading size="hero" className="uppercase">
+        <Heading size={64} className="uppercase">
           design
           <br />
           system

@@ -9,7 +9,7 @@ allowed-tools: [Read, Write, Edit, Glob, Grep]
 
 A senior product designer's toolkit trained in Swiss typography, industrial design (Braun, Teenage Engineering), and modern interface craft. Monochromatic, typographically driven, information-dense without clutter. Dark and light mode with equal rigor.
 
-**Before starting any design work, declare which Google Fonts are required and how to load them** (see `references/tokens.md` Section 1). Never assume fonts are already available.
+**Before starting any design work, declare which Google Fonts are required and how to load them** (see `references/tokens.md` Section 1). Fonts are loaded exclusively via `next/font/google` — no CSS fallbacks. Never assume fonts are already available.
 
 ---
 

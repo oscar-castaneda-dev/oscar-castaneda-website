@@ -1,3 +1,7 @@
+// ============================================================
+// COLORS
+// ============================================================
+
 // prettier-ignore
 export const BACKGROUND_SCALE = [
   { color: "bg-surface", name: "bg-surface", hex: "#000000" },
@@ -21,12 +25,6 @@ export const COLORS = [
   { name: "warning",     hex: "#d4a843", bg: "bg-warning",     text: "text-black" },
   { name: "action",      hex: "#F16A0D", bg: "bg-action",      text: "text-black" },
 ];
-export const STATS = [
-  { label: "BASED IN", value: "MEXICO", valueClass: "text-title" },
-  { label: "EXPERIENCE", value: "5+ YEARS", valueClass: "text-title" },
-  { label: "FOCUS", value: "FULL-STACK", valueClass: "text-title" },
-  { label: "STATUS", value: "AVAILABLE", valueClass: "text-success" },
-];
 
 export const STATUS_COLORS = [
   { color: "text-success", value: "available" },
@@ -41,3 +39,13 @@ export const WHITE_SCALE = [
   { color: "text-caption", value: "The quick brown fox" },
   { color: "text-disabled", value: "The quick brown fox" },
 ];
+
+// ============================================================
+// TYPOGRAPHY
+// ============================================================
+
+export const HEADING_SIZES = [64, 48, 44] as const;
+
+export const SUBTITLE_SIZES = [36, 30, 24, 20] as const;
+
+export const TEXT_SIZES = [60, 48, 36, 30, 24, 20, 18, 16, 14, 12] as const;

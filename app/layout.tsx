@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Space_Mono, Doto } from "next/font/google";
+import { Doto, Space_Grotesk, Space_Mono } from "next/font/google";
 
 import "./globals.css";
 

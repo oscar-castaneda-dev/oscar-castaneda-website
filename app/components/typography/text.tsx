@@ -11,7 +11,6 @@ const sizes = {
   36: "text-4xl leading-[1.1]",
   48: "text-5xl leading-[1.05]",
   60: "text-6xl leading-[1.0]",
-  72: "text-7xl leading-[1.0]",
 } as const;
 
 const colors = {
@@ -33,8 +32,6 @@ export function Text({
   children,
 }: TextProps) {
   return (
-    <p className={cn(sizes[size], colors[color], "font-light", className)}>
-      {children}
-    </p>
+    <p className={cn(sizes[size], colors[color], className)}>{children}</p>
   );
 }

@@ -1,9 +1,9 @@
 import { cn } from "@/lib/cn";
 
 const sizes = {
-  hero: "text-[clamp(64px,11vw,128px)]",
-  lg: "text-[clamp(48px,8vw,100px)]",
-  md: "text-[clamp(44px,5.5vw,72px)]",
+  64: "text-[clamp(64px,11vw,128px)]",
+  48: "text-[clamp(48px,8vw,100px)]",
+  44: "text-[clamp(44px,5.5vw,72px)]",
 } as const;
 
 interface HeadingProps {
@@ -14,7 +14,7 @@ interface HeadingProps {
 }
 
 export function Heading({
-  size = "hero",
+  size = 64,
   as: Tag = "h1",
   className,
   children,

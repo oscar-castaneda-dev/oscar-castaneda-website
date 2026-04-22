@@ -18,9 +18,9 @@
   --color-action: #f16a0d;
 
   /* FONTS */
-  --font-sans: var(--font-space-grotesk), "DM Sans", system-ui, sans-serif;
-  --font-mono: var(--font-space-mono), "JetBrains Mono", monospace;
-  --font-display: var(--font-doto), "Space Mono", monospace;
+  --font-sans: var(--font-space-grotesk);
+  --font-mono: var(--font-space-mono);
+  --font-display: var(--font-doto);
 }
 
 html {
