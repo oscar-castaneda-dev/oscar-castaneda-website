@@ -20,11 +20,15 @@ interface Dot {
 
 const SPACING = 16;
 const RADIUS = 1;
-const COLOR = "#555";
+const COLOR = "#9d9d9d";
 const MOUSE_R = 80;
 const MOUSE_R_SQ = MOUSE_R * MOUSE_R;
 
-export function DotGrid({ fade = true, className, interactive = false }: DotGridProps) {
+export function DotGrid({
+  fade = true,
+  className,
+  interactive = false,
+}: DotGridProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const stateRef = useRef({
     dots: [] as Dot[],
@@ -115,15 +119,36 @@ export function DotGrid({ fade = true, className, interactive = false }: DotGrid
       drawDots();
     }
 
-    function onMouseMove(e: MouseEvent) {
+    function getPos(clientX: number, clientY: number) {
       const rect = canvas!.getBoundingClientRect();
-      s.mx = e.clientX - rect.left;
-      s.my = e.clientY - rect.top;
+      return { x: clientX - rect.left, y: clientY - rect.top };
+    }
+
+    function onMouseMove(e: MouseEvent) {
+      const { x, y } = getPos(e.clientX, e.clientY);
+      s.mx = x;
+      s.my = y;
       s.mouseActive = true;
       startLoop();
     }
 
     function onMouseLeave() {
+      s.mouseActive = false;
+      s.mx = -9999;
+      s.my = -9999;
+      startLoop();
+    }
+
+    function onTouchMove(e: TouchEvent) {
+      const touch = e.touches[0];
+      const { x, y } = getPos(touch.clientX, touch.clientY);
+      s.mx = x;
+      s.my = y;
+      s.mouseActive = true;
+      startLoop();
+    }
+
+    function onTouchEnd() {
       s.mouseActive = false;
       s.mx = -9999;
       s.my = -9999;
@@ -137,12 +162,18 @@ export function DotGrid({ fade = true, className, interactive = false }: DotGrid
 
     parent.addEventListener("mousemove", onMouseMove);
     parent.addEventListener("mouseleave", onMouseLeave);
+    parent.addEventListener("touchmove", onTouchMove, { passive: true });
+    parent.addEventListener("touchend", onTouchEnd);
+    parent.addEventListener("touchcancel", onTouchEnd);
 
     return () => {
       cancelAnimationFrame(s.rafId);
       ro.disconnect();
       parent.removeEventListener("mousemove", onMouseMove);
       parent.removeEventListener("mouseleave", onMouseLeave);
+      parent.removeEventListener("touchmove", onTouchMove);
+      parent.removeEventListener("touchend", onTouchEnd);
+      parent.removeEventListener("touchcancel", onTouchEnd);
     };
   }, [interactive]);
 
