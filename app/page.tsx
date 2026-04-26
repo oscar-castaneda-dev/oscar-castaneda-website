@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <Main>
       <Hero />
+      <ProjectGrid />
     </Main>
   );
 }

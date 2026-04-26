@@ -1,17 +1,13 @@
-import Link from "next/link";
 import { NavLink } from "./nav-link";
+import { Logo } from "../ui/logo";
 
 export function Nav() {
   return (
     <header className="border-b border-border">
       <div className="container py-6 flex justify-between items-center">
-        <Link href="/" className="font-nothing-subtitle text-title text-sm">
-          [ OC ]
-        </Link>
+        <Logo />
         <nav className="flex items-center gap-8">
-          <NavLink href="/#work">WORK</NavLink>
-          <NavLink href="/about">ABOUT</NavLink>
-          <NavLink href="/#contact">CONTACT</NavLink>
+          <NavLink href="/about">about</NavLink>
         </nav>
       </div>
     </header>

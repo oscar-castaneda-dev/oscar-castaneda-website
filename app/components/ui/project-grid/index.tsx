@@ -10,7 +10,7 @@ import { Contact } from "./contact";
 
 export function ProjectGrid() {
   return (
-    <div className="project-grid">
+    <section className="container mb-24 project-grid">
       <ProjectCard area="project1" project={PROJECTS[0]} featured />
       <Experience />
       <Role />
@@ -22,6 +22,6 @@ export function ProjectGrid() {
       <ProjectCard area="project3" project={PROJECTS[2]} />
       <ProjectCard area="project4" project={PROJECTS[3]} />
       <Contact />
-    </div>
+    </section>
   );
 }

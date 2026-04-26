@@ -18,7 +18,7 @@ export function Hero() {
           AI Engineer specializing in ML, NLP, and inference-powered digital
           products. Shipping web and mobile applications with AI at the core.
         </Text>
-        <div className="flex gap-12 border-t border-border py-6">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-12 border-t border-border py-6">
           {PROFILE_META.map(({ colorClass, label, value }) => (
             <div key={label} className="flex flex-col gap-1">
               <Subtitle>{label}</Subtitle>
