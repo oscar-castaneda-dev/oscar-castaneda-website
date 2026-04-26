@@ -25,8 +25,20 @@ const doto = Doto({
 });
 
 export const metadata: Metadata = {
-  title: "Oscar Castaneda",
-  description: "Software engineer building things for the web.",
+  title: "Oscar Castaneda — AI Engineer",
+  description:
+    "AI Engineer specializing in ML, NLP, and inference-powered digital products. Shipping web and mobile applications with AI at the core.",
+  keywords: [
+    "AI Engineer",
+    "ML",
+    "NLP",
+    "React",
+    "Python",
+    "Web",
+    "Mobile",
+    "México",
+  ],
+  authors: [{ name: "Oscar Castaneda" }],
 };
 
 export default function RootLayout({
