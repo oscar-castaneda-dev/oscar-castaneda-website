@@ -73,3 +73,53 @@ body {
   );
   background-size: 12px 12px;
 }
+
+/* =======================
+   PROJECT GRID
+   ======================= */
+
+@utility project-grid {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+
+  /* DESKTOP */
+  grid-template-columns: 2fr 1.2fr 1.2fr;
+  grid-template-rows: 180px 180px 260px 260px;
+  grid-template-areas:
+    "project1 experience role"
+    "project1 building location"
+    "project2 something stack"
+    "project3 project4 contact";
+
+  /* TABLET */
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: unset;
+    grid-template-areas:
+      "project1 project1"
+      "experience role"
+      "building location"
+      "project2 something"
+      "stack stack"
+      "project3 project4"
+      "contact contact";
+  }
+
+  /* MOBILE */
+  @media (max-width: 639px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "project1"
+      "experience"
+      "role"
+      "building"
+      "location"
+      "project2"
+      "something"
+      "stack"
+      "project3"
+      "project4"
+      "contact";
+  }
+}
