@@ -1,12 +1,11 @@
 import { Main } from "@/app/components/layout/main";
 import { ProjectGrid } from "@/app/components/ui/project-grid";
+import { Hero } from "./home/hero";
 
 export default function Home() {
   return (
     <Main>
-      <section className="container py-16">
-        <ProjectGrid />
-      </section>
+      <Hero />
     </Main>
   );
 }

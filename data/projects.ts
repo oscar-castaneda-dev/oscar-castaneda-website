@@ -15,7 +15,7 @@ export const PROJECTS: Project[] = [
     year: "2026",
   },
   {
-    category: "Mobile App",
+    category: "web",
     img: "/images/placeholder.svg",
     slug: "ronas",
     title: "ronas",

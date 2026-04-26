@@ -6,7 +6,6 @@ import { cn } from "@/lib/cn";
 interface DotGridProps {
   fade?: boolean;
   className?: string;
-  interactive?: boolean;
 }
 
 interface Dot {
@@ -20,15 +19,11 @@ interface Dot {
 
 const SPACING = 16;
 const RADIUS = 1;
-const COLOR = "#9d9d9d";
+const COLOR = "#787878";
 const MOUSE_R = 80;
 const MOUSE_R_SQ = MOUSE_R * MOUSE_R;
 
-export function DotGrid({
-  fade = true,
-  className,
-  interactive = false,
-}: DotGridProps) {
+export function DotGrid({ fade = true, className }: DotGridProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const stateRef = useRef({
     dots: [] as Dot[],
@@ -40,8 +35,6 @@ export function DotGrid({
   });
 
   useEffect(() => {
-    if (!interactive) return;
-
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
@@ -175,19 +168,7 @@ export function DotGrid({
       parent.removeEventListener("touchend", onTouchEnd);
       parent.removeEventListener("touchcancel", onTouchEnd);
     };
-  }, [interactive]);
-
-  if (!interactive) {
-    return (
-      <div
-        className={cn(
-          "dot-grid absolute inset-0 pointer-events-none",
-          fade && "mask-[linear-gradient(to_bottom,black_0%,transparent_100%)]",
-          className,
-        )}
-      />
-    );
-  }
+  }, []);
 
   return (
     <canvas
