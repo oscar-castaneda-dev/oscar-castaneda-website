@@ -8,31 +8,31 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
-    category: "finance",
+    category: "01 -web",
     img: "/images/placeholder.svg",
-    slug: "finexy",
-    title: "finexy",
+    slug: "datex",
+    title: "datex",
     year: "2026",
   },
   {
-    category: "web",
+    category: "02 - web",
     img: "/images/placeholder.svg",
-    slug: "ronas",
-    title: "ronas",
+    slug: "pulso",
+    title: "pulso",
     year: "2026",
   },
   {
-    category: "app",
+    category: "03 - dashboard",
     img: "/images/placeholder.svg",
-    slug: "nixtio",
-    title: "nixtio",
+    slug: "nori",
+    title: "nori",
     year: "2026",
   },
   {
-    category: "app",
+    category: "04 - mobile app",
     img: "/images/placeholder.svg",
-    slug: "social-ai",
-    title: "SocialAI",
+    slug: "signa",
+    title: "signa",
     year: "2026",
   },
 ];

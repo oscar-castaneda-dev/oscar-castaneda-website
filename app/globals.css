@@ -89,7 +89,7 @@ body {
   grid-template-areas:
     "project1 experience role"
     "project1 building location"
-    "project2 something stack"
+    "project2 blog stack"
     "project3 project4 contact";
 
   /* TABLET */
@@ -100,7 +100,7 @@ body {
       "project1 project1"
       "experience role"
       "building location"
-      "project2 something"
+      "project2 blog"
       "stack stack"
       "project3 project4"
       "contact contact";
@@ -116,7 +116,7 @@ body {
       "building"
       "location"
       "project2"
-      "something"
+      "blog"
       "stack"
       "project3"
       "project4"
