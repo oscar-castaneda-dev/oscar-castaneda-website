@@ -2,7 +2,7 @@ import { Card } from "./card";
 import { Heading } from "@/app/components/typography/heading";
 import { Subtitle } from "@/app/components/typography/subtitle";
 import { ArrowRightUpIcon } from "../../icons/arrow-right-up";
-import { IconLink } from "../icon-link";
+import { ExternalLink } from "../external-link";
 
 export function Contact() {
   return (
@@ -12,15 +12,15 @@ export function Contact() {
         let&apos;s talk
       </Heading>
       <div className="flex flex-col">
-        <IconLink
+        <ExternalLink
           href="https://github.com/oscar-castaneda-dev"
           icon={<ArrowRightUpIcon />}
         >
           github
-        </IconLink>
-        <IconLink href="https://x.com/iamoscar" icon={<ArrowRightUpIcon />}>
+        </ExternalLink>
+        <ExternalLink href="https://x.com/iamoscar" icon={<ArrowRightUpIcon />}>
           twitter
-        </IconLink>
+        </ExternalLink>
       </div>
     </Card>
   );

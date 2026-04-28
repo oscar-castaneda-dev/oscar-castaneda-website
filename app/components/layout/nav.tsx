@@ -7,7 +7,7 @@ export function Nav() {
       <div className="container py-6 flex justify-between items-center">
         <Logo />
         <nav className="flex items-center gap-8">
-          <NavLink href="/about">about</NavLink>
+          <NavLink href="/about">/about</NavLink>
         </nav>
       </div>
     </header>

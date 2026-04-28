@@ -1,13 +1,13 @@
 import { cn } from "@/lib/cn";
 
-interface IconLinkProps {
+interface ExternalLinkProps {
   children: React.ReactNode;
   className?: string;
   href: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
 }
 
-export function IconLink({ children, className, href, icon }: IconLinkProps) {
+export function ExternalLink({ children, className, href, icon }: ExternalLinkProps) {
   return (
     <a
       href={href}
