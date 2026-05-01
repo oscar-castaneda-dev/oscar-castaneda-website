@@ -7,7 +7,7 @@ import { Text } from "@/app/components/typography/text";
 
 export function AboutHero() {
   return (
-    <section className="py-16 relative overflow-hidden border-b border-border">
+    <section className="py-16 relative overflow-hidden border-border">
       <DotGrid fade />
       <div className="container relative">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">

@@ -1,6 +1,7 @@
 import { Heading } from "@/app/components/typography/heading";
 import { Subtitle } from "@/app/components/typography/subtitle";
 import { Text } from "@/app/components/typography/text";
+import { YEARS_OF_EXPERIENCE } from "@/app/constants";
 
 export function Experience() {
   return (
@@ -11,7 +12,7 @@ export function Experience() {
       <Subtitle color="body">experience</Subtitle>
       <div>
         <Heading size={48} as="h3">
-          {new Date().getFullYear() - 2012}
+          {YEARS_OF_EXPERIENCE}
         </Heading>
         <Text size={12}>years</Text>
       </div>
