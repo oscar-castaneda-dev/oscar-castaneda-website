@@ -5,7 +5,7 @@ import { Subtitle } from "@/app/components/typography/subtitle";
 import { Text } from "@/app/components/typography/text";
 import { ButtonPrimary } from "@/app/components/buttons/button-primary";
 
-export function Hero() {
+export function HomeHero() {
   return (
     <section className="py-24 relative overflow-hidden">
       <DotGrid />
