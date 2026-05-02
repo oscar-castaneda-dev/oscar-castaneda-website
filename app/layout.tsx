@@ -25,7 +25,7 @@ const doto = Doto({
 });
 
 export const metadata: Metadata = {
-  title: "Oscar Castaneda — AI Engineer",
+  title: "Oscar Castaneda",
   description:
     "AI Engineer specializing in ML, NLP, and inference-powered digital products. Shipping web and mobile applications with AI at the core.",
   keywords: [
