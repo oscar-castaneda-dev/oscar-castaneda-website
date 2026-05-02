@@ -1,11 +1,14 @@
+import Link from "next/link";
+
 import { Heading } from "@/app/components/typography/heading";
 import { Text } from "@/app/components/typography/text";
 import { ArrowRightUpIcon } from "../../icons/arrow-right-up";
 
 export function Blog() {
   return (
-    <div
-      className="rounded-lg p-5 flex flex-col justify-between min-h-40 border border-[#1e1e33] bg-[#0d0d1a]"
+    <Link
+      href="/blog"
+      className="rounded-lg p-5 flex flex-col justify-between min-h-40 border border-[#1e1e33] bg-[#0d0d1a] transition-colors duration-200 hover:border-indigo-500/40 hover:bg-[#0f0f20]"
       style={{ gridArea: "blog" }}
     >
       <Text size={14} className="text-indigo-300 uppercase">
@@ -20,6 +23,6 @@ export function Blog() {
           <ArrowRightUpIcon className="text-indigo-300" size={20} />
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

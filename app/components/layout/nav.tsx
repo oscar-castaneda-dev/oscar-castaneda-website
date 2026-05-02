@@ -8,6 +8,7 @@ export function Nav() {
         <Logo />
         <nav className="flex items-center gap-8">
           <NavLink href="/about">/about</NavLink>
+          <NavLink href="/work">/work</NavLink>
         </nav>
       </div>
     </header>
