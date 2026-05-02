@@ -42,8 +42,8 @@ export function ProjectCard({
         }
         className="object-cover opacity-50 transition-opacity duration-300 group-hover:opacity-100"
       />
-      <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/15 to-transparent" />
-      <div className="absolute inset-0 flex flex-col justify-between p-5">
+      <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/15 to-transparent transition-opacity duration-300 group-hover:opacity-0" />
+      <div className="absolute inset-0 flex flex-col justify-between p-5 transition-opacity duration-300 group-hover:opacity-0">
         <Subtitle color="body">{category}</Subtitle>
         <div>
           <Heading size={featured ? 44 : 36} as="h2" className="uppercase">

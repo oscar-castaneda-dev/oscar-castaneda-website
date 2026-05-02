@@ -19,7 +19,7 @@ export function HomeHero() {
           AI Engineer specializing in ML, NLP, and inference-powered digital
           products. Shipping web and mobile applications with AI at the core.
         </Text>
-        <ButtonPrimary href="/" className="mb-16">
+        <ButtonPrimary href="/work" className="mb-16">
           View my work
         </ButtonPrimary>
         <div className="flex flex-col md:flex-row gap-6 md:gap-12 border-t border-border py-6">
