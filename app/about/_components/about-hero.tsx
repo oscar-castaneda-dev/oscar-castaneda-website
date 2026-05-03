@@ -14,7 +14,7 @@ export function AboutHero() {
           {/* LEFT COLUMN */}
           <div className="col-span-1 md:col-span-2 flex flex-col">
             <Subtitle className="mb-3">// who i am</Subtitle>
-            <Heading size={44} className="uppercase mb-1">
+            <Heading size={48} className="uppercase mb-1">
               Oscar <br /> Castaneda
             </Heading>
             <Text className="uppercase mb-6">Tech Lead - AI Engineer</Text>

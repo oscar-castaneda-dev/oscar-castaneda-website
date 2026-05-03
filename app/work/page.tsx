@@ -1,7 +1,10 @@
+import { Main } from "@/app/components/layout/main";
+import { WorkHero } from "./_components/work-hero";
+
 export default function WorkPage() {
   return (
-    <div>
-      <p>WorkPage</p>
-    </div>
+    <Main>
+      <WorkHero />
+    </Main>
   );
 }

@@ -8,7 +8,7 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
-    category: "01 -web",
+    category: "01 - web",
     img: "/images/placeholder.svg",
     slug: "datex",
     title: "datex",
