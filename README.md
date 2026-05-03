@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![Oscar Castaneda](./public/preview.webp)
 
-## Getting Started
+# oscar-castaneda.dev
 
-First, run the development server:
+Personal portfolio. AI Engineer specializing in ML, NLP, and inference-powered digital products.
+
+## Stack
+
+- **Next.js 16** with React 19
+- **Tailwind CSS v4**
+- **Fonts:** Space Grotesk (body), Space Mono (labels), Doto (headings)
+
+## Routes
+
+- `/` — Home: hero, projects grid, footer
+- `/about` — Bio, stats strip, tech stack, contact CTA
+- `/work` — Selected work list
+- `/work/[slug]` — Project case studies
+- `/design-system` — Live design system reference
+- `/404` — Custom not found page
+
+## Design System
+
+Dark mode only. Custom "Nothing" design system with colors, typography, and spacing all defined as Tailwind utilities in `app/globals.css`.
+
+**Colors**
+
+- Backgrounds: `surface` (#000), `card` (#111), `raised` (#1a1a1a)
+- Borders: `border` (#222), `outline` (#333)
+- Text: `caption` (#999), `body` (#e8e8e8), `title` (#fff)
+- Status: `accent` (#d71921), `success`, `warning`, `action`
+
+**Typography components** — raw HTML text elements are not used in pages or feature components:
+
+- `Heading` — Doto font, sizes 44/48/64, used for hero headings
+- `Subtitle` — Space Mono, sizes 20/24/30/36, uppercase labels
+- `Text` — Space Grotesk, sizes 12–60, body content
+
+**Custom utility classes:**
+
+- `font-nothing-subtitle` — Space Mono, uppercase, tracked
+- `font-nothing-dots` — Doto font shortcut
+- `font-nothing-code` — monospace shortcut
+
+## Git Hooks
+
+Uses **Husky** with lint-staged. On every commit, ESLint runs against staged `.ts` and `.tsx` files with `--max-warnings=0` — the commit is blocked if any warning or error is found.
+
+## Dev
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm dev         # localhost:3000
+pnpm build
+pnpm lint
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

@@ -7,9 +7,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run dev      # Start dev server (Next.js 16 on http://localhost:3000)
-npm run build    # Production build
-npm run lint     # ESLint (no test suite exists)
+pnpm dev         # Start dev server (Next.js 16 on http://localhost:3000)
+pnpm build       # Production build
+pnpm lint        # ESLint (no test suite exists)
 ```
 
 ## Stack
