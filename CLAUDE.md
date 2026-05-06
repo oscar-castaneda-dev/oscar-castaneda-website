@@ -12,6 +12,10 @@ pnpm build       # Production build
 pnpm lint        # ESLint (no test suite exists)
 ```
 
+## TypeScript
+
+Prefer `interface` over `type` where possible (object shapes, component props). Use `type` only when `interface` can't express it: unions, mapped types, utility types (`Record`, `Pick`, etc.).
+
 ## Stack
 
 - **Next.js 16.2.2** with React 19 — App Router, TypeScript
