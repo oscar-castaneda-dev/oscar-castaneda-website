@@ -16,6 +16,7 @@ const sizes = {
 const colors = {
   body: "text-body",
   caption: "text-caption",
+  title: "text-title",
 } as const;
 
 interface TextProps {

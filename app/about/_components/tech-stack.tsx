@@ -4,7 +4,7 @@ import { STACK } from "@/data/stack";
 
 export function TechStack() {
   return (
-    <section className="py-16 border-b border-boder">
+    <section className="py-16">
       <div className="container">
         <Subtitle className="mb-8">// stack</Subtitle>
         <div className="flex flex-col gap-5">

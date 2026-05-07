@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Doto, Space_Grotesk, Space_Mono } from "next/font/google";
 
-import "./globals.css";
+import { Nav } from "@/app/components/layout/nav";
+import { Footer } from "@/app/components/layout/footer";
 
-import { Nav } from "./components/layout/nav";
-import { Footer } from "./components/layout/footer";
+import "@/app/globals.css";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",

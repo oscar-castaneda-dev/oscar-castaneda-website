@@ -1,10 +1,41 @@
+import Link from "next/link";
+
 import { ArrowRightUpIcon } from "@/app/components/icons/arrow-right-up";
 import { ExternalLink } from "@/app/components/ui/external-link";
+import { Text } from "@/app/components/typography/text";
+import { Subtitle } from "@/app/components/typography/subtitle";
 
 export function Footer() {
   return (
     <footer className="border-t border-border">
-      <div className="container py-8 flex flex-col md:flex-row justify-start md:justify-between text-body">
+      {/* NAVIGATION SECTION */}
+      <div className="container py-12 flex flex-col md:flex-row justify-between gap-12">
+        <div className="flex flex-col gap-2">
+          <Text color="title" className="uppercase">
+            oc.
+          </Text>
+          <Text color="caption">Tech Lead, AI Engineer</Text>
+        </div>
+        <div className="flex flex-col gap-4">
+          <Subtitle>Navigate</Subtitle>
+          <nav className="flex flex-col items-end gap-3">
+            <Link
+              href="/about"
+              className="text-body hover:text-title transition-colors duration-150"
+            >
+              about
+            </Link>
+            <Link
+              href="/work"
+              className="text-body hover:text-title transition-colors duration-150"
+            >
+              work
+            </Link>
+          </nav>
+        </div>
+      </div>
+      {/* COPYRIGHT SECTION */}
+      <div className="border-t border-border container py-8 flex flex-col md:flex-row justify-start md:justify-between text-body">
         <div className="flex items-cente mb-4 md:mb-0">
           {new Date().getFullYear()} - Oscar Castaneda
         </div>
