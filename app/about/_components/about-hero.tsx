@@ -10,9 +10,9 @@ export function AboutHero() {
     <section className="py-16 relative overflow-hidden border-border">
       <DotGrid fade />
       <div className="container relative">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
           {/* LEFT COLUMN */}
-          <div className="col-span-1 md:col-span-2 flex flex-col">
+          <div className="col-span-1 md:col-span-3 flex flex-col">
             <Subtitle className="mb-3">// who i am</Subtitle>
             <Heading size={48} className="uppercase mb-1">
               Oscar <br /> Castaneda
@@ -34,7 +34,7 @@ export function AboutHero() {
             </div>
           </div>
           {/* RIGHT COLUMN */}
-          <div className="relative w-full aspect-square md:aspect-3/4 bg-surface border border-border rounded-xl overflow-hidden order-first md:order-0 md:[transform:perspective(1000px)_rotateY(-8deg)]">
+          <div className="relative w-full aspect-square md:aspect-3/4 bg-surface border border-border rounded-xl overflow-hidden order-first md:order-0 md:col-span-2">
             <Image
               src="/images/avatar.webp"
               alt="Oscar Castaneda"
