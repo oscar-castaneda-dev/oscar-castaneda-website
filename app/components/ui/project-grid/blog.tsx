@@ -8,7 +8,7 @@ export function Blog() {
   return (
     <Link
       href="/blog"
-      className="rounded-lg p-5 flex flex-col justify-between min-h-40 border border-[#1e1e33] bg-[#0d0d1a] transition-colors duration-200 hover:border-indigo-500/40 hover:bg-[#0f0f20]"
+      className="rounded-lg p-5 flex flex-col justify-between min-h-40 border border-indigo-border bg-indigo-surface transition-colors duration-200 hover:border-indigo-500/40 hover:bg-[#0f0f20]"
       style={{ gridArea: "blog" }}
     >
       <Text size={14} className="text-indigo-300 uppercase">

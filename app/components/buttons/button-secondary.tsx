@@ -25,7 +25,7 @@ export function ButtonSecondary({
 }: ButtonSecondaryProps) {
   const classes = cn(
     "inline-flex items-center rounded-full font-mono uppercase duration-150",
-    "border border-body text-body transition-colors hover:border-title hover:text-title",
+    "border border-body text-body transition-colors hover:bg-title hover:border-title hover:text-surface",
     sizes[size],
     className,
   );

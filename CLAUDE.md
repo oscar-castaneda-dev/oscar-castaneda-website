@@ -57,6 +57,11 @@ Dark mode only. All design tokens live in `app/globals.css` under `@theme`, whic
 - `disabled` (#666) · `caption` (#999) · `body` (#e8e8e8) · `title` (#fff)
 - `accent` (#d71921) · `success` · `warning` · `action`
 
+**Accent palettes** — tinted card surfaces for contextual sections. Use the custom tokens for backgrounds/borders; use Tailwind's built-in scale for text:
+
+- Green (building / side-projects): `bg-green-surface` (#0a1a0d) · `border-green-border` (#1a3d22) · `text-green-muted` (#3d6645) · `text-green-400`
+- Indigo (writing / blog): `bg-indigo-surface` (#0d0d1a) · `border-indigo-border` (#1e1e33) · `text-indigo-300` · `text-indigo-400`
+
 **Spacing** — uses Tailwind's default numeric scale (`--spacing: 0.25rem`). Common values: `1`=4px · `2`=8px · `4`=16px · `6`=24px · `8`=32px · `12`=48px · `16`=64px · `24`=96px
 
 **Fonts** — use as `font-*` Tailwind classes:

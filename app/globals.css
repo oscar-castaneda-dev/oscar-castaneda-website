@@ -17,6 +17,15 @@
   --color-warning: #d4a843;
   --color-action: #f16a0d;
 
+  /* GREEN ACCENT PALETTE (building / side-projects) */
+  --color-green-surface: #0a1a0d;
+  --color-green-border: #1a3d22;
+  --color-green-muted: #3d6645;
+
+  /* INDIGO ACCENT PALETTE (writing / blog) */
+  --color-indigo-surface: #0d0d1a;
+  --color-indigo-border: #1e1e33;
+
   /* FONTS */
   --font-sans: var(--font-space-grotesk);
   --font-mono: var(--font-space-mono);

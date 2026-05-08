@@ -25,7 +25,7 @@ export function ButtonPrimary({
 }: ButtonPrimaryProps) {
   const classes = cn(
     "inline-flex items-center rounded-full font-mono uppercase duration-150",
-    "bg-white text-black font-semibold transition-colors duration-150 hover:bg-neutral-200",
+    "bg-white text-black font-semibold transition-colors duration-150 hover:bg-success hover:text-white",
     sizes[size],
     className,
   );
