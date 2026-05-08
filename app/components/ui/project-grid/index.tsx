@@ -11,16 +11,21 @@ import { Role } from "./role";
 export function ProjectGrid() {
   return (
     <section className="container mb-24 project-grid">
-      <ProjectCard area="project1" project={PROJECTS[0]} featured />
+      <ProjectCard
+        area="project1"
+        project={PROJECTS[0]}
+        projectNumber={1}
+        featured
+      />
       <Experience />
       <Role />
       <Building />
       <Location />
-      <ProjectCard area="project2" project={PROJECTS[1]} />
+      <ProjectCard area="project2" project={PROJECTS[1]} projectNumber={2} />
       <Blog />
       <Reading />
-      <ProjectCard area="project3" project={PROJECTS[2]} />
-      <ProjectCard area="project4" project={PROJECTS[3]} />
+      <ProjectCard area="project3" project={PROJECTS[2]} projectNumber={3} />
+      <ProjectCard area="project4" project={PROJECTS[3]} projectNumber={4} />
       <Contact />
     </section>
   );

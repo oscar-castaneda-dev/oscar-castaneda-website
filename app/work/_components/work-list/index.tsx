@@ -8,28 +8,43 @@ import { WideRow } from "./wide-row";
 import type { ProjectRow } from "./types";
 
 interface RowRenderer {
-  featured: (row: ProjectRow, idx: number) => React.ReactElement;
-  wide: (row: ProjectRow, idx: number) => React.ReactElement;
-  duo: (row: ProjectRow, idx: number) => React.ReactElement;
-  trio: (row: ProjectRow, idx: number) => React.ReactElement;
+  featured: (row: ProjectRow, idx: number, startIndex: number) => React.ReactElement;
+  wide: (row: ProjectRow, idx: number, startIndex: number) => React.ReactElement;
+  duo: (row: ProjectRow, idx: number, startIndex: number) => React.ReactElement;
+  trio: (row: ProjectRow, idx: number, startIndex: number) => React.ReactElement;
 }
 
 const ROW_RENDERERS: RowRenderer = {
-  featured: (row, idx) => <FeaturedRow key={idx} items={row.items} />,
-  wide: (row, idx) => <WideRow key={idx} item={row.items[0]} />,
-  duo: (row, idx) => <DuoRow key={idx} items={row.items} />,
-  trio: (row, idx) => <TrioRow key={idx} items={row.items} />,
+  featured: (row, idx, startIndex) => (
+    <FeaturedRow key={idx} items={row.items} startIndex={startIndex} />
+  ),
+  wide: (row, idx, startIndex) => (
+    <WideRow key={idx} item={row.items[0]} startIndex={startIndex} />
+  ),
+  duo: (row, idx, startIndex) => (
+    <DuoRow key={idx} items={row.items} startIndex={startIndex} />
+  ),
+  trio: (row, idx, startIndex) => (
+    <TrioRow key={idx} items={row.items} startIndex={startIndex} />
+  ),
 };
 
 export function WorkList() {
   const rows = buildRows(PROJECTS);
+
+  const startIndices = rows.reduce<number[]>((acc, _, idx) => {
+    const next = idx === 0 ? 1 : acc[idx - 1] + rows[idx - 1].items.length;
+    return [...acc, next];
+  }, []);
 
   return (
     <section className="py-16">
       <div className="container">
         <Subtitle className="mb-8">// work</Subtitle>
         <div className="flex flex-col gap-3">
-          {rows.map((row, idx) => ROW_RENDERERS[row.type](row, idx))}
+          {rows.map((row, idx) =>
+            ROW_RENDERERS[row.type](row, idx, startIndices[idx]),
+          )}
         </div>
       </div>
     </section>

@@ -5,21 +5,26 @@ import { cn } from "@/lib/cn";
 import { Heading } from "@/app/components/typography/heading";
 import { Subtitle } from "@/app/components/typography/subtitle";
 import type { Project } from "@/data/projects";
+import { formatNumber } from "@/app/lib/format-number";
 
 interface ProjectCardProps {
-  project: Project;
   area: string;
-  featured?: boolean;
   className?: string;
+  featured?: boolean;
+  project: Project;
+  projectNumber: number;
 }
 
 export function ProjectCard({
-  project,
   area,
-  featured = false,
   className,
+  featured = false,
+  project,
+  projectNumber,
 }: ProjectCardProps) {
   const { category, img, slug, title, year } = project;
+
+  const num = formatNumber(projectNumber);
 
   return (
     <Link
@@ -44,7 +49,9 @@ export function ProjectCard({
       />
       <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/15 to-transparent transition-opacity duration-300 group-hover:opacity-0" />
       <div className="absolute inset-0 flex flex-col justify-between p-5 transition-opacity duration-300 group-hover:opacity-0">
-        <Subtitle color="body">{category}</Subtitle>
+        <Subtitle color="body">
+          {num} - {category}
+        </Subtitle>
         <div>
           <Heading size={featured ? 44 : 36} as="h2" className="uppercase">
             {title}

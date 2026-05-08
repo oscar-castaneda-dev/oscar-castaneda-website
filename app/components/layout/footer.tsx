@@ -18,7 +18,7 @@ export function Footer() {
         </div>
         <div className="flex flex-col gap-4">
           <Subtitle>Navigate</Subtitle>
-          <nav className="flex flex-col items-end gap-3">
+          <nav className="flex flex-col items-start md:items-end gap-3">
             <Link
               href="/about"
               className="text-body hover:text-title transition-colors duration-150"

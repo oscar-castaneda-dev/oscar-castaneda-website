@@ -1,3 +1,8 @@
+import { notFound } from "next/navigation";
+
+import { Main } from "@/app/components/layout/main";
+import { PROJECTS } from "@/data/projects";
+import { SingleProjectHeader } from "./_components/single-project-header";
 interface SingleWorkPageProps {
   params: Promise<{ slug: string }>;
 }
@@ -5,9 +10,13 @@ interface SingleWorkPageProps {
 export default async function SingleWorkPage({ params }: SingleWorkPageProps) {
   const { slug } = await params;
 
+  const project = PROJECTS.find((project) => slug === project.slug);
+
+  if (!project) notFound();
+
   return (
-    <div>
-      <p>{slug}</p>
-    </div>
+    <Main>
+      <SingleProjectHeader project={project} />
+    </Main>
   );
 }

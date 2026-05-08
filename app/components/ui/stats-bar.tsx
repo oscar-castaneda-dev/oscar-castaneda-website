@@ -11,7 +11,7 @@ interface StatsBarProps {
   className?: string;
 }
 
-export function StatsBar({ items, className = "" }: StatsBarProps) {
+export function StatsBar({ items, className }: StatsBarProps) {
   return (
     <div className={cn("border-y border-border", className)}>
       <div className="container">
@@ -39,7 +39,12 @@ export function StatsBar({ items, className = "" }: StatsBarProps) {
                 <span className="font-nothing-subtitle text-caption">
                   {item.label}
                 </span>
-                <span className={cn("font-nothing-subtitle", item.fontClasses ?? "text-title")}>
+                <span
+                  className={cn(
+                    "font-nothing-subtitle",
+                    item.fontClasses ?? "text-title",
+                  )}
+                >
                   {item.value}
                 </span>
               </div>

@@ -21,16 +21,30 @@ export function ButtonPrimary({
   className,
   children,
 }: ButtonPrimaryProps) {
+  const classes = cn(
+    "inline-flex items-center rounded-full font-mono uppercase duration-150",
+    "bg-white text-black font-semibold transition-colors duration-150 hover:bg-neutral-200",
+    sizes[size],
+    className,
+  );
+
+  const isExternal = href.startsWith("http") || href.startsWith("mailto");
+
+  if (isExternal) {
+    return (
+      <a
+        href={href}
+        target={href.startsWith("mailto") ? undefined : "_blank"}
+        rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+        className={classes}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <Link
-      href={href}
-      className={cn(
-        "inline-flex items-center rounded-full font-mono uppercase duration-150",
-        "bg-white text-black font-semibold transition-colors duration-150 hover:bg-neutral-200",
-        sizes[size],
-        className,
-      )}
-    >
+    <Link href={href} className={classes}>
       {children}
     </Link>
   );

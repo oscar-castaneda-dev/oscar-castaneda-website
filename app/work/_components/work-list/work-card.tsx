@@ -6,13 +6,17 @@ import { Subtitle } from "@/app/components/typography/subtitle";
 
 import type { WorkCardVariant } from "./types";
 import type { Project } from "@/data/projects";
+import { formatNumber } from "@/app/lib/format-number";
 
 interface WorkCardProps {
   project: Project;
+  projectNumber: number;
   variant: WorkCardVariant;
 }
 
-export function WorkCard({ project, variant }: WorkCardProps) {
+export function WorkCard({ project, projectNumber, variant }: WorkCardProps) {
+  const num = formatNumber(projectNumber);
+
   return (
     <Link
       href={`/work/${project.slug}`}
@@ -36,7 +40,7 @@ export function WorkCard({ project, variant }: WorkCardProps) {
       <div className="absolute inset-0 flex flex-col justify-between p-5 transition-opacity duration-300 group-hover:opacity-0">
         <div className="flex">
           <Subtitle color="body" as="span">
-            {project.category}
+            {num} - {project.category}
           </Subtitle>
         </div>
         <div>
