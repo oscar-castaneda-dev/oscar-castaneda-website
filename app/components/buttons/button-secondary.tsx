@@ -12,6 +12,7 @@ interface ButtonSecondaryProps {
   size?: keyof typeof sizes;
   href: string;
   className?: string;
+  ariaLabel?: string;
   children: React.ReactNode;
 }
 
@@ -19,6 +20,7 @@ export function ButtonSecondary({
   size = "md",
   href,
   className,
+  ariaLabel,
   children,
 }: ButtonSecondaryProps) {
   const classes = cn(
@@ -36,6 +38,7 @@ export function ButtonSecondary({
         href={href}
         target={href.startsWith("mailto") ? undefined : "_blank"}
         rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+        aria-label={ariaLabel}
         className={classes}
       >
         {children}
@@ -44,7 +47,7 @@ export function ButtonSecondary({
   }
 
   return (
-    <Link href={href} className={classes}>
+    <Link href={href} aria-label={ariaLabel} className={classes}>
       {children}
     </Link>
   );

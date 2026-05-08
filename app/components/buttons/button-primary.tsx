@@ -12,6 +12,7 @@ interface ButtonPrimaryProps {
   size?: keyof typeof sizes;
   href: string;
   className?: string;
+  ariaLabel?: string;
   children: React.ReactNode;
 }
 
@@ -19,6 +20,7 @@ export function ButtonPrimary({
   size = "md",
   href,
   className,
+  ariaLabel,
   children,
 }: ButtonPrimaryProps) {
   const classes = cn(
@@ -36,6 +38,7 @@ export function ButtonPrimary({
         href={href}
         target={href.startsWith("mailto") ? undefined : "_blank"}
         rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+        aria-label={ariaLabel}
         className={classes}
       >
         {children}
@@ -44,7 +47,7 @@ export function ButtonPrimary({
   }
 
   return (
-    <Link href={href} className={classes}>
+    <Link href={href} aria-label={ariaLabel} className={classes}>
       {children}
     </Link>
   );

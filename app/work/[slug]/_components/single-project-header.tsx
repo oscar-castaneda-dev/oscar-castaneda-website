@@ -9,6 +9,7 @@ import { GitHubIcon } from "@/app/components/icons/github";
 import { ArrowRightUpIcon } from "@/app/components/icons/arrow-right-up";
 import Image from "next/image";
 import { StatsBar } from "@/app/components/ui/stats-bar";
+import { AppStoreIcon } from "@/app/components/icons/app-store";
 
 interface SingleProjectHeaderProps {
   project: Project;
@@ -37,11 +38,11 @@ export function SingleProjectHeader({ project }: SingleProjectHeaderProps) {
   ];
 
   return (
-    <section className="py-16 relative overflow-hidden">
+    <section className="pt-16 relative overflow-hidden">
       <DotGrid />
       <div className="container relative mb-8">
         <Subtitle className="mb-2">// case study</Subtitle>
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 md:gap-8 mb-4">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 md:gap-8 mb-6">
           <div>
             <Heading size={48} className="uppercase">
               {project.title}
@@ -51,12 +52,31 @@ export function SingleProjectHeader({ project }: SingleProjectHeaderProps) {
             </Text>
           </div>
           <div className="flex gap-3 shrink-0">
-            <ButtonPrimary href={project.projectUrl}>
-              live site <ArrowRightUpIcon size={24} />
-            </ButtonPrimary>
+            {project.projectUrl && (
+              <ButtonPrimary
+                href={project.projectUrl}
+                ariaLabel="Visit live site"
+              >
+                <span className="hidden md:inline">live site</span>
+                <ArrowRightUpIcon size={24} />
+              </ButtonPrimary>
+            )}
             {project.githubUrl && (
-              <ButtonSecondary href={project.githubUrl}>
-                github <GitHubIcon size={24} />
+              <ButtonSecondary
+                href={project.githubUrl}
+                ariaLabel="View on GitHub"
+              >
+                <span className="hidden md:inline">github</span>
+                <GitHubIcon size={24} />
+              </ButtonSecondary>
+            )}
+            {project.appStoreUrl && (
+              <ButtonSecondary
+                href={project.appStoreUrl}
+                ariaLabel="Download on the App Store"
+              >
+                <span className="hidden md:inline">app store</span>
+                <AppStoreIcon size={36} />
               </ButtonSecondary>
             )}
           </div>

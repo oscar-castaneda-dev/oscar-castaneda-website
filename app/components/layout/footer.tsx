@@ -2,8 +2,9 @@ import Link from "next/link";
 
 import { ArrowRightUpIcon } from "@/app/components/icons/arrow-right-up";
 import { ExternalLink } from "@/app/components/ui/external-link";
-import { Text } from "@/app/components/typography/text";
+import { NAV_LINKS } from "@/app/constants/nav-links";
 import { Subtitle } from "@/app/components/typography/subtitle";
+import { Text } from "@/app/components/typography/text";
 
 export function Footer() {
   return (
@@ -19,18 +20,15 @@ export function Footer() {
         <div className="flex flex-col gap-4">
           <Subtitle>Navigate</Subtitle>
           <nav className="flex flex-col items-start md:items-end gap-3">
-            <Link
-              href="/about"
-              className="text-body hover:text-title transition-colors duration-150"
-            >
-              about
-            </Link>
-            <Link
-              href="/work"
-              className="text-body hover:text-title transition-colors duration-150"
-            >
-              work
-            </Link>
+            {NAV_LINKS.map(({ href, label }) => (
+              <Link
+                key={label}
+                href={href}
+                className="text-body hover:text-title transition-colors duration-150"
+              >
+                {label}
+              </Link>
+            ))}
           </nav>
         </div>
       </div>
