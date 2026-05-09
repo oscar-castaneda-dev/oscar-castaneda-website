@@ -4,13 +4,20 @@ import { ImageModal } from "./image-modal";
 import { Industry } from "./industry";
 import { Project } from "@/data/projects";
 import { Subtitle } from "@/app/components/typography/subtitle";
+import { Stat } from "./stat";
 
 interface SingleProjectGridProps {
   project: Project;
 }
 
 export function SingleProjectGrid({ project }: SingleProjectGridProps) {
-  const { features, gallery, industry } = project;
+  const { features, gallery, industry, stats } = project;
+
+  const statGridClasses = [
+    "col-start-1 col-end-3 row-start-4",
+    "col-start-3 col-end-5 row-start-4",
+    "col-start-5 col-end-7 row-start-4",
+  ];
 
   // ┌──────────────┬──────────────┐
   // │              │    IMG2      │
@@ -21,7 +28,7 @@ export function SingleProjectGrid({ project }: SingleProjectGridProps) {
   // │ KEY FEATURES │    IMG3      │
   // │              │              │
   // ├──────┬───────┼──────────────┤
-  // │ TIME │ COST  │    USERS     │
+  // │ TIME │ COST  │    NOTE      │
   // └──────┴───────┴──────────────┘
 
   return (
@@ -62,6 +69,15 @@ export function SingleProjectGrid({ project }: SingleProjectGridProps) {
               index={2}
               src={gallery[2].src}
             />
+            {/* STATS */}
+            {stats.map((stat, index) => (
+              <Stat
+                key={stat.title}
+                className={statGridClasses[index]}
+                index={index}
+                stat={stat}
+              />
+            ))}
           </div>
         </div>
       </section>
