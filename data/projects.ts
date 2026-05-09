@@ -5,7 +5,10 @@ export interface Project {
   description: string[];
   duration: string;
   features: string[];
-  gallery: string[];
+  gallery: {
+    alt: string;
+    src: string;
+  }[];
   githubUrl: string | null;
   img: string;
   industry: string;
@@ -36,9 +39,18 @@ export const PROJECTS: Project[] = [
       "custom dashboards",
     ],
     gallery: [
-      "/images/placeholder.svg",
-      "/images/placeholder.svg",
-      "/images/placeholder.svg",
+      {
+        alt: "Project gallery image 01",
+        src: "/images/placeholder.svg",
+      },
+      {
+        alt: "Project gallery image 02",
+        src: "/images/placeholder.svg",
+      },
+      {
+        alt: "Project gallery image 03",
+        src: "/images/placeholder.svg",
+      },
     ],
     githubUrl: "https://github.com/oscar-castaneda-dev",
     img: "/images/placeholder.svg",
@@ -68,9 +80,18 @@ export const PROJECTS: Project[] = [
       "custom dashboards",
     ],
     gallery: [
-      "/images/placeholder.svg",
-      "/images/placeholder.svg",
-      "/images/placeholder.svg",
+      {
+        alt: "Project gallery image 01",
+        src: "/images/placeholder.svg",
+      },
+      {
+        alt: "Project gallery image 02",
+        src: "/images/placeholder.svg",
+      },
+      {
+        alt: "Project gallery image 03",
+        src: "/images/placeholder.svg",
+      },
     ],
     githubUrl: "https://github.com/oscar-castaneda-dev",
     img: "/images/placeholder.svg",
@@ -100,9 +121,18 @@ export const PROJECTS: Project[] = [
       "custom dashboards",
     ],
     gallery: [
-      "/images/placeholder.svg",
-      "/images/placeholder.svg",
-      "/images/placeholder.svg",
+      {
+        alt: "Project gallery image 01",
+        src: "/images/placeholder.svg",
+      },
+      {
+        alt: "Project gallery image 02",
+        src: "/images/placeholder.svg",
+      },
+      {
+        alt: "Project gallery image 03",
+        src: "/images/placeholder.svg",
+      },
     ],
     githubUrl: "https://github.com/oscar-castaneda-dev",
     img: "/images/placeholder.svg",
@@ -132,9 +162,18 @@ export const PROJECTS: Project[] = [
       "custom dashboards",
     ],
     gallery: [
-      "/images/placeholder.svg",
-      "/images/placeholder.svg",
-      "/images/placeholder.svg",
+      {
+        alt: "Project gallery image 01",
+        src: "/images/placeholder.svg",
+      },
+      {
+        alt: "Project gallery image 02",
+        src: "/images/placeholder.svg",
+      },
+      {
+        alt: "Project gallery image 03",
+        src: "/images/placeholder.svg",
+      },
     ],
     githubUrl: "https://github.com/oscar-castaneda-dev",
     img: "/images/placeholder.svg",
