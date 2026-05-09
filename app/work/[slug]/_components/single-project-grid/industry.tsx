@@ -16,14 +16,14 @@ export function Industry({ className, value }: IndustryProps) {
         className,
       )}
     >
-      <Text size={12} className="uppercase text-indigo-300 font-mono">
+      <Text size={12} className="uppercase text-indigo-300">
         industry
       </Text>
       <div>
         <Heading size={36} as="h3" className="uppercase text-indigo-400">
           {value}
         </Heading>
-        <Text>sector</Text>
+        <Text className="text-indigo-300">sector</Text>
       </div>
     </div>
   );

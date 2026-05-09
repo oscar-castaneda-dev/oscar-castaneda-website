@@ -1,15 +1,16 @@
-import { Subtitle } from "@/app/components/typography/subtitle";
-import { Project } from "@/data/projects";
-import { ImageModal } from "./image-modal";
+import { Features } from "./features";
 import { ImageCard } from "./image-card";
+import { ImageModal } from "./image-modal";
 import { Industry } from "./industry";
+import { Project } from "@/data/projects";
+import { Subtitle } from "@/app/components/typography/subtitle";
 
 interface SingleProjectGridProps {
   project: Project;
 }
 
 export function SingleProjectGrid({ project }: SingleProjectGridProps) {
-  const { gallery, industry } = project;
+  const { features, gallery, industry } = project;
 
   // ┌──────────────┬──────────────┐
   // │              │    IMG2      │
@@ -33,7 +34,7 @@ export function SingleProjectGrid({ project }: SingleProjectGridProps) {
             <ImageCard
               alt={gallery[0].alt}
               className="min-h-72 col-start-1 col-end-4 row-start-1 row-end-3"
-              index={1}
+              index={0}
               priority
               src={gallery[0].src}
             />
@@ -41,8 +42,7 @@ export function SingleProjectGrid({ project }: SingleProjectGridProps) {
             <ImageCard
               alt={gallery[1].alt}
               className="aspect-square col-start-4 col-end-7 row-start-1"
-              index={2}
-              priority
+              index={1}
               src={gallery[1].src}
             />
             {/* INDUSTRY */}
@@ -51,6 +51,17 @@ export function SingleProjectGrid({ project }: SingleProjectGridProps) {
               value={industry}
             />
             {/* KEY FEATURES */}
+            <Features
+              className="col-start-1 col-end-4 row-start-3"
+              features={features}
+            />
+            {/* IMG3 */}
+            <ImageCard
+              alt={gallery[2].alt}
+              className="aspect-square col-start-4 col-end-7 row-start-3"
+              index={2}
+              src={gallery[2].src}
+            />
           </div>
         </div>
       </section>
