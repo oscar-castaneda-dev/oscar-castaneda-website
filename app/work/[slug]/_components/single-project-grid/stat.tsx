@@ -1,25 +1,21 @@
-import { cn } from "@/lib/cn";
-
 import { Heading } from "@/app/components/typography/heading";
 import { StatItem } from "@/data/projects";
 import { Subtitle } from "@/app/components/typography/subtitle";
 import { Text } from "@/app/components/typography/text";
 
 interface StatsProps {
-  className?: string;
+  area: string;
   index: number;
   stat: StatItem;
 }
 
-export function Stat({ className, index, stat }: StatsProps) {
+export function Stat({ area, index, stat }: StatsProps) {
   const { label, title, value } = stat;
 
   return (
     <div
-      className={cn(
-        "bg-card border border-border rounded-lg p-5 flex flex-col justify-between aspect-square",
-        className,
-      )}
+      className="bg-card border border-border rounded-lg p-5 flex flex-col justify-between aspect-square"
+      style={{ gridArea: area }}
     >
       <Subtitle color="body">{title}</Subtitle>
       {index !== 2 ? (

@@ -132,3 +132,31 @@ body {
       "contact";
   }
 }
+
+/* =======================
+   SINGLE PROJECT GRID
+   ======================= */
+
+@utility single-project-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "img1 img1 img1 img2 img2 img2"
+    "img1 img1 img1 industry industry industry"
+    "features features features img3 img3 img3"
+    "stat1 stat1 stat2 stat2 stat3 stat3";
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img1"
+      "img2"
+      "industry"
+      "features"
+      "img3"
+      "stat1"
+      "stat2"
+      "stat3";
+  }
+}

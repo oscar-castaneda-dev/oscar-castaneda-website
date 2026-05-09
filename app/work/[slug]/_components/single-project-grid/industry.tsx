@@ -1,20 +1,16 @@
-import { cn } from "@/lib/cn";
-
 import { Heading } from "@/app/components/typography/heading";
 import { Text } from "@/app/components/typography/text";
 
 interface IndustryProps {
-  className?: string;
+  area: string;
   value: string;
 }
 
-export function Industry({ className, value }: IndustryProps) {
+export function Industry({ area, value }: IndustryProps) {
   return (
     <div
-      className={cn(
-        "bg-indigo-surface border border-indigo-border rounded-lg p-5 flex flex-col justify-between min-h-40",
-        className,
-      )}
+      className="bg-indigo-surface border border-indigo-border rounded-lg p-5 flex flex-col justify-between min-h-40"
+      style={{ gridArea: area }}
     >
       <Text size={12} className="uppercase text-indigo-300">
         industry

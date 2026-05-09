@@ -4,6 +4,7 @@ import { cn } from "@/lib/cn";
 
 interface ImageCardProps {
   alt: string;
+  area: string;
   className?: string;
   index: number;
   priority?: boolean;
@@ -12,6 +13,7 @@ interface ImageCardProps {
 
 export function ImageCard({
   alt,
+  area,
   className,
   index,
   priority = false,
@@ -23,6 +25,7 @@ export function ImageCard({
         "relative overflow-hidden rounded-lg border border-border bg-card block w-full cursor-zoom-in",
         className,
       )}
+      style={{ gridArea: area }}
       popoverTarget={`lightbox-${index}`}
     >
       <Image

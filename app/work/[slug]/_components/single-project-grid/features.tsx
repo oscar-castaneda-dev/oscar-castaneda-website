@@ -4,17 +4,15 @@ import { Heading } from "@/app/components/typography/heading";
 import { Text } from "@/app/components/typography/text";
 
 interface FeaturesProps {
-  className?: string;
+  area: string;
   features: string[];
 }
 
-export function Features({ className, features }: FeaturesProps) {
+export function Features({ area, features }: FeaturesProps) {
   return (
     <div
-      className={cn(
-        "bg-green-surface border border-green-border rounded-lg p-5 flex flex-col gap-4 aspect-square",
-        className,
-      )}
+      className="bg-green-surface border border-green-border rounded-lg p-5 flex flex-col gap-4 aspect-square"
+      style={{ gridArea: area }}
     >
       <Text className="uppercase text-green-400">// key features</Text>
       <div className="grid grid-cols-2 flex-1">
