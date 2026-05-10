@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
 
 interface ImageModalProps {
   alt: string;
@@ -10,27 +9,15 @@ interface ImageModalProps {
 }
 
 export function ImageModal({ alt, index, src }: ImageModalProps) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const handleToggle = (e: Event) => {
-      const { newState } = e as ToggleEvent;
-      document.body.style.overflow = newState === "open" ? "hidden" : "";
-    };
-
-    el.addEventListener("toggle", handleToggle);
-    return () => el.removeEventListener("toggle", handleToggle);
-  }, []);
-
   return (
     <div
-      ref={ref}
       id={`lightbox-${index}`}
       popover="auto"
       className="fixed inset-0 w-screen h-screen max-w-none max-h-none m-0 p-0 border-0 bg-black/92 cursor-zoom-out overflow-hidden"
+      onToggle={(e) => {
+        const { newState } = e.nativeEvent as ToggleEvent;
+        document.body.style.overflow = newState === "open" ? "hidden" : "";
+      }}
     >
       {/* button that closes the modal anywhere on the screen */}
       <button
