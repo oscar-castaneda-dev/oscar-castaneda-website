@@ -2,6 +2,8 @@ import { BUILDING_PROJECTS } from "@/data/building";
 import { Main } from "@/app/components/layout/main";
 
 import { ActiveProject } from "./_components/active-project";
+import { CompletedProject } from "./_components/completed-project";
+import { PendingProject } from "./_components/pending-project";
 
 export default function BuildingPage() {
   const activeProjects = BUILDING_PROJECTS.filter(
@@ -31,7 +33,7 @@ export default function BuildingPage() {
       {completedProjects.length > 0 && (
         <>
           {completedProjects.map((completedProject) => (
-            <ActiveProject
+            <CompletedProject
               key={completedProject.slug}
               project={completedProject}
             />
@@ -43,7 +45,10 @@ export default function BuildingPage() {
       {pendingProjects.length > 0 && (
         <>
           {pendingProjects.map((pendingProject) => (
-            <ActiveProject key={pendingProject.slug} project={pendingProject} />
+            <PendingProject
+              key={pendingProject.slug}
+              project={pendingProject}
+            />
           ))}
         </>
       )}
