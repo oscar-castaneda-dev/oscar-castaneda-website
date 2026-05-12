@@ -1,8 +1,7 @@
-import { BUILDING_PROJECTS } from "@/data/building";
-import { Main } from "@/app/components/layout/main";
-
 import { ActiveProject } from "./_components/active-project";
+import { BUILDING_PROJECTS } from "@/data/building";
 import { CompletedProject } from "./_components/completed-project";
+import { Main } from "@/app/components/layout/main";
 import { PendingProject } from "./_components/pending-project";
 
 export default function BuildingPage() {
