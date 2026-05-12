@@ -46,7 +46,7 @@ export function CompletedProject({ project }: CompletedProjectProps) {
         />
       </div>
       {/* COLUMN DONE */}
-      <Text size={14} className="font-nothing-subtitle block mb-2">
+      <Text size={14} className="font-nothing-subtitle block mb-8">
         done
       </Text>
       <div className="grid grid-cols-1 gap-4">
