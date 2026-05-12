@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { BuildingProject } from "@/data/building";
+import { getProjectColumns, columnGridClass } from "./columns";
 import { Heading } from "@/app/components/typography/heading";
 import { ProgressBar } from "@/app/components/ui/progress-bar";
 import { StatusDot } from "@/app/components/ui/status-dot";
@@ -15,6 +16,8 @@ export function ActiveProject({ project }: ActiveProjectProps) {
     project.done.length + project.inProgress.length + project.upcoming.length;
 
   const progress = Math.round((project.done.length / total) * 100);
+
+  const columns = getProjectColumns(project);
 
   return (
     <section className="space-y-12">
@@ -45,6 +48,28 @@ export function ActiveProject({ project }: ActiveProjectProps) {
           <Text size={48}>{progress}%</Text>
         </div>
         <ProgressBar total={total} filled={project.done.length} />
+      </div>
+      {/* COLUMNS - TO DO, IN PROGRESS, DONE */}
+      <div className={`grid ${columnGridClass[columns.length]} gap-8`}>
+        {columns.map((column) => (
+          <div key={column.label}>
+            <Text size={14} className="font-nothing-subtitle block mb-4">
+              {column.label}
+            </Text>
+            {column.items.map((item, index) => (
+              <div
+                key={index}
+                className="flex items-start gap-3 py-3 border-t border-border"
+              >
+                <Text size={14} className={`${column.symbolClass} shrink-0`}>
+                  {column.symbol}
+                </Text>
+                <Text size={14}>{item}</Text>
+              </div>
+            ))}
+            <div className="border-t border-border" />
+          </div>
+        ))}
       </div>
     </section>
   );
