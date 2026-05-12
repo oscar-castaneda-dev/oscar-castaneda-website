@@ -30,24 +30,21 @@ export function CompletedProject({ project }: CompletedProjectProps) {
             {project.type} - {project.year}
           </Text>
         </div>
-        <div className="sm:text-right shrink-0">
-          <Text
-            size={12}
-            className="font-nothing-subtitle text-indigo-300 block mb-8"
-          >
-            progress
-          </Text>
-          <Text size={48} className="text-indigo-400">
-            100%
-          </Text>
-        </div>
       </Link>
       {/* PROGRESS BAR */}
-      <ProgressBar
-        total={project.done.length}
-        filled={project.done.length}
-        filledClassName="bg-indigo-400"
-      />
+      <div className="space-y-3">
+        <div className="flex justify-between items-baseline">
+          <Text size={12} className="font-nothing-subtitle">
+            progress
+          </Text>
+          <Text size={48}>100%</Text>
+        </div>
+        <ProgressBar
+          total={project.done.length}
+          filled={project.done.length}
+          filledClassName="bg-indigo-400"
+        />
+      </div>
       {/* COLUMN DONE */}
       <Text size={14} className="font-nothing-subtitle block mb-2">
         done

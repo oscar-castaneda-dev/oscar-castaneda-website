@@ -31,6 +31,7 @@ export default function BuildingPage() {
       {/* COMPLETED PROJECTS */}
       {completedProjects.length > 0 && (
         <>
+          <div className="border-t border-border" />
           {completedProjects.map((completedProject) => (
             <CompletedProject
               key={completedProject.slug}
@@ -43,6 +44,7 @@ export default function BuildingPage() {
       {/* PENDING PROJECTS */}
       {pendingProjects.length > 0 && (
         <>
+          <div className="border-t border-border" />
           {pendingProjects.map((pendingProject) => (
             <PendingProject
               key={pendingProject.slug}
