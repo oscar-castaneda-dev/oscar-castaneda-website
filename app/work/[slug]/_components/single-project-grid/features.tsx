@@ -1,6 +1,5 @@
 import { cn } from "@/lib/cn";
 
-import { Heading } from "@/app/components/typography/heading";
 import { Text } from "@/app/components/typography/text";
 
 interface FeaturesProps {
@@ -25,9 +24,9 @@ export function Features({ area, features }: FeaturesProps) {
               index % 2 === 1 && "border-l border-green-border",
             )}
           >
-            <Heading size={36} as="h3" className="text-green-400 uppercase">
+            <Text className="text-sm sm:text-base md:text-xl lg:text-3xl font-nothing-dots text-green-400 uppercase font-bold">
               {feature}
-            </Heading>
+            </Text>
           </div>
         ))}
       </div>
