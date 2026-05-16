@@ -50,6 +50,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`dark text-base ${spaceGrotesk.variable} ${spaceMono.variable} ${doto.variable}`}
+      suppressHydrationWarning
     >
       <body className="antialiased">
         <Nav />
