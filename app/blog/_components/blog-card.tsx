@@ -38,8 +38,8 @@ export function BlogCard({
           {date}
         </Subtitle>
       </div>
-      <div className="absolute bottom-4 left-4 right-4">
-        <Text size={18} color="title" className="line-clamp-3 leading-snug">
+      <div className="absolute bottom-0 inset-x-0 h-20 flex flex-col justify-start px-4 pt-2 pb-3">
+        <Text size={18} color="title" className="line-clamp-2 leading-snug">
           {title}
         </Text>
       </div>
