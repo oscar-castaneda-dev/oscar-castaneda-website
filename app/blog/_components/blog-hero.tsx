@@ -30,7 +30,7 @@ export function BlogHero() {
               date="May 15, 2026"
               excerpt="The tools are moving fast. Here's what's actually worth paying attention to."
               href="/blog/abc"
-              image="/images/placeholder.svg"
+              image="/images/montain.webp"
               imageAlt="something"
               title="How AI Is Changing the Way We Build for the Web"
             />

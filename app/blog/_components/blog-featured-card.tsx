@@ -31,6 +31,7 @@ export function BlogFeaturedCard({
           alt={imageAlt}
           loading="eager"
           fill
+          sizes="(min-width: 1024px) 40vw, 100vw"
           className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
         />
       </a>
