@@ -1,6 +1,5 @@
 import { Heading } from "@/app/components/typography/heading";
 import { Subtitle } from "@/app/components/typography/subtitle";
-import { Text } from "@/app/components/typography/text";
 
 export function Role() {
   return (

@@ -1,8 +1,8 @@
+import { ArrowRightUpIcon } from "@/app/components/icons/arrow-right-up";
 import { Card } from "./card";
+import { ExternalLink } from "@/app/components/ui/external-link";
 import { Heading } from "@/app/components/typography/heading";
 import { Subtitle } from "@/app/components/typography/subtitle";
-import { ArrowRightUpIcon } from "../../icons/arrow-right-up";
-import { ExternalLink } from "../external-link";
 
 export function Contact() {
   return (

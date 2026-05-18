@@ -8,7 +8,7 @@ import { PROJECTS } from "@/data/projects";
 import { Reading } from "./reading";
 import { Role } from "./role";
 
-export function ProjectGrid() {
+export function HomeGrid() {
   return (
     <section className="container mb-24 project-grid">
       <ProjectCard

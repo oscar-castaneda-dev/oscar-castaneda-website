@@ -1,12 +1,12 @@
 import { Main } from "@/app/components/layout/main";
-import { ProjectGrid } from "@/app/components/ui/project-grid";
+import { HomeGrid } from "@/app/home/_components/home-grid";
 import { HomeHero } from "./home/_components/home-hero";
 
 export default function Home() {
   return (
     <Main>
       <HomeHero />
-      <ProjectGrid />
+      <HomeGrid />
     </Main>
   );
 }

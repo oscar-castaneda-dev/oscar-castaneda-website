@@ -1,8 +1,8 @@
 import Link from "next/link";
 
+import { ArrowRightUpIcon } from "@/app/components/icons/arrow-right-up";
 import { Heading } from "@/app/components/typography/heading";
 import { Text } from "@/app/components/typography/text";
-import { ArrowRightUpIcon } from "../../icons/arrow-right-up";
 
 export function Blog() {
   return (
