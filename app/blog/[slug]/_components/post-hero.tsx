@@ -4,7 +4,7 @@ import { DotGrid } from "@/app/components/ui/dot-grid";
 import { Heading } from "@/app/components/typography/heading";
 import { Text } from "@/app/components/typography/text";
 
-export function BlogPostHero() {
+export function PostHero() {
   return (
     <section className="pt-24 pb-16 relative overflow-hidden">
       <DotGrid />
