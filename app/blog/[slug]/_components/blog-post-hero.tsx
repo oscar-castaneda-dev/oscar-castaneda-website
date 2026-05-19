@@ -29,7 +29,7 @@ export function BlogPostHero() {
           </div>
         </div>
         {/* COVER IMAGE */}
-        <div className="mt-12 mx-auto max-w-5xl border border-border bg-card relative overflow-hidden aspect-video">
+        <div className="mt-8 mx-auto max-w-5xl border border-border bg-card relative overflow-hidden aspect-video">
           <Image
             src="/images/montain.webp"
             alt="Post cover"
