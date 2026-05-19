@@ -15,6 +15,7 @@ export function BlogPostHero() {
             A step-by-step guide to building a modern, responsive blog using
             React and Tailwind CSS.
           </Text>
+          {/* AUTHOR AND DATE */}
           <div className="flex flex-col items-center uppercase tracking-widest border-t border-border pt-4">
             <Image
               src="/images/avatar.webp"
@@ -26,18 +27,17 @@ export function BlogPostHero() {
             <Text size={14}>Oscar Castaneda</Text>
             <Text size={12}>May 18, 2026</Text>
           </div>
-          {/* <div className="flex items-center gap-3 text-xs uppercase tracking-widest">
-            <Image
-              src="/images/avatar.webp"
-              alt="Oscar Castaneda"
-              width={200}
-              height={200}
-              className="w-12 h-12 rounded-full border border-border object-cover object-center grayscale shrink-0"
-            />
-            <span>Oscar Castaneda</span>
-            <span>·</span>
-            <span>May 18, 2026</span>
-          </div> */}
+        </div>
+        {/* COVER IMAGE */}
+        <div className="mt-12 mx-auto max-w-5xl border border-border bg-card relative overflow-hidden aspect-video">
+          <Image
+            src="/images/montain.webp"
+            alt="Post cover"
+            fill
+            sizes="(max-width: 1024px) 100vw, 1280px"
+            className="object-cover"
+            priority
+          />
         </div>
       </div>
     </section>
