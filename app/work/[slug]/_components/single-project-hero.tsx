@@ -11,11 +11,11 @@ import Image from "next/image";
 import { StatsBar } from "@/app/components/ui/stats-bar";
 import { AppStoreIcon } from "@/app/components/icons/app-store";
 
-interface SingleProjectHeaderProps {
+interface SingleProjectHeroProps {
   project: Project;
 }
 
-export function SingleProjectHeader({ project }: SingleProjectHeaderProps) {
+export function SingleProjectHero({ project }: SingleProjectHeroProps) {
   const projectStats = [
     {
       label: "year",

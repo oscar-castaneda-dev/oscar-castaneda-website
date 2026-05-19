@@ -1,13 +1,16 @@
+import { Main } from "@/app/components/layout/main";
+import { BlogPostHero } from "./_components/blog-post-hero";
+
 interface BlogPostProps {
   params: Promise<{ slug: string }>;
 }
 
 export default async function BlogPost({ params }: BlogPostProps) {
-  const { slug } = await params;
+  await params;
 
   return (
-    <div>
-      <p>{slug}</p>
-    </div>
+    <Main>
+      <BlogPostHero />
+    </Main>
   );
 }

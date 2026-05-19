@@ -4,7 +4,7 @@ import { Description } from "./_components/description";
 import { Main } from "@/app/components/layout/main";
 import { PROJECTS } from "@/data/projects";
 import { SingleProjectGrid } from "./_components/single-project-grid";
-import { SingleProjectHeader } from "./_components/single-project-header";
+import { SingleProjectHero } from "./_components/single-project-hero";
 
 interface SingleWorkPageProps {
   params: Promise<{ slug: string }>;
@@ -19,7 +19,7 @@ export default async function SingleWorkPage({ params }: SingleWorkPageProps) {
 
   return (
     <Main>
-      <SingleProjectHeader project={project} />
+      <SingleProjectHero project={project} />
       <Description project={project} />
       <SingleProjectGrid project={project} />
     </Main>
