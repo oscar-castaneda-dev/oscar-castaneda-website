@@ -32,15 +32,20 @@ This is a personal portfolio site with three routes:
 
 `app/layout.tsx` — Root layout. Sets up fonts and global metadata.
 
-## Typography Components
+## Typography
 
-**Never use raw `<p>`, `<span>`, `<h1>`–`<h3>` for text.** Always use the typography components:
+Use raw HTML elements (`<h1>`–`<h3>`, `<p>`, `<span>`) with utility classes directly. No typography wrapper components.
 
-- `Heading` — `app/components/typography/heading.tsx` — Doto font, hero headings
-- `Subtitle` — `app/components/typography/subtitle.tsx` — Space Mono, uppercase labels
-- `Text` — `app/components/typography/text.tsx` — Space Grotesk, body content
+**Heading utilities** (defined in `globals.css`) — Doto font, responsive `clamp()` sizing, always `text-title`:
 
-Raw HTML text elements are only acceptable inside these components themselves, not in pages or feature components.
+- `heading-64` — hero headings (~128px desktop)
+- `heading-48` — section heroes (~100px desktop)
+- `heading-44` — page titles (~72px desktop)
+- `heading-36` — subsection headings (~36px desktop)
+
+**Subtitle / labels** — `font-nothing-subtitle` (Space Mono, uppercase, tracking 0.08em). Does not set color — always pair with `text-caption`, `text-body`, or `text-title`.
+
+**Body text** — `font-sans` (Space Grotesk) + Tailwind `text-*` size + color class (`text-body`, `text-caption`, etc.).
 
 ## Design Skill
 

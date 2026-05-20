@@ -26,33 +26,29 @@
 | `--caption` | 12px | 1.4 | 0.04em | Timestamps, footnotes |
 | `--label` | 11px | 1.2 | 0.08em | ALL CAPS monospace labels |
 
-### Component APIs
+### Utility Classes (React/Tailwind — `globals.css`)
 
-**`<Text size={n}>`** — `app/components/typography/text.tsx`  
-Numeric key = px value. Default `16`.
+**Heading utilities** — Doto font, `font-bold`, `tracking-[-0.03em]`, `leading-[0.92]`, `text-title`. Responsive via `clamp()`.
 
-| size | Tailwind | leading |
+| Utility | Min | Fluid | Max | Use |
+|---------|-----|-------|-----|-----|
+| `heading-64` | 48px | 11vw | 128px | Hero headings |
+| `heading-48` | 48px | 8vw | 100px | Section heroes |
+| `heading-44` | 48px | 5.5vw | 72px | Page titles |
+| `heading-36` | 28px | 2.8vw | 36px | Subsection headings |
+
+**Subtitle / label utility** — `font-nothing-subtitle` = Space Mono, uppercase, `letter-spacing: 0.08em`. Does not set color — always pair with a `text-*` class.
+
+**Body text** — raw Tailwind `text-*` size + `font-sans` + color class:
+
+| Size | Tailwind | leading |
 |------|----------|---------|
-| 12 | `text-xs` | 1.4 |
-| 14 | `text-sm` | 1.5 |
-| 16 | `text-base` | 1.7 |
-| 18 | `text-lg` | 1.4 |
-| 20 | `text-xl` | 1.4 |
-| 24 | `text-2xl` | 1.2 |
-| 30 | `text-3xl` | 1.2 |
-| 36 | `text-4xl` | 1.1 |
-| 48 | `text-5xl` | 1.05 |
-| 60 | `text-6xl` | 1.0 |
-
-**`<Subtitle size={n}>`** — `app/components/typography/subtitle.tsx`  
-Space Mono, ALL CAPS, no leading override. Default `20`.
-
-| size | Tailwind |
-|------|----------|
-| 20 | `text-xl` |
-| 24 | `text-2xl` |
-| 30 | `text-3xl` |
-| 36 | `text-4xl` |
+| 12px | `text-xs` | 1.4 |
+| 14px | `text-sm` | 1.5 |
+| 16px | `text-base` | 1.7 |
+| 18px | `text-lg` | 1.4 |
+| 20px | `text-xl` | 1.4 |
+| 24px | `text-2xl` | 1.2 |
 
 ### Typographic Rules
 

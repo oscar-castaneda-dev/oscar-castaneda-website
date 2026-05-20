@@ -80,18 +80,28 @@ Load fonts via `next/font/google`. Tokens live in `globals.css` under `@theme`. 
 | `--warning` | `text-warning` |
 | `--action` | `text-action` |
 
-### Type Scale → Tailwind Class
+### Type Scale → Utility Classes
+
+**Headings** — use the `@utility` classes defined in `globals.css`. Apply directly to `<h1>`–`<h3>`:
+
+| Utility | Size (clamp) | Use |
+|---|---|---|
+| `heading-64` | 48px → 128px | Hero headings |
+| `heading-48` | 48px → 100px | Section heroes |
+| `heading-44` | 48px → 72px | Page titles |
+| `heading-36` | 28px → 36px | Subsection headings |
+
+**Subtitle / labels** — `font-nothing-subtitle` + `text-*` color. Apply to `<p>`, `<span>`, etc.:
 
 | Design Token | Size | Tailwind |
 |---|---|---|
-| `--label` | 11px, Space Mono, ALL CAPS, tracking 0.08em | `nd-label` (custom `@utility`) |
 | `--caption` | 12px | `text-xs` |
 | `--body-sm` | 14px | `text-sm` |
 | `--body` | 16px | `text-base` |
 | `--subheading` | 18px | `text-lg` |
 | `--heading` | 24px | `text-2xl` |
 | Space Mono body | — | `font-mono` |
-| Doto display | — | `nd-doto` / `font-display` |
+| Doto display | — | `font-display` |
 
 ### Spacing Token → Tailwind Scale
 

@@ -84,6 +84,34 @@ body {
 }
 
 /* =======================
+   TYPOGRAPHY UTILITIES
+   ======================= */
+
+@utility heading-64 {
+  @apply font-nothing-dots font-bold tracking-[-0.03em] leading-[0.92] text-title;
+  font-size: clamp(48px, 11vw, 128px);
+}
+
+@utility heading-48 {
+  @apply font-nothing-dots font-bold tracking-[-0.03em] leading-[0.92] text-title;
+  font-size: clamp(48px, 8vw, 100px);
+}
+
+@utility heading-44 {
+  @apply font-nothing-dots font-bold tracking-[-0.03em] leading-[0.92] text-title;
+  font-size: clamp(48px, 5.5vw, 72px);
+}
+
+@utility heading-36 {
+  @apply font-nothing-dots font-bold tracking-[-0.03em] leading-[0.92] text-title;
+  font-size: clamp(28px, 2.8vw, 36px);
+}
+
+@utility subtitle {
+  @apply font-nothing-subtitle uppercase;
+}
+
+/* =======================
    PROJECT GRID
    ======================= */
 
