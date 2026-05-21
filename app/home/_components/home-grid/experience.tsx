@@ -1,6 +1,3 @@
-import { Heading } from "@/app/components/typography/heading";
-import { Subtitle } from "@/app/components/typography/subtitle";
-import { Text } from "@/app/components/typography/text";
 import { YEARS_OF_EXPERIENCE } from "@/app/constants";
 
 export function Experience() {
@@ -9,12 +6,10 @@ export function Experience() {
       className="bg-card border border-border rounded-lg p-5 flex flex-col justify-between min-h-40"
       style={{ gridArea: "experience" }}
     >
-      <Subtitle color="body">experience</Subtitle>
+      <p className="subtitle text-xl text-body">experience</p>
       <div>
-        <Heading size={48} as="h3">
-          {YEARS_OF_EXPERIENCE}
-        </Heading>
-        <Text size={12}>years</Text>
+        <h3 className="heading-48">{YEARS_OF_EXPERIENCE}</h3>
+        <p className="text-xs">years</p>
       </div>
     </div>
   );

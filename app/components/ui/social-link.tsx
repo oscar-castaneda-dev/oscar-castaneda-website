@@ -1,13 +1,13 @@
 import { cn } from "@/lib/cn";
+import { ArrowRightUpIcon } from "@/app/components/icons/arrow-right-up";
 
 interface ExternalLinkProps {
   children: React.ReactNode;
   className?: string;
   href: string;
-  icon?: React.ReactNode;
 }
 
-export function ExternalLink({ children, className, href, icon }: ExternalLinkProps) {
+export function SocialLink({ children, className, href }: ExternalLinkProps) {
   return (
     <a
       href={href}
@@ -19,7 +19,7 @@ export function ExternalLink({ children, className, href, icon }: ExternalLinkPr
       )}
     >
       <span className="inline-block group-hover:underline">{children}</span>
-      {icon}
+      <ArrowRightUpIcon className="transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
     </a>
   );
 }

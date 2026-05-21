@@ -1,8 +1,6 @@
 import Link from "next/link";
 
 import { ArrowRightUpIcon } from "@/app/components/icons/arrow-right-up";
-import { Heading } from "@/app/components/typography/heading";
-import { Text } from "@/app/components/typography/text";
 
 export function Blog() {
   return (
@@ -11,15 +9,13 @@ export function Blog() {
       className="rounded-lg p-5 flex flex-col justify-between min-h-40 border border-indigo-border bg-indigo-surface transition-colors duration-200 hover:border-indigo-500/40 hover:bg-[#0f0f20]"
       style={{ gridArea: "blog" }}
     >
-      <Text size={14} className="text-indigo-300 uppercase">
-        writing
-      </Text>
+      <p className="text-sm text-indigo-300 uppercase">writing</p>
       <div>
-        <Heading size={36} className="uppercase text-indigo-400">
+        <h3 className="heading-36 uppercase text-indigo-400 mb-1">
           daily blog
-        </Heading>
+        </h3>
         <div className="flex justify-between items-center">
-          <Text className="text-indigo-300 uppercase">Building in public</Text>
+          <p className="text-indigo-300 uppercase">Building in public</p>
           <ArrowRightUpIcon className="text-indigo-300" size={20} />
         </div>
       </div>

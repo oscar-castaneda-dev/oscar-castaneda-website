@@ -2,10 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { cn } from "@/lib/cn";
-import { Heading } from "@/app/components/typography/heading";
-import { Subtitle } from "@/app/components/typography/subtitle";
-import type { Project } from "@/data/projects";
 import { formatNumber } from "@/app/lib/format-number";
+import type { Project } from "@/data/projects";
 
 interface ProjectCardProps {
   area: string;
@@ -49,16 +47,19 @@ export function ProjectCard({
       />
       <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/15 to-transparent transition-opacity duration-300 group-hover:opacity-0" />
       <div className="absolute inset-0 flex flex-col justify-between p-5 transition-opacity duration-300 group-hover:opacity-0">
-        <Subtitle color="body">
+        <p className="subtitle text-xl text-body">
           {num} - {category}
-        </Subtitle>
+        </p>
         <div>
-          <Heading size={featured ? 44 : 36} as="h2" className="uppercase">
+          <h2
+            className={cn(
+              "uppercase mb-1",
+              featured ? " heading-44" : "heading-36",
+            )}
+          >
             {title}
-          </Heading>
-          <Subtitle size={20} color="caption" className="mt-1">
-            {year}
-          </Subtitle>
+          </h2>
+          <p className="subtitle text-xl text-caption">{year}</p>
         </div>
       </div>
     </Link>

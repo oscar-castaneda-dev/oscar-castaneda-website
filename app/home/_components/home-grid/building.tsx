@@ -1,8 +1,6 @@
 import Link from "next/link";
 
-import { Heading } from "@/app/components/typography/heading";
 import { StatusDot } from "@/app/components/ui/status-dot";
-import { Text } from "@/app/components/typography/text";
 
 export function Building() {
   return (
@@ -13,17 +11,15 @@ export function Building() {
     >
       <div className="flex items-center gap-x-2">
         <StatusDot />
-        <Text size={12} className="uppercase text-green-muted">
-          currently building
-        </Text>
+        <p className="text-green-muted text-xs uppercase">currently building</p>
       </div>
       <div>
-        <Heading size={36} className="mb-1 uppercase text-green-400">
+        <h3 className="heading-36 mb-1 uppercase text-green-400">
           Data as a Service
-        </Heading>
-        <Text size={12} className="uppercase text-green-muted">
+        </h3>
+        <p className="text-xs uppercase text-green-muted">
           Side Project - 2026
-        </Text>
+        </p>
       </div>
     </Link>
   );

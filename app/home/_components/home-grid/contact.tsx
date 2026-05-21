@@ -1,26 +1,16 @@
-import { ArrowRightUpIcon } from "@/app/components/icons/arrow-right-up";
 import { Card } from "./card";
-import { ExternalLink } from "@/app/components/ui/external-link";
-import { Heading } from "@/app/components/typography/heading";
-import { Subtitle } from "@/app/components/typography/subtitle";
+import { SocialLink } from "@/app/components/ui/social-link";
 
 export function Contact() {
   return (
     <Card area="contact">
-      <Subtitle color="body">contact</Subtitle>
-      <Heading size={36} className="uppercase">
-        let&apos;s talk
-      </Heading>
+      <p className="subtitle text-xl text-body">contact</p>
+      <h3 className="heading-36 uppercase">let&apos;s talk</h3>
       <div className="flex flex-col">
-        <ExternalLink
-          href="https://github.com/oscar-castaneda-dev"
-          icon={<ArrowRightUpIcon />}
-        >
+        <SocialLink href="https://github.com/oscar-castaneda-dev">
           github
-        </ExternalLink>
-        <ExternalLink href="https://x.com/iamoscar" icon={<ArrowRightUpIcon />}>
-          twitter
-        </ExternalLink>
+        </SocialLink>
+        <SocialLink href="https://x.com/iamoscar">twitter</SocialLink>
       </div>
     </Card>
   );
