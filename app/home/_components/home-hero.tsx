@@ -1,6 +1,6 @@
+import { ButtonLink } from "@/app/components/ui/button-link";
 import { DotGrid } from "@/app/components/ui/dot-grid";
 import { PROFILE_META } from "@/data/profile-meta";
-import { ButtonPrimary } from "@/app/components/buttons/button-primary";
 
 export function HomeHero() {
   return (
@@ -16,9 +16,9 @@ export function HomeHero() {
           AI Engineer specializing in ML, NLP, and inference-powered digital
           products. Shipping web and mobile applications with AI at the core.
         </p>
-        <ButtonPrimary href="/work" className="mb-16">
+        <ButtonLink href="/work" className="mb-16">
           View my work
-        </ButtonPrimary>
+        </ButtonLink>
         <div className="flex flex-col md:flex-row gap-6 md:gap-12 border-t border-border py-6">
           {PROFILE_META.map(({ colorClass, label, value }) => (
             <div key={label} className="flex flex-col gap-1">
