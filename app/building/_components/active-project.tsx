@@ -2,7 +2,6 @@ import Link from "next/link";
 
 import { BuildingProject } from "@/data/building";
 import { getProjectColumns, columnGridClass } from "./columns";
-import { Heading } from "@/app/components/typography/heading";
 import { ProgressBar } from "@/app/components/ui/progress-bar";
 import { StatusDot } from "@/app/components/ui/status-dot";
 import { Text } from "@/app/components/typography/text";
@@ -28,24 +27,18 @@ export function ActiveProject({ project }: ActiveProjectProps) {
       >
         <div className="flex items-center gap-2 mb-6">
           <StatusDot />
-          <Text size={12} className="font-nothing-subtitle">
-            Currently Building
-          </Text>
+          <p className="subtitle text-xs">currently building</p>
         </div>
-        <Heading size={44} as="h2" className="text-green-400 mb-2">
-          {project.name}
-        </Heading>
-        <Text size={12} className="font-nothing-subtitle">
+        <h2 className="heading-44 text-green-400 mb-2">{project.name}</h2>
+        <p className="subtitle text-xs">
           {project.type} - {project.year}
-        </Text>
+        </p>
       </Link>
       {/* PROGRESS BAR */}
       <div className="space-y-3">
         <div className="flex justify-between items-baseline">
-          <Text size={12} className="font-nothing-subtitle">
-            progress
-          </Text>
-          <Text size={48}>{progress}%</Text>
+          <p className="subtitle text-xs">progress</p>
+          <p className="text-5xl">{progress}%</p>
         </div>
         <ProgressBar total={total} filled={project.done.length} />
       </div>
@@ -53,9 +46,7 @@ export function ActiveProject({ project }: ActiveProjectProps) {
       <div className={`grid ${columnGridClass[columns.length]} gap-8`}>
         {columns.map((column) => (
           <div key={column.label}>
-            <Text size={14} className="font-nothing-subtitle block mb-4">
-              {column.label}
-            </Text>
+            <p className="subtitle text-sm block mb-4">{column.label}</p>
             {column.items.map((item, index) => (
               <div
                 key={index}
