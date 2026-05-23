@@ -1,9 +1,7 @@
 import Link from "next/link";
 
 import { BuildingProject } from "@/data/building";
-import { Heading } from "@/app/components/typography/heading";
 import { ProgressBar } from "@/app/components/ui/progress-bar";
-import { Text } from "@/app/components/typography/text";
 
 interface CompletedProjectProps {
   project: BuildingProject;
@@ -19,25 +17,19 @@ export function CompletedProject({ project }: CompletedProjectProps) {
       >
         <div>
           <div className="flex items-center gap-2 mb-6">
-            <Text size={12} className="font-nothing-subtitle">
-              completed
-            </Text>
+            <p className="subtitle text-xs">completed</p>
           </div>
-          <Heading size={44} as="h2" className="text-indigo-400 mb-2">
-            {project.name}
-          </Heading>
-          <Text size={12} className="font-nothing-subtitle">
+          <h2 className="heading-44 text-indigo-400 mb-2">{project.name}</h2>
+          <p className="subtitle text-xs">
             {project.type} - {project.year}
-          </Text>
+          </p>
         </div>
       </Link>
       {/* PROGRESS BAR */}
       <div className="space-y-3">
         <div className="flex justify-between items-baseline">
-          <Text size={12} className="font-nothing-subtitle">
-            progress
-          </Text>
-          <Text size={48}>100%</Text>
+          <p className="subtitle text-xs">progress</p>
+          <p className="text-5xl">100%</p>
         </div>
         <ProgressBar
           total={project.done.length}
@@ -46,19 +38,15 @@ export function CompletedProject({ project }: CompletedProjectProps) {
         />
       </div>
       {/* COLUMN DONE */}
-      <Text size={14} className="font-nothing-subtitle block mb-8">
-        done
-      </Text>
+      <p className="subtitle text-sm block mb-8">done</p>
       <div className="grid grid-cols-1 gap-4">
         {project.done.map((item, index) => (
           <div
             key={index}
             className="flex items-start gap-3 py-3 border-t border-border"
           >
-            <Text size={14} className="text-indigo-400 shrink-0">
-              ✓
-            </Text>
-            <Text size={14}>{item}</Text>
+            <p className="text-sm text-indigo-400 shrink-0">✓</p>
+            <p className="text-sm">{item}</p>
           </div>
         ))}
       </div>
