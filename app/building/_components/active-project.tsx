@@ -4,7 +4,6 @@ import { BuildingProject } from "@/data/building";
 import { getProjectColumns, columnGridClass } from "./columns";
 import { ProgressBar } from "@/app/components/ui/progress-bar";
 import { StatusDot } from "@/app/components/ui/status-dot";
-import { Text } from "@/app/components/typography/text";
 
 interface ActiveProjectProps {
   project: BuildingProject;
@@ -52,10 +51,10 @@ export function ActiveProject({ project }: ActiveProjectProps) {
                 key={index}
                 className="flex items-start gap-3 py-3 border-t border-border"
               >
-                <Text size={14} className={`${column.symbolClass} shrink-0`}>
+                <p className={`text-sm shrink-0 ${column.symbolClass}`}>
                   {column.symbol}
-                </Text>
-                <Text size={14}>{item}</Text>
+                </p>
+                <p className="text-sm">{item}</p>
               </div>
             ))}
             <div className="border-t border-border" />

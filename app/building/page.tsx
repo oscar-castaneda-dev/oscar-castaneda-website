@@ -19,7 +19,7 @@ export default function BuildingPage() {
 
   return (
     <Main className="container py-16 space-y-24">
-      <div className="space-y-4">
+      <div className="space-y-4 border-b border-border pb-16">
         <h1 className="heading-48 uppercase">Building</h1>
         <p className="text-body max-w-lg">
           Projects currently in motion, experiments in progress, and products
