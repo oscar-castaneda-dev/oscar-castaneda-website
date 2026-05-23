@@ -1,6 +1,4 @@
 import { BuildingProject } from "@/data/building";
-import { Heading } from "@/app/components/typography/heading";
-import { Text } from "@/app/components/typography/text";
 
 interface PendingProjectProps {
   project: BuildingProject;
@@ -12,31 +10,23 @@ export function PendingProject({ project }: PendingProjectProps) {
       {/* HEADER PENDING CARD */}
       <div className="bg-card border border-border rounded-2xl p-8">
         <div className="flex items-center gap-2 mb-6">
-          <Text size={12} className="font-nothing-subtitle">
-            queued
-          </Text>
+          <p className="subtitle text-xs">queued</p>
         </div>
-        <Heading size={44} as="h2" className="mb-2">
-          {project.name}
-        </Heading>
-        <Text size={12} className="font-nothing-subtitle">
+        <h2 className="heading-44 mb-2">{project.name}</h2>
+        <p className="subtitle text-xs">
           {project.type} - {project.year}
-        </Text>
+        </p>
       </div>
       {/* COLUMNS - TO DO */}
-      <Text size={14} className="font-nothing-subtitle block mb-8">
-        To Do
-      </Text>
+      <p className="subtitle text-sm block mb-8">to do</p>
       <div className="grid grid-cols-1 gap-4">
         {project.upcoming.map((item, index) => (
           <div
             key={index}
             className="flex items-start gap-3 py-3 border-t border-border"
           >
-            <Text size={14} className="shrink-0">
-              →
-            </Text>
-            <Text size={14}>{item}</Text>
+            <p className="text-sm shrink-0">→</p>
+            <p className="text-sm">{item}</p>
           </div>
         ))}
       </div>
