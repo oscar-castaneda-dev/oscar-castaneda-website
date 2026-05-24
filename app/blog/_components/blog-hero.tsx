@@ -1,6 +1,5 @@
 import { DotGrid } from "@/app/components/ui/dot-grid";
 import { Heading } from "@/app/components/typography/heading";
-import { Subtitle } from "@/app/components/typography/subtitle";
 import { Text } from "@/app/components/typography/text";
 import { BlogFeaturedCard } from "@/app/blog/_components/blog-featured-card";
 
@@ -12,7 +11,7 @@ export function BlogHero() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
           {/* LEFT COLUMNS */}
           <div className="col-span-1 lg:col-span-3 flex flex-col">
-            <Subtitle className="mb-2">// writing</Subtitle>
+            <p className="subtitle text-xl mb-2 text-caption">// writing</p>
             <Heading size={48} className="uppercase mb-4">
               Blog
             </Heading>
