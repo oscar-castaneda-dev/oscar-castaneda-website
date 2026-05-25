@@ -1,9 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Subtitle } from "@/app/components/typography/subtitle";
-import { Text } from "@/app/components/typography/text";
-
 interface BlogCardProps {
   date: string;
   href: string;
@@ -34,14 +31,10 @@ export function BlogCard({
       />
       <div className="absolute inset-0 bg-linear-to-b from-black/60 via-transparent to-black/80" />
       <div className="absolute top-4 left-4">
-        <Subtitle color="body" className="text-xs">
-          {date}
-        </Subtitle>
+        <p className="subtitle text-xs">{date}</p>
       </div>
       <div className="absolute bottom-0 inset-x-0 h-20 flex flex-col justify-start px-4 pt-2 pb-3">
-        <Text size={18} color="title" className="line-clamp-2 leading-snug">
-          {title}
-        </Text>
+        <p className="text-lg line-clamp-2 leading-snug">{title}</p>
       </div>
     </Link>
   );

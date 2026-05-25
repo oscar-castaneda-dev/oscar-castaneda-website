@@ -1,4 +1,3 @@
-import { Subtitle } from "@/app/components/typography/subtitle";
 import { BlogCard } from "./blog-card";
 
 const POSTS = [
@@ -61,7 +60,7 @@ const POSTS = [
 export function BlogGrid() {
   return (
     <section className="container pb-16">
-      <Subtitle className="mb-8">// all posts</Subtitle>
+      <p className="subtitle text-xl mb-8 text-caption">// all posts</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {POSTS.map((post) => (
           <BlogCard
