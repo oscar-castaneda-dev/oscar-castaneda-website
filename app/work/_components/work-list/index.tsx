@@ -2,16 +2,27 @@ import { buildRows } from "./build-rows";
 import { DuoRow } from "./duo-row";
 import { FeaturedRow } from "./featured-row";
 import { PROJECTS } from "@/data/projects";
-import { Subtitle } from "@/app/components/typography/subtitle";
 import { TrioRow } from "./trio-row";
 import { WideRow } from "./wide-row";
 import type { ProjectRow } from "./types";
 
 interface RowRenderer {
-  featured: (row: ProjectRow, idx: number, startIndex: number) => React.ReactElement;
-  wide: (row: ProjectRow, idx: number, startIndex: number) => React.ReactElement;
+  featured: (
+    row: ProjectRow,
+    idx: number,
+    startIndex: number,
+  ) => React.ReactElement;
+  wide: (
+    row: ProjectRow,
+    idx: number,
+    startIndex: number,
+  ) => React.ReactElement;
   duo: (row: ProjectRow, idx: number, startIndex: number) => React.ReactElement;
-  trio: (row: ProjectRow, idx: number, startIndex: number) => React.ReactElement;
+  trio: (
+    row: ProjectRow,
+    idx: number,
+    startIndex: number,
+  ) => React.ReactElement;
 }
 
 const ROW_RENDERERS: RowRenderer = {
@@ -40,7 +51,7 @@ export function WorkList() {
   return (
     <section className="py-16">
       <div className="container">
-        <Subtitle className="mb-8">// work</Subtitle>
+        <p className="subtitle text-xl text-caption mb-8">// work</p>
         <div className="flex flex-col gap-3">
           {rows.map((row, idx) =>
             ROW_RENDERERS[row.type](row, idx, startIndices[idx]),

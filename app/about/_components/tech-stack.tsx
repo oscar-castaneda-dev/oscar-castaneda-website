@@ -1,12 +1,11 @@
-import { Subtitle } from "@/app/components/typography/subtitle";
-import { Tag } from "@/app/components/ui/tag";
 import { STACK } from "@/data/stack";
+import { Tag } from "@/app/components/ui/tag";
 
 export function TechStack() {
   return (
     <section className="py-16">
       <div className="container">
-        <Subtitle className="mb-8">// stack</Subtitle>
+        <p className="subtitle text-xl text-caption mb-8">// stack</p>
         <div className="flex flex-col gap-5">
           {Object.entries(STACK).map(([area, technologies]) => (
             <div key={area} className="flex items-start gap-6">
