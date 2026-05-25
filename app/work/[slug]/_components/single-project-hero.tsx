@@ -1,10 +1,7 @@
 import { DotGrid } from "@/app/components/ui/dot-grid";
 import { Project } from "@/data/projects";
-import { Subtitle } from "@/app/components/typography/subtitle";
-import { Heading } from "@/app/components/typography/heading";
 import { ButtonPrimary } from "@/app/components/buttons/button-primary";
 import { ButtonSecondary } from "@/app/components/buttons/button-secondary";
-import { Text } from "@/app/components/typography/text";
 import { GitHubIcon } from "@/app/components/icons/github";
 import { ArrowRightUpIcon } from "@/app/components/icons/arrow-right-up";
 import Image from "next/image";
@@ -41,15 +38,11 @@ export function SingleProjectHero({ project }: SingleProjectHeroProps) {
     <section className="pt-16 relative overflow-hidden">
       <DotGrid />
       <div className="container relative mb-8">
-        <Subtitle className="mb-2">// case study</Subtitle>
+        <p className="subtitle text-xl text-caption mb-2">// case study</p>
         <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 md:gap-8 mb-6">
           <div>
-            <Heading size={48} className="uppercase">
-              {project.title}
-            </Heading>
-            <Text color="body" className="capitalize">
-              {project.summary}
-            </Text>
+            <h1 className="heading-48 uppercase">{project.title}</h1>
+            <p className="text-body capitalize">{project.summary}</p>
           </div>
           <div className="flex gap-3 shrink-0">
             {project.projectUrl && (
