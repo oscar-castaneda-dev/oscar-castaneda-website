@@ -3,7 +3,6 @@ import { ImageCard } from "./image-card";
 import { ImageModal } from "./image-modal";
 import { Industry } from "./industry";
 import { Project } from "@/data/projects";
-import { Subtitle } from "@/app/components/typography/subtitle";
 import { Stat } from "./stat";
 
 interface SingleProjectGridProps {
@@ -17,7 +16,7 @@ export function SingleProjectGrid({ project }: SingleProjectGridProps) {
     <>
       <section className="pb-24">
         <div className="container">
-          <Subtitle className="mb-3">// the work</Subtitle>
+          <p className="subtitle text-xl text-caption mb-3">// the work</p>
           <div className="single-project-grid">
             {/* IMG1 */}
             <ImageCard

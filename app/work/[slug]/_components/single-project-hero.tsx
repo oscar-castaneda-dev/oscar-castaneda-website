@@ -80,6 +80,7 @@ export function SingleProjectHero({ project }: SingleProjectHeroProps) {
             alt={project.title}
             fill
             className="object-cover"
+            loading="eager"
             priority
             sizes="(max-width: 768px) 100vw, 1280px"
           />
