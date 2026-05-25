@@ -1,4 +1,3 @@
-import { Subtitle } from "@/app/components/typography/subtitle";
 import {
   BACKGROUND_SCALE,
   COLORS,
@@ -10,7 +9,7 @@ export function Colors() {
   return (
     <section className="py-16 border-b border-border">
       <div className="container space-y-6">
-        <Subtitle>01 - colors</Subtitle>
+        <p className="subtitle text-xl text-caption">01 - colors</p>
         {/* COLORS */}
         <div className="mb-9 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px border border-border bg-border overflow-hidden rounded">
           {COLORS.map((color) => (
@@ -30,7 +29,7 @@ export function Colors() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* WHITE SCALE */}
           <div>
-            <Subtitle className="mb-6">white scale</Subtitle>
+            <p className="subtitle text-xl text-caption mb-6">white scale</p>
             <div className="bg-card border border-border rounded-xl p-6 flex flex-col">
               {WHITE_SCALE.map((whiteColor, index) => (
                 <div
@@ -57,7 +56,7 @@ export function Colors() {
           </div>
           {/* STATUS COLORS */}
           <div>
-            <Subtitle className="mb-6">status colors</Subtitle>
+            <p className="subtitle text-xl text-caption mb-6">status colors</p>
             <div className="bg-card border border-border rounded-xl p-6 flex flex-col">
               {STATUS_COLORS.map((statusColor) => (
                 <div
@@ -78,7 +77,7 @@ export function Colors() {
           </div>
           {/* BACKGROUND SCALE */}
           <div>
-            <Subtitle className="mb-6">background scale</Subtitle>
+            <p className="subtitle text-xl text-caption mb-6">background scale</p>
             <div className="flex flex-col gap-px border border-border rounded-xl overflow-hidden bg-border">
               {BACKGROUND_SCALE.map((bg) => (
                 <div
