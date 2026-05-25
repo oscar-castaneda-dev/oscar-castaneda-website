@@ -1,8 +1,6 @@
 import Image from "next/image";
 
 import { DotGrid } from "@/app/components/ui/dot-grid";
-import { Heading } from "@/app/components/typography/heading";
-import { Text } from "@/app/components/typography/text";
 
 export function PostHero() {
   return (
@@ -10,11 +8,13 @@ export function PostHero() {
       <DotGrid />
       <div className="container relative">
         <div className="mx-auto max-w-4xl flex flex-col items-center text-center gap-6">
-          <Heading size={48}>Designing websites faster with shadcn/ui</Heading>
-          <Text size={18} color="body" className="max-w-md">
+          <h1 className="heading-48">
+            Designing websites faster with shadcn/ui
+          </h1>
+          <p className="text-lg text-body max-w-md">
             A step-by-step guide to building a modern, responsive blog using
             React and Tailwind CSS.
-          </Text>
+          </p>
           {/* AUTHOR AND DATE */}
           <div className="flex flex-col items-center uppercase tracking-widest border-t border-border pt-4">
             <Image
@@ -24,8 +24,8 @@ export function PostHero() {
               height={200}
               className="w-12 h-12 rounded-full border border-border object-cover object-center grayscale shrink-0 mb-3"
             />
-            <Text size={14}>Oscar Castaneda</Text>
-            <Text size={12}>May 18, 2026</Text>
+            <p className="text-sm">Oscar Castaneda</p>
+            <p className="text-xs text-body">May 18, 2026</p>
           </div>
         </div>
         {/* COVER IMAGE */}
