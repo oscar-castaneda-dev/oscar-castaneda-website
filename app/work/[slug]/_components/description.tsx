@@ -1,6 +1,4 @@
-import { Project } from "@/data/projects";
-import { Subtitle } from "@/app/components/typography/subtitle";
-import { Text } from "@/app/components/typography/text";
+import { type Project } from "@/data/projects";
 
 interface DescriptionProps {
   project: Project;
@@ -11,11 +9,11 @@ export function Description({ project }: DescriptionProps) {
     <section className="py-16">
       <div className="container">
         <div className="max-w-xl mx-auto flex flex-col gap-4">
-          <Subtitle className="mb-2">// about</Subtitle>
+          <p className="subtitle text-xl text-caption mb-2">// about</p>
           {project.description.map((paragraph, index) => (
-            <Text key={index} size={20}>
+            <p key={index} className="text-xl">
               {paragraph}
-            </Text>
+            </p>
           ))}
         </div>
       </div>
