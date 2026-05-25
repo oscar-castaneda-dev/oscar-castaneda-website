@@ -1,6 +1,4 @@
 import { DotGrid } from "@/app/components/ui/dot-grid";
-import { Heading } from "@/app/components/typography/heading";
-import { Text } from "@/app/components/typography/text";
 import { BlogFeaturedCard } from "@/app/blog/_components/blog-featured-card";
 
 export function BlogHero() {
@@ -12,15 +10,13 @@ export function BlogHero() {
           {/* LEFT COLUMNS */}
           <div className="col-span-1 lg:col-span-3 flex flex-col">
             <p className="subtitle text-xl mb-2 text-caption">// writing</p>
-            <Heading size={48} className="uppercase mb-4">
-              Blog
-            </Heading>
+            <h1 className="heading-48 uppercase mb-4">Blog</h1>
             <div className="flex flex-col gap-y-4 max-w-lg mb-6">
-              <Text>
+              <p>
                 I write about building for the web, shipping AI products, and
                 leading engineering teams. Less theory — more things that
                 actually make it to production.
-              </Text>
+              </p>
             </div>
           </div>
           {/* RIGHT COLUMN */}
