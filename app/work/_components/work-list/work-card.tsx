@@ -1,12 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Heading } from "@/app/components/typography/heading";
-import { Subtitle } from "@/app/components/typography/subtitle";
-
-import type { WorkCardVariant } from "./types";
-import type { Project } from "@/data/projects";
 import { formatNumber } from "@/app/lib/format-number";
+import type { Project } from "@/data/projects";
+import type { WorkCardVariant } from "./types";
 
 interface WorkCardProps {
   project: Project;
@@ -39,17 +36,13 @@ export function WorkCard({ project, projectNumber, variant }: WorkCardProps) {
       <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/15 to-transparent transition-opacity duration-300 group-hover:opacity-0" />
       <div className="absolute inset-0 flex flex-col justify-between p-5 transition-opacity duration-300 group-hover:opacity-0">
         <div className="flex">
-          <Subtitle color="body" as="span">
+          <span className="subtitle text-xl text-body">
             {num} - {project.category}
-          </Subtitle>
+          </span>
         </div>
         <div>
-          <Heading size={36} as="h2" className="uppercase">
-            {project.title}
-          </Heading>
-          <Subtitle color="caption" className="mt-1">
-            {project.year}
-          </Subtitle>
+          <h2 className="heading-36 uppercase mb-1">{project.title}</h2>
+          <p className="subtitle text-xl text-caption">{project.year}</p>
         </div>
       </div>
     </Link>
