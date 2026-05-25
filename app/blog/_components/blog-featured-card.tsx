@@ -1,8 +1,5 @@
 import Image from "next/image";
 
-import { Subtitle } from "@/app/components/typography/subtitle";
-import { Text } from "@/app/components/typography/text";
-
 interface BlogFeaturedCardProps {
   date: string;
   excerpt: string;
@@ -36,13 +33,11 @@ export function BlogFeaturedCard({
         />
       </a>
       <div className="p-5 flex flex-col gap-3">
-        <Subtitle className="text-base">{date}</Subtitle>
+        <p className="subtitle text-body">{date}</p>
         <a href={href}>
-          <Text size={24} color="title">
-            {title}
-          </Text>
+          <p className="text-2xl">{title}</p>
         </a>
-        <Text color="caption">{excerpt}</Text>
+        <p className="text-caption">{excerpt}</p>
       </div>
     </div>
   );
