@@ -5,7 +5,7 @@ import { DotGrid } from "@/app/components/ui/dot-grid";
 export function AboutHero() {
   return (
     <section className="py-16 relative overflow-hidden border-border">
-      <DotGrid fade />
+      <DotGrid />
       <div className="container relative">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
           {/* LEFT COLUMN */}
