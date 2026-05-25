@@ -1,13 +1,11 @@
 import { StatusDot } from "@/app/components/ui/status-dot";
-import { Subtitle } from "@/app/components/typography/subtitle";
-import { Text } from "@/app/components/typography/text";
 import { WORK_EXPERIENCE } from "@/data/work-experience";
 
 export function WorkExperience() {
   return (
     <section className="py-16 border-b border-border">
       <div className="container">
-        <Subtitle className="mb-8">// experience</Subtitle>
+        <p className="subtitle text-xl text-caption mb-8">// experience</p>
         <div>
           {WORK_EXPERIENCE.map((company, index) => {
             const currentPosition = company.to === null;
@@ -26,13 +24,11 @@ export function WorkExperience() {
                   <div className="flex flex-col gap-1">
                     <div className="flex items-center gap-2">
                       {currentPosition && <StatusDot />}
-                      <Text size={18} className="text-title capitalize">
-                        {company.name}
-                      </Text>
+                      <p className="text-lg capitalize">{company.name}</p>
                     </div>
-                    <Text size={14} color="caption" className="capitalize">
+                    <p className="text-sm text-caption capitalize">
                       {company.role}
-                    </Text>
+                    </p>
                   </div>
                 </div>
                 {/* DURATION */}
