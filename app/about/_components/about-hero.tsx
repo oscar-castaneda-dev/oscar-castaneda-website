@@ -1,9 +1,6 @@
 import Image from "next/image";
 
 import { DotGrid } from "@/app/components/ui/dot-grid";
-import { Heading } from "@/app/components/typography/heading";
-import { Subtitle } from "@/app/components/typography/subtitle";
-import { Text } from "@/app/components/typography/text";
 
 export function AboutHero() {
   return (
@@ -13,24 +10,24 @@ export function AboutHero() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
           {/* LEFT COLUMN */}
           <div className="col-span-1 md:col-span-3 flex flex-col">
-            <Subtitle className="mb-3">// who i am</Subtitle>
-            <Heading size={48} className="uppercase mb-1">
+            <p className="subtitle text-xl text-caption mb-3">// who i am</p>
+            <h1 className="heading-48 uppercase mb-1">
               Oscar <br /> Castaneda
-            </Heading>
-            <Text className="uppercase mb-6">Tech Lead - AI Engineer</Text>
+            </h1>
+            <p className="uppercase mb-6 text-body">Tech Lead - AI Engineer</p>
             <div className="flex flex-col gap-y-4 max-w-lg">
-              <Text>
+              <p>
                 I&#39;ve spent most of my career building products for the web,
                 writing code, leading teams, and shipping things that need to
                 work in the real world. I enjoy the process of taking something
                 from scratch and making it usable.
-              </Text>
-              <Text>
+              </p>
+              <p>
                 Right now, I&#39;m leaning into AI and how it fits into everyday
                 products. I&#39;m less interested in the buzz, and more in how
                 it can improve real user experiences. Simple, clear, and useful
                 is always the goal.
-              </Text>
+              </p>
             </div>
           </div>
           {/* RIGHT COLUMN */}
