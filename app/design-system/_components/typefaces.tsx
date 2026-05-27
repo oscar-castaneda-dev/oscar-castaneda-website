@@ -14,23 +14,23 @@ const headingClass: Record<number, string> = {
 const subtitleSizeClass: Record<number, string> = {
   24: "text-2xl",
   20: "text-xl",
-  18: "text-lg leading-[1.4]",
-  16: "text-base leading-[1.7]",
-  14: "text-sm leading-[1.5]",
-  12: "text-xs leading-[1.4]",
+  18: "text-lg",
+  16: "text-base",
+  14: "text-sm",
+  12: "text-xs",
 };
 
 const textSizeClass: Record<number, string> = {
-  12: "text-xs leading-[1.4]",
-  14: "text-sm leading-[1.5]",
-  16: "text-base leading-[1.7]",
-  18: "text-lg leading-[1.4]",
-  20: "text-xl leading-[1.4]",
-  24: "text-2xl leading-[1.2]",
-  30: "text-3xl leading-[1.2]",
-  36: "text-4xl leading-[1.1]",
-  48: "text-5xl leading-[1.05]",
-  60: "text-6xl leading-[1.0]",
+  12: "text-xs",
+  14: "text-sm",
+  16: "text-base",
+  18: "text-lg",
+  20: "text-xl",
+  24: "text-2xl",
+  30: "text-3xl",
+  36: "text-4xl",
+  48: "text-5xl",
+  60: "text-6xl",
 };
 
 export function Typefaces() {
@@ -54,7 +54,9 @@ export function Typefaces() {
                   className="flex flex-col items-baseline gap-y-2"
                 >
                   <h1 className={headingClass[size]}>Heading</h1>
-                  <p className="text-base leading-[1.7] text-body">{size}px</p>
+                  <p className="text-base leading-[1.7] text-body">
+                    {size}px - {headingClass[size]}
+                  </p>
                 </div>
               ))}
             </div>
@@ -78,7 +80,9 @@ export function Typefaces() {
                   >
                     Subtitle
                   </p>
-                  <p className="text-xs leading-[1.4] text-body">{size}px</p>
+                  <p className="text-sm text-body">
+                    {size}px - {subtitleSizeClass[size]}
+                  </p>
                 </div>
               ))}
             </div>
@@ -98,7 +102,9 @@ export function Typefaces() {
                   className="flex flex-col items-baseline gap-y-2"
                 >
                   <p className={`${textSizeClass[size]} text-body`}>Text</p>
-                  <p className="text-xs leading-[1.4] text-caption">{size}px</p>
+                  <p className="text-sm text-caption">
+                    {size}px - {textSizeClass[size]}
+                  </p>
                 </div>
               ))}
             </div>
