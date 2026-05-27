@@ -74,8 +74,8 @@ export const WHITE_SCALE = [
 // TYPOGRAPHY
 // ============================================================
 
-export const HEADING_SIZES = [64, 48, 44] as const;
+export const HEADING_SIZES = [64, 48, 44, 36] as const;
 
-export const SUBTITLE_SIZES = [36, 30, 24, 20] as const;
+export const SUBTITLE_SIZES = [24, 20, 18, 16, 14, 12] as const;
 
 export const TEXT_SIZES = [60, 48, 36, 30, 24, 20, 18, 16, 14, 12] as const;
