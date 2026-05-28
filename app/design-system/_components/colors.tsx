@@ -1,4 +1,5 @@
 import {
+  ACCENT_PALETTES,
   BACKGROUND_SCALE,
   COLORS,
   STATUS_COLORS,
@@ -76,8 +77,10 @@ export function Colors() {
             </div>
           </div>
           {/* BACKGROUND SCALE */}
-          <div>
-            <p className="subtitle text-xl text-caption mb-6">background scale</p>
+          <div className="md:col-span-2 lg:col-span-1">
+            <p className="subtitle text-xl text-caption mb-6">
+              background scale
+            </p>
             <div className="flex flex-col gap-px border border-border rounded-xl overflow-hidden bg-border">
               {BACKGROUND_SCALE.map((bg) => (
                 <div
@@ -93,6 +96,49 @@ export function Colors() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+        {/* ACCENT PALETTES */}
+        <div>
+          <p className="subtitle text-xl text-caption mb-6">accent palettes</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {ACCENT_PALETTES.map((palette) => (
+              <div key={palette.name}>
+                <p
+                  className={`font-nothing-subtitle text-sm ${palette.textClass} mb-4`}
+                >
+                  // {palette.name}
+                </p>
+                <div
+                  className={`${palette.containerBg} border ${palette.containerBorder} rounded-xl overflow-hidden`}
+                >
+                  {palette.items.map((item) => (
+                    <div
+                      key={item.cls}
+                      className="grid grid-cols-[1.5rem_1fr_auto] items-center gap-4 px-6 py-4 border-b border-white/5 last:border-b-0"
+                    >
+                      {item.cls.startsWith("bg-") ? (
+                        <div
+                          className={`size-6 rounded ${item.cls} border border-white/10 shrink-0`}
+                        />
+                      ) : (
+                        <span
+                          className={`font-nothing-code text-base ${item.cls}`}
+                        >
+                          Aa
+                        </span>
+                      )}
+                      <span className="font-nothing-subtitle text-xs text-caption">
+                        {item.label}
+                      </span>
+                      <span className="font-nothing-code text-xs text-disabled hidden sm:block">
+                        {item.cls}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

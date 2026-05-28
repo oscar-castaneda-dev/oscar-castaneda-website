@@ -34,24 +34,26 @@ export const COLORS = [
 export const ACCENT_PALETTES = [
   {
     name: "green",
-    label: "// building",
     textClass: "text-green-400",
+    containerBg: "bg-green-surface",
+    containerBorder: "border-green-border",
     items: [
-      { token: "bg-green-surface", hex: "#0a1a0d", label: "surface" },
-      { token: "bg-green-border", hex: "#1a3d22", label: "border" },
-      { token: "text-green-muted", hex: "#3d6645", label: "muted" },
-      { token: "text-green-400", hex: "#4ade80", label: "text" },
+      { cls: "bg-green-surface", hex: "#0a1a0d", label: "surface" },
+      { cls: "bg-green-border", hex: "#1a3d22", label: "border" },
+      { cls: "text-green-muted", hex: "#3d6645", label: "muted" },
+      { cls: "text-green-400", hex: "#4ade80", label: "text" },
     ],
   },
   {
     name: "indigo",
-    label: "// writing",
     textClass: "text-indigo-400",
+    containerBg: "bg-indigo-surface",
+    containerBorder: "border-indigo-border",
     items: [
-      { token: "bg-indigo-surface", hex: "#0d0d1a", label: "surface" },
-      { token: "bg-indigo-border", hex: "#1e1e33", label: "border" },
-      { token: "text-indigo-300", hex: "#a5b4fc", label: "text light" },
-      { token: "text-indigo-400", hex: "#818cf8", label: "text" },
+      { cls: "bg-indigo-surface", hex: "#0d0d1a", label: "surface" },
+      { cls: "bg-indigo-border", hex: "#1e1e33", label: "border" },
+      { cls: "text-indigo-300", hex: "#a5b4fc", label: "text light" },
+      { cls: "text-indigo-400", hex: "#818cf8", label: "text" },
     ],
   },
 ];
