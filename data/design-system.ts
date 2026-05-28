@@ -74,6 +74,32 @@ export const WHITE_SCALE = [
 // TYPOGRAPHY
 // ============================================================
 
+// ============================================================
+// SPACING
+// ============================================================
+
+export const SPACING_SCALE = [
+  { scale: 1,  px: 4,  rem: "0.25", category: "tight"  },
+  { scale: 2,  px: 8,  rem: "0.5",  category: "tight"  },
+  { scale: 4,  px: 16, rem: "1",    category: "medium" },
+  { scale: 6,  px: 24, rem: "1.5",  category: "medium" },
+  { scale: 8,  px: 32, rem: "2",    category: "wide"   },
+  { scale: 12, px: 48, rem: "3",    category: "wide"   },
+  { scale: 16, px: 64, rem: "4",    category: "vast"   },
+  { scale: 24, px: 96, rem: "6",    category: "vast"   },
+] as const;
+
+export const SPACING_SEMANTICS = {
+  tight:  "belongs together — icon + label, number + unit",
+  medium: "same group — list items, form fields",
+  wide:   "new group — section breaks",
+  vast:   "new context — hero to content, major divisions",
+} as const;
+
+// ============================================================
+// TYPOGRAPHY
+// ============================================================
+
 export const HEADING_SIZES = [64, 48, 44, 36] as const;
 
 export const SUBTITLE_SIZES = [24, 20, 18, 16, 14, 12] as const;
