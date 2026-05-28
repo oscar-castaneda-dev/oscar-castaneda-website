@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { formatNumber } from "@/app/lib/format-number";
+import { formatNumber } from "@/lib/format-number";
 import type { Project } from "@/data/projects";
 import type { WorkCardVariant } from "./types";
 

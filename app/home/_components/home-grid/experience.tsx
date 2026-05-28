@@ -1,4 +1,4 @@
-import { YEARS_OF_EXPERIENCE } from "@/app/constants";
+import { YEARS_OF_EXPERIENCE } from "@/constants/profile";
 
 export function Experience() {
   return (

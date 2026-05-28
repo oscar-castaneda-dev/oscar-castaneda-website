@@ -1,6 +1,6 @@
 import { Logo } from "../ui/logo";
 import { MobileMenu } from "./mobile-menu";
-import { NAV_LINKS } from "@/app/constants/nav-links";
+import { NAV_LINKS } from "@/constants/nav-links";
 import { NavLink } from "./nav-link";
 
 export function Nav() {

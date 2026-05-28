@@ -1,5 +1,5 @@
 import { Stat } from "@/app/components/ui/stats-bar";
-import { YEARS_OF_EXPERIENCE } from "@/app/constants";
+import { YEARS_OF_EXPERIENCE } from "@/constants/profile";
 
 export const ABOUT_STATS: Stat[] = [
   {

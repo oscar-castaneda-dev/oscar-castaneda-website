@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { cn } from "@/lib/cn";
-import { formatNumber } from "@/app/lib/format-number";
+import { formatNumber } from "@/lib/format-number";
 import type { Project } from "@/data/projects";
 
 interface ProjectCardProps {

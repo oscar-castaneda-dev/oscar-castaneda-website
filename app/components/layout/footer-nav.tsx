@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { NAV_LINKS } from "@/app/constants/nav-links";
+import { NAV_LINKS } from "@/constants/nav-links";
 
 export function FooterNav() {
   return (

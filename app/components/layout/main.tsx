@@ -1,4 +1,4 @@
-import { cn } from "@/app/lib/cn";
+import { cn } from "@/lib/cn";
 
 export function Main({
   children,

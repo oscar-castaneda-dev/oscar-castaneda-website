@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction } from "react";
 
 import { cn } from "@/lib/cn";
 import { Logo } from "@/app/components/ui/logo";
-import { NAV_LINKS } from "@/app/constants/nav-links";
+import { NAV_LINKS } from "@/constants/nav-links";
 import Link from "next/link";
 
 interface MobileDrawerProps {
