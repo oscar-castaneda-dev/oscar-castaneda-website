@@ -35,7 +35,7 @@ const textSizeClass: Record<number, string> = {
 
 export function Typefaces() {
   return (
-    <section className="py-16">
+    <section className="py-16 border-b border-border">
       <div className="container">
         <div className="py-16">
           <p className="subtitle text-xl text-caption">02 - Typography</p>

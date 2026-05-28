@@ -98,3 +98,35 @@ export const SPACING_SCALE = [
 ] as const;
 
 export const CLASS_PREFIXES = ["gap", "p", "m", "space-y"];
+
+// ============================================================
+// PATTERNS
+// ============================================================
+
+export const PATTERNS = [
+  {
+    cls: "dot-grid",
+    description: "16px grid · 1px dots",
+  },
+  {
+    cls: "dot-grid-subtle",
+    description: "12px grid · 0.5px dots",
+  },
+];
+
+// ============================================================
+// BORDERS & RADIUS
+// ============================================================
+
+export const BORDER_COLORS = [
+  { cls: "border-border", hex: "#222222", label: "border" },
+  { cls: "border-outline", hex: "#333333", label: "outline" },
+];
+
+export const BORDER_RADIUS = [
+  { cls: "rounded-sm", value: "4px", label: "sm" },
+  { cls: "rounded-lg", value: "8px", label: "lg" },
+  { cls: "rounded-xl", value: "12px", label: "xl" },
+  { cls: "rounded-2xl", value: "16px", label: "2xl" },
+  { cls: "rounded-full", value: "9999px", label: "full" },
+];
