@@ -25,7 +25,13 @@ const doto = Doto({
 });
 
 export const metadata: Metadata = {
-  title: "Oscar Castaneda",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  ),
+  title: {
+    template: "%s — Oscar Castaneda",
+    default: "Oscar Castaneda",
+  },
   description:
     "AI Engineer specializing in ML, NLP, and inference-powered digital products. Shipping web and mobile applications with AI at the core.",
   keywords: [
@@ -39,6 +45,14 @@ export const metadata: Metadata = {
     "México",
   ],
   authors: [{ name: "Oscar Castaneda" }],
+  openGraph: {
+    siteName: "Oscar Castaneda",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({

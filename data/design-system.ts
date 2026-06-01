@@ -106,11 +106,11 @@ export const CLASS_PREFIXES = ["gap", "p", "m", "space-y"];
 export const PATTERNS = [
   {
     cls: "dot-grid",
-    description: "16px grid · 1px dots",
+    description: "16px grid 1px dots",
   },
   {
     cls: "dot-grid-subtle",
-    description: "12px grid · 0.5px dots",
+    description: "12px grid 0.5px dots",
   },
 ];
 

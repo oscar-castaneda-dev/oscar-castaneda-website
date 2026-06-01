@@ -1,4 +1,22 @@
+import type { Metadata } from "next";
 import { ActiveProject } from "./_components/active-project";
+
+export const metadata: Metadata = {
+  title: "Building",
+  description:
+    "Projects currently in motion, experiments in progress, and side-projects already shipped.",
+  openGraph: {
+    title: "Building — Oscar Castaneda",
+    description:
+      "Projects currently in motion, experiments in progress, and side-projects already shipped.",
+    url: "/building",
+  },
+  twitter: {
+    title: "Building — Oscar Castaneda",
+    description:
+      "Projects currently in motion, experiments in progress, and side-projects already shipped.",
+  },
+};
 import { BUILDING_PROJECTS } from "@/data/building";
 import { CompletedProject } from "./_components/completed-project";
 import { Main } from "@/app/components/layout/main";
