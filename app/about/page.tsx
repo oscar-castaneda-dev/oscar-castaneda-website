@@ -9,7 +9,7 @@ import { WorkExperience } from "./_components/work-experience";
 export const metadata: Metadata = {
   title: "About — Oscar Castaneda",
   description:
-    "AI Engineer based in Mexico. Background in ML, NLP, and full-stack development. Building AI powered web and mobile products.",
+    "AI Engineer based in Mexico. Background in ML, NLP, and full-stack development. Building AI-powered web and mobile products.",
 };
 
 export default function AboutPage() {
