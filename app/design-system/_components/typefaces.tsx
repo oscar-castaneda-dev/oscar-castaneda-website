@@ -41,6 +41,58 @@ export function Typefaces() {
           <p className="subtitle text-xl text-caption">02 - Typography</p>
         </div>
         <div className="flex flex-col gap-12">
+          {/* FONT FAMILIES */}
+          <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 md:gap-16 border-t border-border py-12">
+            <div className="flex flex-col gap-1 pt-1">
+              <p className="subtitle text-xl text-title">families</p>
+              <p className="text-base leading-[1.7] text-disabled mb-4">
+                3 typefaces
+              </p>
+            </div>
+            <div className="flex flex-col gap-y-16">
+              {/* Doto */}
+              <div className="flex flex-col gap-y-3">
+                <p className="font-nothing-dots text-5xl md:text-8xl lg:text-9xl text-title">
+                  Doto
+                </p>
+                <div className="flex flex-col gap-y-1">
+                  <p className="mb-4">
+                    <span>Custom utility:</span>{" "}
+                    <span className="text-disabled">font-nothing-dots</span>
+                  </p>
+                  <p className="text-disabled">Hero headings only</p>
+                </div>
+              </div>
+              {/* Space Mono */}
+              <div className="flex flex-col gap-y-3">
+                <p className="font-mono text-5xl font-normal text-title">
+                  Space Mono
+                </p>
+                <div className="flex flex-col gap-y-1 mt-1">
+                  <p className="mb-4">
+                    <span className="text-body">Custom utility:</span>{" "}
+                    <span className="text-disabled">font-mono</span>
+                  </p>
+                  <p className="text-disabled">Used in subtitles and labels</p>
+                </div>
+              </div>
+              {/* Space Grotesk */}
+              <div className="flex flex-col gap-y-3">
+                <p className="font-sans text-4xl font-light text-title">
+                  Space Grotesk
+                </p>
+                <div className="flex flex-col gap-y-1 mt-1">
+                  <p className="mb-4">
+                    <span className="text-body">Custom utility:</span>{" "}
+                    <span className="text-disabled">font-sans</span>
+                  </p>
+                  <p className="text-disabled">
+                    Used across all body text and paragraphs
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
           {/* HEADINGS */}
           <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 md:gap-16 border-t border-border py-12">
             <div className="flex flex-col gap-1 pt-1">

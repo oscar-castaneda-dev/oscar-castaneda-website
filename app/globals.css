@@ -27,9 +27,9 @@
   --color-indigo-border: #1e1e33;
 
   /* FONTS */
-  --font-sans: var(--font-space-grotesk);
-  --font-mono: var(--font-space-mono);
   --font-display: var(--font-doto);
+  --font-mono: var(--font-space-mono);
+  --font-sans: var(--font-space-grotesk);
 }
 
 html {
@@ -50,6 +50,12 @@ body {
   padding-inline: 3rem;
 }
 
+/* HEADING */
+@utility font-nothing-dots {
+  font-family: var(--font-display);
+}
+
+/* SUBTITLE */
 @utility font-nothing-subtitle {
   font-family: var(--font-mono);
   letter-spacing: 0.08em;
@@ -57,12 +63,9 @@ body {
   line-height: 1.2;
 }
 
+/* BODY TEXT */
 @utility font-nothing-code {
   font-family: var(--font-mono);
-}
-
-@utility font-nothing-dots {
-  font-family: var(--font-display);
 }
 
 @utility dot-grid {
