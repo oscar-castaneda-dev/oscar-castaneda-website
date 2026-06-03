@@ -12,8 +12,8 @@ export default async function Image() {
   return new ImageResponse(
     <OgImageLayout
       label="// about"
-      title="Oscar Castaneda"
-      description="AI Engineer based in Mexico. Building AI-powered web and mobile products."
+      title="About"
+      description="AI Engineer based in Mexico — ML, NLP & full-stack development."
     />,
     { ...size, fonts },
   );
